@@ -1,0 +1,462 @@
+/*para redes sociales*/
+.centroc{
+        text-align:center;
+    }
+
+.ampliar{
+        font-size: 50px;
+    }
+
+.border-redes{
+    border-radius: 50%;
+}
+
+
+.white{
+     color:#fff;
+   }
+
+.info-box-icon-users{
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 60%;
+    background-color: #2A91FF;
+}
+
+.info-box-icon-fecha {
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 60%;
+    background-color: #311d82;
+}
+
+.info-box-icon-fecha-blue {
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 60%;
+    background-color: #2A91FF;
+}
+
+.info-box-icon-fecha-white {
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 60%;
+    color: #2A91FF;
+    background-color: #fff;
+}
+
+.info-box-icon-user-filtre {
+    float: left;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    border-radius: 60%;
+    background-color: #2A91FF;
+}
+
+.info-box-icones{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 60%;
+    border: 1px solid #fff;
+    }
+
+/* logo y mas */
+
+
+img.logo-default {
+    max-height: 40px;
+}
+
+img.circular-log{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* avatares del settings*/
+img.circular-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* tienda */
+img.circular{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* tickets */
+img.circular-tick{
+    border-radius: 50%;
+    margin-left: -20px;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 1);
+    float: left;
+}
+
+/* herramientas */
+img.circular-herramienta{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.margin-herramienta{
+    margin-bottom: 0;
+    margin-top:-3px;
+}
+
+/* gestion de noticias titulo */
+.titulo-herramienta{
+    margin-bottom: -10px;
+    margin-top:-3px;
+}
+
+.otros-herramienta{
+ margin: 0 0 10px;
+ margin-top:-3px;
+}
+
+/* para la tabla de abajo del varrito */
+ .mitable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom:30px;
+}
+
+td, th {
+
+  text-align: left;
+  padding: 8px;
+}
+
+.table>thead>tr>th{
+  color: white;
+  font-size: 18px;
+}
+
+/*para redondear el footer en el home*/
+.border-radius{
+    border-radius:20px;
+}
+
+/*para los iframe de los videos*/
+ @media (max-width: 420px) {
+
+  iframe {
+    width: 280px;
+    height: 200px;
+  }
+
+}
+
+
+/* aumentar el tamano
+* del texto de los botones
+*/
+.btn-agn{
+    font-size: 16px;
+}
+
+/*colores del propover para cambiar el color del sistema*/
+   .text-azul {
+    color: #3c8dbc;
+   }
+
+   .text-azul-claro {
+    color: #00c0ef;
+   }
+
+   .text-purpura {
+    color: #605ca8;
+   }
+
+   .text-purpura-claro {
+    color: #6c67c5;
+    }
+
+    .text-verde {
+    color: #00a65a;
+   }
+
+   .text-verde-claro {
+    color: #2ed689;
+    }
+
+    .text-rojo {
+    color: #d73925;
+   }
+
+   .text-rojo-claro {
+    color: #dd4b39;
+    }
+
+   .text-amarillo {
+    color: #f39c12;
+   }
+
+   .text-amarillo-claro {
+    color: #e08e0b;
+    }
+
+    .text-negro {
+    color: #333;
+   }
+
+   .text-negro-claro {
+    color: #2c3b41;
+    }
+
+    #question-search::placeholder {
+        color: white;
+      }
+      #question-search{
+          background:  #2f343a;;
+          border:  #2f343a;;
+          height:  3em;
+          border-radius: 10px!important;
+      }
+
+      .cajita{
+        background:  #2f343a;;
+        height: 5em;
+        border-radius: 10px!important;
+        margin: 10px;
+
+      }
+
+      .sidenav {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        background-color: #2f343a;;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+      }
+
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      .main {
+        margin-left: 160px; /* Same as the width of the sidenav */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+      }
+
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+
+.accordion-academy{
+    background:#2f343a!important;
+    border:1px;
+    border-radius:5px;
+    color: white;
+}
+.accordion-academy .card-header .btn-link{
+    color: #838181;
+    font-size: 16px;
+}
+
+.accordion-academy .card-body{
+    padding: 10px;
+}
+.academy-question-search{
+    background:#2A91FF;
+    color:white;
+    border:none!important;
+}
+
+#frecuent-question::placeholder{
+    color:white;
+}
+.frecuent-question{
+    color:white;
+}
+
+.ticket-box{
+    color: #ffffff;
+font-size: 18px;
+font-weight: 400;
+background: #2A91FF;
+margin: 0 0 25px;
+overflow: hidden;
+padding: 15px;
+border-radius: 20px;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border: 2px solid #5878ca;
+}
+
+
+.custom-input-file {
+    background-color:#838181;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto 0;
+    min-height: 15px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .custom-input-file .input-file {
+    border: 10000px solid transparent;
+    font-size: 10000px;
+    margin: 0;
+    opacity: 0;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    right: -1000px;
+    top: -1000px;
+   }
+   #question-search::placeholder{
+    color:white;
+}
+.question-search{
+  color: #fff!important;
+}
+
+   .input-white{
+       color: #ffff!important;
+   }
+   input[type=file]::-webkit-file-upload-button {
+    border: 2px solid #838181;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #838181;
+    transition: 1s;
+    color: #ffff!important;
+  }
+
+  input[type=file]::file-selector-button {
+    border: 2px solid #838181;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #838181;
+    transition: 1s;
+  }
+
+  input[type=file]::-webkit-file-upload-button:hover {
+    background-color: #838181;
+    border: 2px solid #838181;
+  }
+
+  input[type=file]::file-selector-button:hover {
+    background-color: #838181;
+    border: 2px solid #838181;
+  }
+
+
+
+  ol {
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    padding-left: 40px;
+  }
+  ol li {
+    margin: 0 0 0.5rem 0;
+    counter-increment: my-awesome-counter;
+    position: relative;
+  }
+  ol li::before {
+    content: counter(my-awesome-counter);
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    --size: 32px;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    transform: rotate(-10deg);
+    background:#2A91FF;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 1px 1px 0 #999;
+  }
+
+
+  @media (min-width: 320px) and (max-width: 320px) {
+    .text-link-mba{
+        font-size:15px!important;
+    }
+    .card-aliados{
+    
+      height: 200px!important;
+      
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .card-aliados{
+  
+  height: 150px!important;
+  
+}
+
+
+}
+
+.card-aliados{
+  
+  height: 100px;
+  
+}

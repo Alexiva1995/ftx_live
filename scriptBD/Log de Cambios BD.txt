@@ -1,0 +1,261 @@
+﻿ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 07/09/2020
+----------------------------------------------
+08/09/2020
+Dev: Luisana Marín
+*Nueva tabla events_users (Correr script events_users)
+
+08/09/2020
+Dev: Crisleivys Gil
+* Agregado los campos likes, shares, views en la tabla courses (correr el script courses)
+
+09/09/2020
+*Nuevo columna biografia en user_campo (user_campo.sql)
+*Nuevos permisos ususarios, cursos, transacciones, red, eventos, (settingpermiso.sql)
+
+09/09/2020
+Dev: Luisana Marín
+*Nuevo campo featured_at (DATE, NULL) tabla courses (Correr script courses)
+
+09/09/2020
+Dev: Crisleivys Gil
+*Nuevos campos cover, cover_name tabla categories (Correr script categories)
+
+10/09/2020
+Dev: Luisana Marín
+*Nueva tabla evaluations (Correr script evaluations.sql)
+*Nueva tabla questions (Correr script questions.sql)
+
+11/09/2020
+*nuevos campos about, cover_name, y reutilizacion del campo avatar (wp98_users.sql)
+*Nueva tabla entradas (entradas.sql)
+*Nuevo campo de permisos (correr script de settingpermiso.sql)
+
+11/09/2020
+Dev: Crisleivys Gil
+*Nuevo campo agregado profession en ta tabla wp98_users (Correr el script wp98_users)
+* Agregados datos para los mentores y cursos (Correr los scripts courses y wp98_users)
+
+12/09/2020
+Dev: Luisana Marín
+*Nueva tabla ratings (Correr script ratings.sql)
+
+12/09/2020
+Dev: Robinson vargas
+*Nueva tabla resources (resources.sql)
+*Nueva tabla event_resources (event_resources.sql)
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 14/09/2020
+----------------------------------------------
+15/09/2020
+*Ajuste en la tabla settings (correr script settings.sql) 
+*tabla wp98_users campo profession null (correr script wp98_users.sql) 
+*tabla wp98_users campo profession null (correr script wp98_users.sql)
+
+15/09/2020
+Dev: Crisleivys
+*Nueva tabla creada schedule (correr el script  schedule)
+* Agregados datos para que se muestre el calendario (correr el script calendarios)
+* Agregados datos en la tabla events (correr el script events)
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 16/09/2020
+----------------------------------------------
+
+17/09/2020
+Dev: Luisana Marín
+*Nueva tabla memberships (Correr script memberships.sql)
+*Nueva tabla shopping_cart (Correr script shopping_cart.sql)
+*Nueva tabla purchases (Correr script purchases.sql)
+*Nueva tabla purchase_details (Correr script purchase_details.sql)
+*Nueva tabla courses_users (Correr script courses_users.sql)
+*Nuevo campo membership_id (INT NULL) a la tabla wp98_users (Correr script wp98_users.sql)
+*Nuevo campo price (DOUBLE PREDEFINIDO 0) a la tabla courses (Correr script courses.sql)
+
+18/09/2020
+Dev: Prieto 
+* Nuevo campo agregado id_courses (correr el script events)
+
+19/09/2020
+Dev: Luisana Marín
+*Nuevo campo duration (time PREDEFINIDO 0:00:00 NOT NULL) a la tabla Lessons (Correr script lessons)
+
+20/09/2020
+Dev: Crisleivys
+* Modificado el id_courses por course_id (correr el script events)
+* Nuevo campo favorite en tabla courses_users (correr script courses_users)
+
+23/09/2020
+Dev: Prieto 
+* Nuevo campo agregado nombre (correr el script redes_sociales)
+
+23/09/2020
+Dev: Carlos Gonzalez
+*Nueva tabla courses_orden (Correr script courses_orden.sql)
+*Nueva tabla coinpayment_transaction (Correr script coinpayment_transaction.sql)
+Nota: aparte de la informacion de bd
+Cuando se bajen mi nueva actualiza tiene que instalar los plugins de stripe y coinpayment
+para que los plugins funcionen correctamente deben agregar la informacion que esta en el 
+archivo que se llama (variables para el archivo .env.txt)
+y lo otro tambien cuando tengan esos plugins listo
+deben pegar los archivos AjaxController.php y IPNController.php
+en esta ruta "vendor/hexters/coinpayment/src/Http/Controllers"
+
+23/09/2020
+Dev: Luisana Marín
+*Nueva tabla evaluations_users (Correr script evaluations_users)
+*Nueva tabla evaluations_users_answers (Correr script evaluations_users_answers)
+*Eliminar campos sobrantes en la tabla eventos (Correr script events.sql)
+*Agregar campo streaming_token a la table users (Correr script wp98_users)
+
+24/09/2020
+Dev:Crisleivys
+*Agregado el campo favorite (correr el script events_users)
+*Agregado el campo favorite (correr el script courses_users)
+
+24/09/2020
+Dev: Luisana Marín
+*Nueva campo uuid a la tabla categories (Correr script categories)
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 24/09/2020
+----------------------------------------------
+
+25/09/2020
+Dev:Crisleivys Gil
+Modificada la información de las tablas events, calendarios, courses_users, events_users (correr scripts events, calendarios, courses_users, events_users)
+
+25/09/2020
+Dev: Luisana Marín
+*Modifiqué el archivo IPNController en la carpeta vendor/hexters/src/HttP/Controllers (Reemplazar archivo IPNController)
+
+26/09/2020
+Dev:Crisleivys Gil
+*Agregados nuevos eventos (correr el script events)
+
+28/09/2020
+Dev: Carlos Gonzalez
+*Agregar las viariable para el funcionamiento de stripe y coinpayment del cliente en el sistema (estan en el archivo viariables para el archivo .env)
+
+28/09/2020
+Dev:Crisleivys Gil
+*Agregado el campo subcategory_id (correr el script events)
+28/09/2020
+Dev: Luisana Marín
+*Modifiqué el archivo IPNController en la carpeta vendor/hexters/src/HttP/Controllers (Reemplazar archivo IPNController)
+*Poner como nulo el campo comments de la tabla ratings
+
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 29/09/2020
+----------------------------------------------
+
+29/09/2020
+Dev:Crisleivys Gil
+*Agregado el campo time en la tabla calendarios (correr el script calendarios)
+*Creada la tabla comments (correr el script comments)
+
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 30/09/2020
+----------------------------------------------
+30/09/2020
+Dev:Pietro
+*Agregado el campo historialcomision (correr el script settingspermiso)
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 06/10/2020
+----------------------------------------------
+07/10/2020
+Dev:Luisana Marín
+*Agregado el campo thumbnail_cover a la tabla courses (correr el script courses)
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 08/10/2020
+----------------------------------------------
+
+Dev:Luisana Marín
+*Nueva Base de datos para el streaming (correr el script streaming)
+*Agregar al archivo .env DB_STREAMING_DATABASE=streaming en los datos de conexión a la base de datos
+
+09/10/2020
+Dev:Crisleivys Gil
+*Agregados los campos created_at y updated_at en la tabla events_resourses(correr el script events_resourses)
+*Tablas survey_options y survey_options_response (correr scripts survey_options y survey_options_response)
+
+12-10-2020
+Dev: Carlos Gonzalez
+* Agregue dos nuevos complemento en el chat en vivo 
+* en el archivo que se llama "variables para el archivo .env" esta las nuevas variables que se necesitan para el chat
+* tambien tiene que actualizar su composer para que se puedan traer los nuevos complementos
+* la informacion que esta ahi es con mi usuario prueba. despues de cambiara por la del cliente.
+
+12/10/2020
+Dev:Crisleivys
+*Agregado el campo selected (correr el script survey_options_response)
+
+12-10-2020
+Dev: Carlos Gonzalez
+*Agregar nuevo campo "offer_id" en las tablas purchase_details y shopping_cart
+*Agregar nuevo campo "type_product" en la tabla courses_orden
+*Crear una nueva tabla llamada offers_live - esta es para las oferta del mentor en la vista de eventos
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 13/10/2020
+----------------------------------------------
+
+13/10/2020
+Dev:Luisana Marín
+*Nuevo campo duration en la tabla courses (VARCHAR 50 NULL)
+*Nuevo campo english_url en la tabla lessons (VARCHAR 255 NULL)
+*Nuevo campo language en la tabla courses_users (VARCHAR 2 PREDETERMINADO "es")
+
+13/10/2020
+Dev:Crisleivys
+*Agregado el campo deleted_at a la tabla courses y courses_users (correr los scripts courses y courses_users)
+
+
+ÚLTIMA ACTUALIZACIÓN DEL SERVIDOR: 17/10/2020
+----------------------------------------------
+
+19/10/2020
+Dev: Carlos Gonzalez
+*Creacion del modulo de insignia y la tabla con el mismo nombre insignia.sql, correr scripts, ya esta en el servidor todo
+
+20/10/2020
+Dev: Carlos Gonzalez
+*Creacion del modulo de insignia_user y la tabla con el mismo nombre insignia_user.sql, correr scripts, ya esta en el servidor todo
+
+21/10/2020
+Dev:Luisana Marín
+*Nuevo campo english_title en la tabla lessons (VARCHAR 255 NULL)
+
+22/10/2020
+Dev:Luisana Marín
+*Nueva tabla event_countries (Corre script event_countries)
+*Nuevos campos abbreviation, event, operation y quantity en la tabla paises (Correr script paises)
+
+31/10/2020
+Dev Pietro 
+*anexar columna de miniatura para agregar la imagen que aparecera en eventos
+
+04/11/2020
+* Actualizados precios de mebresias (correr script membresias)
+
+13/11/2020
+Dev: Crisleivys
+* Nuevos campos descripcion_completa y banner en la tabla de entradas (correr script entradas)
+
+18/11/2020
+*anexar columna correos para verificar si se a enviado un correo a las personas al iniciar el live y 
+cuando falte 1 hora (correr el script events)
+
+18/11/2020
+Dev: Pietro
+*Agregado el campo event_id a la tabla calendarios (correr el script calendarios)
+*Agregar nuevo campo en courses_orden (ejecutar script courses_orden) 
+*nuevos datos en settingsplantilla envio de correos (correr script de settingplantilla)
+
+07/12/2020
+Dev:Luisana Marín
+*Nuevo campo period en tabla shopping_cart
+*Nuevo campo membership_type en tabla purchase_details
+*Nuevos campos price_annual y discount_annual en tabla memberships y nuevas membresías
+*Nuevo campo membership_id en la tabla courses
+
+08/12/2020
+Dev:Luisana Marín
+*Nuevo campo streamings en tabla memberships
+*Nuevo campo streamings en tabla wp98_users
