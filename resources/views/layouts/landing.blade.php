@@ -10,13 +10,13 @@
         <meta http-equiv="Expires" content="0" />
         <meta http-equiv="Pragma" content="no-cache" />
         <!--<title>{{ $settings->name }}</title>-->
-        <title>FTX Live</title>
+        <title>{{ $settings->name }}</title>
 
         <link rel="stylesheet" href="{{ asset('bootstrap-4.5.1/css/bootstrap.min.css') }}">
         <link href="{{ asset('css/simple-sidebar.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="shortcut icon" href="{{ asset('icon.png') }}" />
 
         <!-- css para la vista de anotaciones y mas -->
         <link rel="stylesheet" href="{{asset('css/anotaciones-simple.css')}}">
@@ -131,9 +131,9 @@
 
                 @yield('content')
                      <div class="icon-bar">
-                        <a href="#" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
-                        <a href="#" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
-                        <a href="#" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.ftxlive.com/office/&title=FTX%20Live&summary=&source=" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
                         <a href="#" class="btn btn-social-media-icon btn-rounded email-icon mt-2 mb-2" target="_blank"><i class="fas fa-envelope"></i></a>
                         <a href="#" class="btn btn-social-media-icon btn-rounded youtube" target="_blank"><i class="fa fa-youtube"></i></a>
                      </div>

@@ -22,6 +22,8 @@ Route::get('mioficina', function(){
   return redirect('/');
 });
 
+
+
 Route::get('terms-and-conditions', function(){
   return view('auth.termsAndConditions');
 })->name('terms-and-conditions');
@@ -29,6 +31,9 @@ Route::get('terms-and-conditions', function(){
 Route::get('certificado', 'HomeController@certificado');
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/certificado', "HomeController@certificado");
+Route::get('/new_events', 'HomeController@new_events')->name('new_events');
+// Eventos por categoria
+Route::get('events/category/{id}', 'HomeController@show_event_category')->name('show.events.category');
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::get('search-by-category/{category_slug}/{category_id}/{subcategory_slug}/{subcategory_id}', 'HomeController@search_by_category')->name('search-by-category');

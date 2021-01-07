@@ -74,7 +74,7 @@
     <!-- Logo -->
     <a class="logo" href="{{ url('/') }}">
         <div class="col-md-1">
-        <img src="{{ asset('images/logo.png') }}" style="width: 150px;">
+        <img src="{{ asset('images/logo.png') }}">
         </div>
         
         <!--<div style="color: white; font-size: 16px; font-weight: bold; margin-top: -10px;">My Business</div> 

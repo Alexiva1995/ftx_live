@@ -77,263 +77,107 @@ class HomeController extends Controller{
 
    public function index(){
        
-       //pop up
-       $pop = Pop::find(1);
-       $pop_up = 0;
-            
-      $cursosDestacados = Course::where('featured', '=', 1)
-                              ->where('status', '=', 1)
-                              ->orderBy('featured_at', 'DESC')
-                              ->get();
-
-      $cursosNuevos = Course::where('status', '=', 1)
-                        ->orderBy('id', 'DESC')
-                        ->take(3)
-                        ->get();
-
-      $ultCurso = Course::select('id')
-                     ->where('status', '=', 1)
-                     ->orderBy('id', 'DESC')
-                     ->first();
-
-      $primerCurso = Course::select('id')
-                        ->where('status', '=', 1)
-                        ->orderBy('id', 'ASC')
-                        ->first();
-      $idStart = 0;
-      $idEnd = 0;
-      $cont = 1;
-      $previous = 1;
-      $next = 1;
-
-      $insignia = new InsigniaController;
-      
-      if (Auth::user()){
-           //Pop up
-           if(Auth::user()->pop_up == 1){
-           $user = User::find(Auth::user()->ID);
-           $user->pop_up = 0;
-           $user->save();
-           $pop_up = 1;
-           }
-           
-         if (Auth::user()->rol_id != 0){
-            $insignia->validadInsignia(Auth::user()->ID);
-         }
-      }
-
-      foreach ($cursosNuevos as $curso){
-         if ($cont == 1){
-            $idStart = $curso->id;
-         }
-         $idEnd = $curso->id;
-         $cont++;
-      }
-         
-      if ($cursosNuevos->count() > 0){
-         if ($idStart == $ultCurso->id){
-            $previous = 0;
-         }
-         if ($idEnd == $primerCurso->id){
-            $next = 0;
-         }
-      }
-
-      $proximoEvento = Events::where('status', '=', 1)
-                            ->where('date', '>=', date('Y-m-d'))
-                            ->with('countries')
-                           ->orderBy('time', 'ASC')
-                           ->first();
-    $checkPais = NULL;
-    $horaEvento = NULL;
-      if (!is_null($proximoEvento)){
-         $fechaEvento = new Carbon($proximoEvento->date);
-         $proximoEvento->date_day = $fechaEvento->format('d');
-
-         switch ($fechaEvento->format('l')) {
-            case 'Monday': $proximoEvento->weekend_day = 'Lunes'; break;
-            case 'Tuesday': $proximoEvento->weekend_day = 'Martes'; break;
-            case 'Wednesday': $proximoEvento->weekend_day = 'Miércoles'; break;
-            case 'Thursday': $proximoEvento->weekend_day = 'Jueves'; break;
-            case 'Friday': $proximoEvento->weekend_day = 'Viernes'; break;
-            case 'Saturday': $proximoEvento->weekend_day = 'Sábado'; break;
-            case 'Sunday': $proximoEvento->weekend_day = 'Domingo'; break;
-         }
-         
-         switch ($fechaEvento->format('m')) {
-            case '01': $proximoEvento->month = 'Enero'; break;
-            case '02': $proximoEvento->month = 'Febrero'; break;
-            case '03': $proximoEvento->month = 'Marzo'; break;
-            case '04': $proximoEvento->month = 'Abril'; break;
-            case '05': $proximoEvento->month = 'Mayo'; break;
-            case '06': $proximoEvento->month = 'Junio'; break;
-            case '07': $proximoEvento->month = 'Julio'; break;
-            case '08': $proximoEvento->month = 'Agosto'; break;
-            case '09': $proximoEvento->month = 'Septiembre'; break;
-            case '10': $proximoEvento->month = 'Octubre'; break;
-            case '11': $proximoEvento->month = 'Noviembre'; break;
-            case '12': $proximoEvento->month = 'Diciembre'; break;
-         }
-         
-         $horaEvento = $proximoEvento->time;
-         if (!Auth::guest()){
-            $checkPais = NULL;
+      setlocale(LC_TIME, 'es_ES.UTF-8'); //Para el server
+      // setlocale(LC_TIME, 'es');//Local
+       Carbon::setLocale('es');
+       $mytime = Carbon::now();
+       //return dd ($mytime->toDateTimeString());
  
-            $paisUsuario = DB::table('user_campo')
-                              ->select('pais')
-                              ->where('ID', '=', Auth::user()->ID)
-                              ->first();
-         
-            if ( (!is_null($paisUsuario)) && (!is_null($paisUsuario->pais)) ){
-               $paisID = DB::table('paises')
-                           ->select('id')
-                           ->where('nombre', '=', $paisUsuario->pais)
-                           ->first();
-               
-               if (!is_null($paisID)){
-                  $checkPais = DB::table('event_countries')
-                                    ->where('event_id', '=', $proximoEvento->id)
-                                    ->where('country_id', '=', $paisID->id)
-                                    ->first();
-   
-                  if (!is_null($checkPais)){
-                     $horaEvento = $checkPais->time;
-                  }
-               }
-            }
-         }
-      }
-
-      $membresia = 'Sin Nivel';
-      $membresia2 = 'Principiante';
-      $cursos = 0;
-      if (!empty(Auth::user()->membership)) {
-         $membresia = Auth::user()->membership->name;
-         $idmembresia = (Auth::user()->membership_id == 4) ? 4 : (Auth::user()->membership_id+1);
-         if (Auth::user()->membership_id < 4) {
-            $membresia2 = Auth::user()->membership->where('id', ($idmembresia))->first()->name;
-         }else{
-            $membresia2 = '';
-         }
-         
-         $cursos = Auth::user()->courses_buyed->count();
-      }
-      
-
-      $avance = [
-         'nivel' => $membresia,
-         'proximo' => $membresia2,
-         'cursos' => $cursos
-      ];
-
-      //linea de referidos Directos
-      $refeDirec =0;
-      if(Auth::user()){
-         $refeDirec = User::where('referred_id', Auth::user()->ID)->count('ID');
-      }
-      
+       $evento_actual = Events::where('date', '>=', Carbon::now()->format('Y-m-d'))
+                        ->where('time', '>=', date('H:i:s'))
+                        ->where('status', '=',1)
+                        ->get()
+                        ->first();
+                        // dd(Empty($evento_actual));
+     if(Empty($evento_actual))
+     {
+         $proximos = null;
+          $finalizados = Events::where('date', '<=',date('Y-m-d'))
+         ->where('time', '<', date('H:i:s'))
+         ->orwhere('date', '<',date('Y-m-d'))
+         ->get();
+ 
        $misEventosArray = [];
-      if (!Auth::guest()){
-         $misEventos = DB::table('events_users')
-                        ->select('event_id')
-                        ->where('user_id', '=', Auth::user()->ID)
+       if (!Auth::guest()){
+          $misEventos = DB::table('events_users')
+                         ->select('event_id')
+                         ->where('user_id', '=', Auth::user()->ID)
+                         ->get();
+ 
+          foreach ($misEventos as $miEvento){
+             array_push($misEventosArray, $miEvento->event_id);
+          }
+       }
+       $total = 0;
+
+        /*Eventos por categoria con el numero de eventos asociados*/
+        $events_category = Category::withCount('events')
+                        ->take(9)
                         ->get();
 
-         foreach ($misEventos as $miEvento){
-            array_push($misEventosArray, $miEvento->event_id);
-         }
-      }
-      
-      /*Mentores que tengan cursos*/
-            $mentores = DB::table('wp98_users')
-                        ->join('courses', 'courses.mentor_id', '=', 'wp98_users.id')
-                        ->select(array ('wp98_users.display_name as nombre', 'wp98_users.avatar as avatar', 'courses.mentor_id as mentor_id'))
-                        ->groupBy('courses.mentor_id', 'wp98_users.display_name', 'wp98_users.avatar')
-                        ->get();
-
-            foreach ($mentores as $mentor) {
-                $cursostmp = DB::table('courses')->where('mentor_id', $mentor->mentor_id)->get();
-                $cantCateg = count($cursostmp);
-                $cont = 0;
-                $string = '';
-                $categoriastmp = [];
-                foreach ($cursostmp as $curso) {
-                    $cate = DB::table('categories')->where('id', $curso->category_id)->first();
-                    // $categoriastmp [] = $cate->title;
-                    if ($cantCateg == 1) {
-                        $string = $cate->title;
-                    }else{
-                        if ($cont == 0) {
-                            $string = $cate->title;
-                        }else{
-                            if($string != $cate->title)
-                            {
-                                $string = $string.', '.$cate->title;
-                            }
-
-                        }
-                    }
-                    $cont++;
-                }
-                // $categoriastmp2 = array_unique($categoriastmp);
-                // dump($categoriastmp, $categoriastmp2);
-                // for ($i=0; $i < count($categoriastmp2); $i++) {
-                //     if ($i == 0){
-                //         $string = $categoriastmp2[$i];
-                //     }else{
-                //         $string = $string.', '.$categoriastmp2[$i];
-                //     }
-                // }
-                $mentor->categoria = $string;
-                $mentor->courses = $cursostmp;
-            }
-      
-      
-
-      return view('index')->with(compact('cursosDestacados', 'cursosNuevos', 'idStart', 'idEnd', 'previous', 'next', 'refeDirec', 'proximoEvento', 'checkPais', 'horaEvento', 'avance', 'misEventosArray', 'mentores',
-      'pop','pop_up'));
+         return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category'));
+ 
+     }else{
+         $proximos = Events::where('date', '>', date('Y-m-d'))
+                       ->where('id', '!=', $evento_actual->id)
+                       ->orwhere('date', '=', date('Y-m-d'))
+                       ->where('time', '>=', date('H:i:s'))
+                       ->get();
+ 
+         //$finalizados = Events::where('status', '=',3)->get();
+         $finalizados = Events::where('date', '<=',date('Y-m-d'))
+         ->where('time', '<', date('H:i:s'))
+         ->orwhere('date', '<',date('Y-m-d'))
+         ->get();
+         $total = count($proximos);
+ 
+             $total = count($proximos);
+ 
+       $misEventosArray = [];
+       if (!Auth::guest()){
+          $misEventos = DB::table('events_users')
+                         ->select('event_id')
+                         ->where('user_id', '=', Auth::user()->ID)
+                         ->get();
+ 
+          foreach ($misEventos as $miEvento){
+             array_push($misEventosArray, $miEvento->event_id);
+          }
+       }
+        /*Eventos por categoria con el numero de eventos asociados*/
+        $events_category = Category::withCount('events')
+        ->take(9)
+        ->get();
+ 
+       return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category'));
+     }
    }
 
    public function search(Request $request){
-      $cursosIds = [];
+      $eventsIds = [];
 
       $busqueda = $request->get('q');
 
-      $courses = Course::where(function ($query) use ($busqueda){
+      $events = Events::where(function ($query) use ($busqueda){
                      $query->where('title', 'LIKE', '%'.$busqueda.'%')
                            ->orWhere('description', 'LIKE', '%'.$busqueda.'%');
                   })->where('status', '=', 1)
                   ->get();
-                 // dd ($courses);
       
-      foreach ($courses as $curso){
-         array_push($cursosIds, $curso->id);
+      
+      foreach ($events as $event){
+         array_push($eventsIds, $event->id);
       }
       
-      $categorias = Category::with(['course' => function($query) use ($cursosIds){
-                              $query->whereNotIn('id', $cursosIds)
+      $categorias = Category::with(['events' => function($query) use ($eventsIds){
+                              $query->whereNotIn('id', $eventsIds)
                                  ->where('status', '=', 1);
                         }])->where('title', 'LIKE', '%'.$busqueda.'%')
-                        ->get();
-                        
-                        
+                        ->get();  
 
-      /*foreach ($categorias as $categoria){
-         foreach ($categoria->course as $cursoCat){
-            array_push($cursosIds, $cursoCat->id);
-            $courses->push($cursoCat);
-         
-      }   */   
-
-      //$page = 'search';
-
-      $directos = NULL;
-      if (!Auth::guest()){
-         $directos = User::where('referred_id', Auth::user()->ID)->count('ID');
-      }
       $category_name = NULL;
 
-      return view('cursos.cursos_categorias')->with(compact('courses', 'category_name', 'directos'));
+      return view('events.events_by_category')->with(compact('events','category_name'));
    }
 
    public function search_by_category($category_slug, $category_id, $subcategory_slug, $subcategory_id){
@@ -343,7 +187,7 @@ class HomeController extends Controller{
                         }])->where('id', '=', $category_id)
                         ->first();
 
-      $courses = $category_name->course;
+      $events = $category_name->course;
 
       $directos = NULL;
       if (!Auth::guest()){
@@ -448,4 +292,31 @@ class HomeController extends Controller{
        return response()->file($file, $headers);
         
     }
+
+
+    /*Eventos más nuevos*/
+
+    public function new_events(){
+
+       /*Eventos por categoria con el numero de eventos asociados*/
+       $categories= Category::with('events')
+       ->withCount('events')
+       ->get();
+       
+
+      $new_events = Events::where('status', '1')->orderBy('created_at', 'DESC')->orderBy('category_id')->with('category')->get();
+   //   dd($events, $new_events);
+      return view('events.new_events', compact('new_events','categories'));
+    }
+
+
+        /*MOSTRAR EVENTOS POR CATEGORIA*/
+        public function show_event_category($category_id)
+        {
+
+            $events = Event::where('category_id','=', $category_id)->get();
+            $category_name = Category::where('id', '=', $category_id)->first();
+ 
+             return view('events.events_by_category', compact('events','category_name'));
+         }
 }

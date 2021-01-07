@@ -238,7 +238,7 @@
 </div>
 
 <div class="col-md-12" style="text-align: center; margin-top: 30px; color: white; display: flex;justify-content: center;align-items: center;">
-    <img src="{{asset('/images/FTXlive-logo.png')}}" style="width: 150px;">&nbsp; 2020 My Business Academy Pro All Rigth Reserved
+    <img src="{{asset('/images/FTXlive-logo.png')}}" style="width: 150px;">&nbsp; 2020 FTX Live All Rigth Reserved
 
 </div>
 

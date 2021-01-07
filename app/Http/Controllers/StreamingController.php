@@ -130,7 +130,7 @@ class StreamingController extends Controller{
 
         $extension = explode('.', $request->avatar);
         $nombreImg = $usuario->id.".".$extension[1];
-        copy('/home/mbapro/public_html/academia/uploads/avatar/'.$request->avatar, '/home/mbapro/public_html/streaming/storage/app/public/avatar/'.$nombreImg);
+        copy('/home/ftxl/public_html/office/uploads/avatar/'.$request->avatar, '/home/ftxl/public_html/streaming/storage/app/public/avatar/'.$nombreImg);
         $usuario->avatar = '/storage/avatar/'.$nombreImg;
         $usuario->save();
 

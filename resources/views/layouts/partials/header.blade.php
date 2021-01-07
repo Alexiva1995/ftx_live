@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom" style="height: 70px;flex-wrap: nowrap!important;">
-        <button class="btn" id="menu-toggle" style="background-color: #B70F1E !important; color: #fff"><!--<span class="navbar-toggler-icon"></span>--><i class="fas fa-bars"></i></button>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom" style="height: 70px;flex-wrap: nowrap!important;">
+        <button class="btn" id="menu-toggle" style="background-color: #B70F1E !important; color: #fff"><i class="fas fa-bars"></i></button>
 
         <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,31 +11,32 @@
              <a href="#" target="_blank" class="btn float-right"><i class="text-white fa fa-youtube fa-1x"></i></a>
              <a href="#" target="_blank" class="btn float-right"><i class="text-white fa fa-linkedin fa-1x"></i></a>
         </div>
-</nav>
+</nav>-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom navbar-redes" style="height: 70px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom" style="height: 70px;">
+        <button class="btn" id="menu-toggle" style="background-color: #B70F1E !important; color: #fff"><i class="fas fa-bars"></i></button>
 
+        <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     <div class="collapse navbar-collapse" id="navbarItems" style="z-index: 1000;">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 header-list">
             <li class="nav-item active">
                 <a class="nav-link items-header" href="{{route('index')}}">INICIO</a>
             </li>
             <li class="nav-item">
-                <!--<a class="nav-link items-header" href="">NOSOTROS</a>-->
-                <a class="nav-link items-header" href="{{route('step1')}}">NOSOTROS</a>
+               <a class="nav-link items-header" href="{{route('step1')}}">NOSOTROS</a>
             </li>
             <li class="nav-item">
-                <!--<a class="nav-link items-header" href="">GRATIS</a>-->
                 <a class="nav-link items-header" href="{{route('step2')}}">GRATIS</a>
             </li>
             <li class="nav-item">
-                <!--<a class="nav-link items-header" href="">BLOG</a>-->
                 <a class="nav-link items-header" href="{{route('step3')}}">BLOG</a>
             </li>
-            <li class="nav-item active">
+           <li class="nav-item active">
                 <a class="nav-link items-header" href="{{ route('blog.afiliados')}}">AFILIADOS</a>
             </li>
-            @if (Auth::guest())
+            <!--@if (Auth::guest())
                 <li class="nav-item">
                     <a class="nav-link items-header" href="{{ route('courses') }}">CURSOS</a>
                 </li>
@@ -43,7 +44,7 @@
                 <li class="nav-item">
                     <a class="nav-link items-header" href="{{ route('courses') }}">MIS CURSOS</a>
                 </li>
-            @endif
+            @endif-->
             <li class="nav-item">
                 <a class="nav-link items-header" href="{{route('transmisiones')}}">STREAMING</a>
             </li>

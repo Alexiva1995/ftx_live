@@ -62,6 +62,12 @@ i.fa.fa-user.referrers-icon {
     left: -10px;
 }
 
+
+.dropdown-item:hover{
+    background-color: #CF202F!important;
+    color: #fff!important;
+}
+
 .dropdown-notifications {
     top: 40px;
     right: 0px;
@@ -586,6 +592,14 @@ h5.title-level {
     .text-title-miscursos{
         font-size: 12px!important;
     }
+    .estilobusiness{
+        margin-top: 10%!important;
+    }
+    .ecosistema-img
+    {
+        padding-top: 0px!important;
+    }
+    
 
 }
 
@@ -680,6 +694,13 @@ h5.title-level {
     .text-title-miscursos{
         font-size: 12px!important;
     }
+    .reciente-mentor-name{
+        top:60%!important;
+    }
+    .card-comisiones-two {
+        height: 200px!important;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -780,6 +801,16 @@ h5.title-level {
     .ftxlivestreming-text{
         font-size: 1.5rem!important;
     }
+    .reciente-mentor-name{
+        top:60%!important;
+    }
+    .card-comisiones-two {
+        height: 200px!important;
+    }
+    .ecosistema-img
+    {
+        padding-top: 0px!important;
+    }
     
 }
 
@@ -789,6 +820,9 @@ h5.title-level {
     }
     .card-comisiones {
         height: 450px!important;
+    }
+    .card-comisiones-two {
+        height: 400px!important;
     }
     .recomendados-title p {
         font-size: 10px!important;
@@ -807,6 +841,9 @@ h5.title-level {
     }
     .text-title-miscursos{
         font-size: 12px!important;
+    }
+    .ecosistema-img{
+        padding-top: 90px!important;
     }
 }
 
@@ -872,7 +909,6 @@ p.col-sm.w-100.pl-0 {
 h6.card-title {
     color: #FFFFFF;
     font-size: 16px !important;
-    padding-left: 10px;
 }
 
 .reco {
@@ -1036,13 +1072,24 @@ h4.section-title-landing.text-primary.text-center {
 
 .course-category1 {
     background: transparent;
-    opacity: 0.75;
+    opacity: 0.96;
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 1px;
     border-radius: 20px;
     height: 242px;
 }
+
+.event-category {
+    background: transparent;
+    opacity: 0.96;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px;
+    border-radius: 20px;
+    height: 242px;
+}
+
 
 .section-title-category {
     font-weight: bold;
@@ -1882,7 +1929,7 @@ p.card-text.font-weight-bold.mr-2 {
     line-height: 60px;
     color: #B70F1E;
     font-weight: 700!important;
-    margin-top: 50px;
+    margin-top: 30%;
 }
 
 .estilostreaming {
@@ -1924,11 +1971,12 @@ p.card-text.font-weight-bold.mr-2 {
     }
     .estilobusiness {
         text-align: right;
-        font-size: 42px;
+        font-size: 30px;
         line-height: 40px;
         color: #B70F1E;
         font-weight: 700!important;
         margin-top: 0px;
+        text-align: center!important;
     }
 }
 
@@ -2336,8 +2384,21 @@ p.card-text.font-weight-bold.mr-2 {
     transition: transform .2s;
     box-shadow: 0 0 6px #1C1D211D;
 }
+.card-comisiones-two {
+    border-radius: 15px!important;
+    transition: transform .2s;
+    box-shadow: 0 0 6px #1C1D211D;
+    height: 150px;
+}
 
 .card-comisiones:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+.card-comisiones-two:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);
@@ -2390,4 +2451,42 @@ p.card-text.font-weight-bold.mr-2 {
 
 .mentor-overlay{
     background: linear-gradient(180deg, rgba(255,255,255,0) 74%, rgba(20,20,20,1) 100%);
+}
+
+.col-md-4 img.card-img-top {
+max-width: 450px;
+max-height: 405px;
+}
+
+.reciente-mentor-name{
+    margin-left: 10px;
+    margin-right: 10px;
+    top:70%
+}
+
+.ecosistema-img
+{
+    padding-top: 150px;
+}
+
+.logo-scale:hover{
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.logo-rotate:hover{
+    transition: 0.90s;
+    -webkit-transition: 0.90s;
+    -moz-transition: 0.90s;
+    -ms-transition: 0.90s;
+    -o-transition: 0.90s;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+
 }

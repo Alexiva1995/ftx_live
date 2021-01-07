@@ -730,7 +730,7 @@ class Menu
                 ]
             ],
             
-            'Cursos' => [
+            /*'Cursos' => [
                 'submenu' => 1,
                 'ruta' => 'javascript:;',
                 'icono' => 'fab fa-discourse',
@@ -782,7 +782,7 @@ class Menu
                         'oculto'=> 'activo',
                     ],
                 ]
-            ],
+            ],*/
             'Eventos' => [
                 'submenu' => 1,
                 'ruta' => 'javascript:;',

@@ -57,11 +57,11 @@ class ActualizarController extends Controller
             $nombre = $rol->name;
         }
 
-        $insignia = '';
-        $insigniaUser = InsigniaUser::where('status', 1)->take(1)->orderBy('id', 'desc')->first();
-        $model_insignia = Insignia::find($insigniaUser->insignia_id);
-        if ($model_insignia != null) {
-            $insignia = asset($model_insignia->insignia);
+        if(!is_null($insigniaUser)){
+            $model_insignia = Insignia::find($insigniaUser->insignia_id);
+                if ($model_insignia != null) {
+                    $insignia = asset($model_insignia->insignia);
+                }
         }
 
         $data = [

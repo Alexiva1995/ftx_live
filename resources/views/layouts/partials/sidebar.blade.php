@@ -59,7 +59,7 @@
     <div class="sidebar-heading border-right" style="border-bottom: solid white 1px; height: 70px;">
         <div class="row">
             <div class="col-4">
-                <img src="{{ asset('images/FTXlive-logo.png') }}" style="width: 150px; height: 50px;">
+                <img src="{{ asset('images/FTXlive-logo.png') }}">
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
         @if(Auth::user())
         <a href="{{route('transmisiones')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-video"></i> Streaming</a>
         <a href="{{ route('schedule.calendar') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-calendar"></i> Mis Eventos</a>
-        <a href="{{ route('courses') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-user-circle"></i> Mis Cursos</a>
+        <!--<a href="{{ route('courses') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-user-circle"></i> Mis Cursos</a>-->
         <a href="{{url('/admin')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-user"></i> Backoffice</a>
         @endif
         <a href="{{route('shopping-cart.membership')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fa fa-shopping-bag"></i> Membresias</a>
@@ -83,30 +83,17 @@
                             </div>-->
             </form>
         </div>
-        <a href="{{ route('courses.show.all') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-graduation-cap"></i> Todos los cursos</a>
-        <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv" style="color: white;"><i class="far fa-list-alt"></i> Contenidos <i class="fas fa-angle-down"></i></a>
-        <div class="collapse" id="categoriesDiv" style="padding-left: 15px;">
+        <!--<a href="{{ route('courses.show.all') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-graduation-cap"></i> Todos los cursos</a>-->
+        <!--<a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv" style="color: white;"><i class="far fa-list-alt"></i> Contenidos <i class="fas fa-angle-down"></i></a>-->
+       <!-- <div class="collapse" id="categoriesDiv" style="padding-left: 15px;">
             @foreach ($categoriasSidebar as $categoria)
             @if (!is_null($categoria->course))
             <a class="list-group-item bg-dark-gray" href="{{ url ('courses/show/'.$categoria->course->slug.'/'.$categoria->course->id)}}" style="color: white;"><i class="{{ $categoria->icon }}"></i> {{ $categoria->title }} </a>
             @else
             <a class="list-group-item bg-dark-gray" href="{{ url ('courses/category/'.$categoria->id)}}" style="color: white;"><i class="{{ $categoria->icon }}"></i> {{ $categoria->title }} </a>
             @endif
-            <!--<div class="collapse" id="subcategories-{{$categoria->id}}" style="padding-left: 15px;">
-                                @foreach ($subcategoriasSidebar as $subcategoria)
-                                    <a class="list-group-item bg-dark-gray" href="{{ route('search-by-category', [$categoria->slug, $categoria->id, $subcategoria->slug, $subcategoria->id]) }}" style="color: white;"><i class="far fa-circle"></i> {{ $subcategoria->title }} </a>
-                                @endforeach
-                            </div>-->
             @endforeach
-            <!--@foreach ($cursos as $curso)
-                            <a class="list-group-item bg-dark-gray" href="{{ url ('courses/show/'.$curso->slug.'/'.$curso->id)}}" style="color: white;"><i class="text-primary fas fa-arrow-circle-right"></i> {{ $curso->title }} </a>
-                            <!--<div class="collapse" id="subcategories-{{$categoria->id}}" style="padding-left: 15px;">
-                                @foreach ($subcategoriasSidebar as $subcategoria)
-                                    <a class="list-group-item bg-dark-gray" href="{{ route('search-by-category', [$categoria->slug, $categoria->id, $subcategoria->slug, $subcategoria->id]) }}" style="color: white;"><i class="far fa-circle"></i> {{ $subcategoria->title }} </a>
-                                @endforeach
-                            </div>-->
-            <!--@endforeach-->
-        </div>
+        </div>-->
 
         @if(Auth::user())
             @if(Auth::user()->rol_id == 0)
