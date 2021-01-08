@@ -8,7 +8,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12" id="videos_section">
-                            @if(!empty($resources_video))
+                             @if(!empty($resources_video))
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <iframe src="{!! $resources_video->url !!}"></iframe>
                                 </div>

@@ -4,7 +4,7 @@
             @foreach($presentations as $presentation)
                 <div class="row" style="padding-bottom: 10px;">
                     <div class="col-10">
-                        <a href="{{route ('download_resource_file', [$event_id, $presentation->id])}}" class="btn btn-primary btn-block" target="_blank">{{$presentation->title}}</a>
+                        <a href="{{route ('download_resource_file', [$event_id, $presentation->id])}}" class="btn btn-danger btn-block" target="_blank">{{$presentation->title}}</a>
                     </div>
                     <div class="col-2">
                         <a class="btn btn-danger" href="javascript:;" onclick="deletePresentation({{$presentation->id}});" id="delete_presentation_submit-{{$presentation->id}}"><i class="fa fa-times"></i></a>
@@ -17,7 +17,7 @@
         @else
             @foreach($presentations as $presentation)
                 <ul class="list-group">
-                    <li><a href="{{route ('download_resource_file', [$event_id, $presentation->id])}}" class="btn btn-primary btn-block" target="_blank">{{$presentation->title}}</a></li>
+                    <li><a href="{{route ('download_resource_file', [$event_id, $presentation->id])}}" class="btn btn-danger btn-block" target="_blank">{{$presentation->title}}</a></li>
                 </ul>
             @endforeach
         @endif

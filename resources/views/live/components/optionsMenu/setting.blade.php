@@ -9,31 +9,31 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mt-2">
-                                <a data-toggle="modal" data-target="#modal-settings-survey" class="btn btn-primary btn-block">
+                                <a data-toggle="modal" data-target="#modal-settings-survey" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
                                     Agregar Encuesta
                                 </a>
                             </div>
                             <div class="mt-2">
-                                <a data-toggle="modal" data-target="#modal-settings-presentation" class="btn btn-primary btn-block">
+                                <a data-toggle="modal" data-target="#modal-settings-presentation" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
                                     Agregar Memoria
                                 </a>
                             </div>
                             <div class="mt-2">
-                                <a data-toggle="modal" data-target="#modal-settings-video" class="btn btn-primary btn-block">
+                                <a data-toggle="modal" data-target="#modal-settings-video" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
                                     Agregar Video
                                 </a>
                             </div>
                             <div class="mt-2">
-                                <a data-toggle="modal" data-target="#modal-settings-file" class="btn btn-primary btn-block">
+                                <a data-toggle="modal" data-target="#modal-settings-file" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
                                     Agregar Archivos
                                 </a>
                             </div>
                             <div class="mt-2">
-                                <a data-toggle="modal" data-target="#modal-settings-offers" class="btn btn-primary btn-block">
+                                <a data-toggle="modal" data-target="#modal-settings-offers" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
                                     Agregar Oferta
                                 </a>

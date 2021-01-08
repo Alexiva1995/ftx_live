@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Anotación</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar Anotaci贸n</h5>
             </div>
             <form id="update_note_form">
                 {{ csrf_field() }}
@@ -25,8 +25,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-success" onclick="updateNote();" id="update_note_submit">Guardar Cambios</a>
-                    <button class="btn btn-success" type="button" disabled id="update_note_loader" style="display: none;">
+                    <a class="btn btn-danger" onclick="updateNote();" id="update_note_submit">Guardar Cambios</a>
+                    <button class="btn btn-danger" type="button" disabled id="update_note_loader" style="display: none;">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Espere...
                     </button>

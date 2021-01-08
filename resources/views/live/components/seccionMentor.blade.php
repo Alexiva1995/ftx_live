@@ -47,7 +47,7 @@
                                     <div class="media-body">
                                         <div class="col-12 box-comments ">
                                             <div class="card card-anotaciones pb-2">
-                                                <div class="card-body p-0">
+                                                <div class="card-body p-1">
                                                     <form class="m-2" id="store_note_form">
                                                         @csrf
                                                         <input id="event_id" name="event_id" type="hidden"
@@ -60,7 +60,7 @@
                                                                 id="content" name="content" 
                                                                 required autofocus rows="3" placeholder="Escribe tu nota" style="background-color: #363840;"></textarea>
                                                         </div>
-                                                        <a class="btn btn-success float-right" onclick="newNote();">Guardar nota</a>
+                                                        <a class="btn btn-danger float-right" onclick="newNote();">Guardar nota</a>
                                                     </form>
                                                 </div>
                                             </div>

@@ -39,8 +39,8 @@
                                                 <input type="hidden" name="selected" value='1' required>
                                             </div>
                                             
-                                            <a class="btn btn-small btn-success float-right" onclick="newResponseSurvey();" id="survey_response_submit">Enviar</a>
-                                            <button class="btn btn-success" type="button" disabled id="survey_response_loader" style="display: none;">
+                                            <a class="btn btn-small btn-danger float-right" onclick="newResponseSurvey();" id="survey_response_submit">Enviar</a>
+                                            <button class="btn btn-danger" type="button" disabled id="survey_response_loader" style="display: none;">
                                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                                 Espere...
                                             </button>

@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <a title="Agregar una respuesta más" class="btn btn-success btn-circle addResponse"><i
+                                <a title="Agregar una respuesta más" class="btn btn-danger btn-circle addResponse"><i
                                         class="fa fa-plus-circle"></i></a>
                             </div>
                         </div>
@@ -37,8 +37,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success sendFormQuestion" id="store_survey_submit">Enviar</button>
-                    <button class="btn btn-success" type="button" disabled id="store_survey_loader" style="display: none;">
+                    <button type="button" class="btn btn-danger sendFormQuestion" id="store_survey_submit">Enviar</button>
+                    <button class="btn btn-danger" type="button" disabled id="store_survey_loader" style="display: none;">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Espere...
                     </button>

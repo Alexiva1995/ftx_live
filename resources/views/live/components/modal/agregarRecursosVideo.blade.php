@@ -25,8 +25,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-success" onclick="newVideo();" id="store_video_submit">Enviar</a>
-                    <button class="btn btn-success" type="button" disabled id="store_video_loader" style="display: none;">
+                    <a class="btn btn-danger" onclick="newVideo();" id="store_video_submit">Enviar</a>
+                    <button class="btn btn-danger" type="button" disabled id="store_video_loader" style="display: none;">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Espere...
                     </button>

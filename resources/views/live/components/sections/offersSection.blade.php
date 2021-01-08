@@ -10,7 +10,7 @@
                 <form action="{{route('shopping-cart.store', $offer->id)}}" method="get">
                     @csrf
                     <input type="hidden" value="oferta" name="type">
-                    <button type="submit" class="btn btn-info">Comprar</button>
+                    <button type="submit" class="btn btn-danger">Comprar</button>
                 </form>
             </div>
         </div>
