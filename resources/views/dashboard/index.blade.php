@@ -5,7 +5,7 @@
   <section class="content">
       
     {{-- seccion de slider --}}
-    @include('dashboard.componenteIndex.slider')
+   <!-- @include('dashboard.componenteIndex.slider')-->
     
     {{-- seccion de los cuadros informativos --}}
     @include('dashboard.componenteIndex.cuadros')

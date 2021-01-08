@@ -26,7 +26,7 @@
                 </div>
                 
                 <div class="form-group has-feedback date col-xs-12 col-md-2" style="margin-top: 25px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-danger" type="submit">
                         buscar
                     </button>
                 </div>

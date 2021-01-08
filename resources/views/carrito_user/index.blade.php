@@ -3,11 +3,11 @@
 @section('content')
 <style>
     .color-green{
-        color: #6ab742;
+        color: #CF202F;
     }
 
-    .btn-color-green{
-        background: #6ab742;
+    .btn-color-green {
+            background: #B70F1E;
     }
 </style>
 

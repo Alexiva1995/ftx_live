@@ -2,10 +2,10 @@
 @section('content')
     @if(isset($total))
         @if(Auth::user()->rol_id==5)
-            <a href="{{url('admin/generarliquidaciones')}}" class="btn btn-primary">Generar Liquidaciones</a>
+            <a href="{{url('admin/generarliquidaciones')}}" class="btn btn-danger">Generar Liquidaciones</a>
 
             @if($total>0)
-                <a href="{{url('admin/liquidar_todo')}}" class="btn btn-success">Aprobar todas las liquidaciones</a>
+                <a href="{{url('admin/liquidar_todo')}}" class="btn btn-danger">Aprobar todas las liquidaciones</a>
     		@endif
         @endif
 

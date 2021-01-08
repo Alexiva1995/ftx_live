@@ -13,7 +13,7 @@
                 <form action="{{route('admin.soporte.search.questions_two')}}" method="GET">
                 <div class="form-group col-md-12">
                         <div class="input-group">
-                      <div class="input-group-addon academy-question-search" style="background:#2A91FF!important; border:none; border-top-left-radius: 20px; border-bottom-left-radius: 20px; padding: 0px!important;">
+                      <div class="input-group-addon academy-question-search" style="background:#CF202F!important; border:none; border-top-left-radius: 20px; border-bottom-left-radius: 20px; padding: 0px!important;">
                         <button class="btn btn-none border-0" type="submit" style="background:none!important;"><i class="fa fa-search white" aria-hidden="true"></i></button>
                       </div>
                       <input name="frecuent-question" id="frecuent-question" type="text" placeholder="Busca tu pregunta" class="form-control academy-question-search" value="">
@@ -24,14 +24,14 @@
                 <br><br>
                 <a><h3 class="white">Categorías</h3></a>
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link" id="v-pills-questions-tab" data-toggle="pill" href="#v-pills-questions" role="tab" aria-controls="v-pills-questions" aria-selected="true"><i class="far fa-comments text-primary"></i> Preguntas frecuentes</a>
-                <a class="nav-link" id="v-pills-academy-tab" data-toggle="pill" href="#v-pills-academy" role="tab" aria-controls="v-pills-academy" aria-selected="false"><i class="fas fa-graduation-cap text-primary"></i> Academia</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-user-plus text-primary"></i> Afiliados</a>
+                <a class="nav-link" id="v-pills-questions-tab" data-toggle="pill" href="#v-pills-questions" role="tab" aria-controls="v-pills-questions" aria-selected="true"><i class="far fa-comments text-danger"></i> Preguntas frecuentes</a>
+                <a class="nav-link" id="v-pills-academy-tab" data-toggle="pill" href="#v-pills-academy" role="tab" aria-controls="v-pills-academy" aria-selected="false"><i class="fas fa-graduation-cap text-danger"></i> Academia</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-user-plus text-danger"></i> Afiliados</a>
                 @if(Auth::user()->rol_id != 0)
-                <a href="{{route('soporte.tickets.clients')}}" class="nav-link"><i class="fas fa-ticket-alt text-primary"></i> Mis Tickets</a>
+                <a href="{{route('soporte.tickets.clients')}}" class="nav-link"><i class="fas fa-ticket-alt text-danger"></i> Mis Tickets</a>
                 @endif
                 @if(Auth::user()->rol_id == 0)
-                <a href="{{route('soporte.tickets.team')}}" class="nav-link"><i class="fas fa-tools text-primary"></i> Tickets/Soporte</a>
+                <a href="{{route('soporte.tickets.team')}}" class="nav-link"><i class="fas fa-tools text-danger"></i> Tickets/Soporte</a>
                 @endif
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 <!--ACCORDION END-->
                 <br><br><br><br>
                 <h4 style="color:#838181;">¿No encuentras la respuesta que buscas? Abre un ticket</h4>
-                <a href="{{route('soporte.tickets')}}" class="btn btn-success">Abrir Ticket</a>
+                <a href="{{route('soporte.tickets')}}" class="btn btn-danger">Abrir Ticket</a>
             </div>
             <!--ACADEMIA END-->
              <!--AFILIADOS-->

@@ -64,7 +64,7 @@
                                         @if ($promocion->status == 1)
                                             <a class="btn btn-danger" href="{{ route('admin.promotions.change-status', [$promocion->id, 0]) }}" title="Deshabilitar"><i class="fa fa-ban"></i></a>
                                         @else
-                                            <a class="btn btn-success" href="{{ route('admin.promotions.change-status', [$promocion->id, 1]) }}" title="Habilitar"><i class="fa fa-check"></i></a>
+                                            <a class="btn btn-danger" href="{{ route('admin.promotions.change-status', [$promocion->id, 1]) }}" title="Habilitar"><i class="fa fa-check"></i></a>
                                         @endif
 									</td>
                                 </tr>

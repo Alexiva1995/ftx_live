@@ -53,7 +53,7 @@
                                 <td class="text-center">@if (!is_null($banner->url)) {{ $banner->url }} @else - @endif</td>
 								<td class="text-center">
                                     <a class="btn btn-info" data-source="{{ asset('uploads/images/banners/'.$banner->image) }}" id="image-{{$banner->id}}" onclick="showImg(this.id);"><i class="fa fa-image"></i></a>
-									<a class="btn btn-success" href="{{ route('admin.banners.change-status', [$banner->id, 1]) }}" title="Habilitar"><i class="fa fa-check"></i></a>
+									<a class="btn btn-danger" href="{{ route('admin.banners.change-status', [$banner->id, 1]) }}" title="Habilitar"><i class="fa fa-check"></i></a>
 								</td>
 							</tr>
 						@endforeach

@@ -145,7 +145,7 @@ class EventsController extends Controller
         $calendario->contenido = $evento->description;
         $calendario->inicio = $evento->date;
         $calendario->time = $evento->time;
-        $calendario->color = '#28a745';
+        $calendario->color = '#B70F1E';
         $calendario->lugar = 'Ninguno';
         $calendario->iduser = $evento->user_id;
         $calendario->event_id = $evento->id;
@@ -788,7 +788,7 @@ class EventsController extends Controller
                 $calendario->contenido = $new_calendar->description;
                 $calendario->inicio = $new_calendar->date;
                 $calendario->time = $new_calendar->time;
-                $calendario->color = '#28a745';
+                $calendario->color = ' #B70F1E';
                 $calendario->lugar = 'Ninguno';
                 $calendario->iduser = Auth::user()->ID;
                 $calendario->save();

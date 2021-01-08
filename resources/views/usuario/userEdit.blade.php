@@ -1,5 +1,12 @@
 @extends('layouts.dashboardnew')
 
+<style>
+    
+.nav>li>a {
+  color:#CF202F;
+  font-weight: bold;
+}
+</style>
 @section('content')
 
 @include('usuario.formEdit.resumen')
@@ -11,7 +18,7 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item active">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true" aria-expanded="true">informacion Personal</a>
+                        aria-controls="home" aria-selected="true" aria-expanded="true">Informacion Personal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"

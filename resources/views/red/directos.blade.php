@@ -37,7 +37,7 @@
 </div>
 
 <div class="col-xs-12">
-	<div class="box box-info" style="background-color: #007bff; border-radius: 10px;">
+	<div class="box box-info" style="background-color: #CF202F; border-radius: 10px;">
 		<div class="box-body">
 
 			<h4 class="box-title white">
@@ -154,7 +154,7 @@
 </div>
 
 <div class="col-xs-12">
-	<div class="box box-info" style="background-color: #5743a7; border-radius: 10px;">
+	<div class="box box-info" style="background-color: #CF202F; border-radius: 10px;">
 		<div class="box-body">
 
 			<h4 class="box-title white">
@@ -176,7 +176,7 @@
                     <input class="form-control" type="date" name="fecha4" required>
                 </div>
                 <div class="col-xs-12 col-md-2" style="margin-top: 23px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit" style="background-color:#dc3545!important;border-color:#dc3545!important;">
                         buscar
                     </button>
                 </div>

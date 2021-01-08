@@ -147,7 +147,7 @@
               @endif
 
             </p>
-            <a class="btn btn-success btn-block" href="{{ route('timeliveEvent', $agendado->id) }}">
+            <a class="btn btn-danger btn-block" href="{{ route('timeliveEvent', $agendado->id) }}">
               <h4>Ir al Evento</h4>
             </a>
           </div>

@@ -2,7 +2,7 @@
     <div class="box" style="border-radius: 10px;">
         <div class="box-body">
 
-<h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; background-color: #005aff; color: white;">Mis notas de los eventos
+<h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; color: white;">Mis notas de los eventos
 </h3>
 @if(!$notes->isEmpty())
 <table  id="mytable" class="table" style="width: 100%!important;">

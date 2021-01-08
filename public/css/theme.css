@@ -2063,7 +2063,7 @@ p.card-text.font-weight-bold.mr-2 {
 }
 
 .card-header-azul-price {
-    background-color: #B70F1E;
+    background-color:#2a91ff;
     border-radius: 1rem;
     letter-spacing: .1rem;
     font-weight: bold;
@@ -2109,9 +2109,12 @@ p.card-text.font-weight-bold.mr-2 {
 }
 
 .text-azul-claro {
-    color: #B70F1E;
+    color: #2a91ff;
 }
 
+.text-rojo {
+    color: #B70F1E;
+}
 .text-verde-claro {
     color: #56c08f;
 }

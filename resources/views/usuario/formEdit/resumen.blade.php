@@ -11,7 +11,7 @@
                   @endif
 
                   @if(Auth::user()->ID == $data['principal']->ID || Auth::user()->rol_id == 0)    
-                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal"><b>Editar
+                    <a href="#" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal" style="background-color: #CF202F!important; border-color: #CF202F!important;"><b>Editar
                             imagen</b></a>
                             @endif
                 </div>

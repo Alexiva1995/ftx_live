@@ -92,7 +92,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             <div>
-                <a href="{{route ('schedule.calendar')}}" class="btn btn-success"> VER AGENDA</a>
+                <a href="{{route ('schedule.calendar')}}" class="btn btn-danger"> VER AGENDA</a>
             </div>
         </div>
     @endif
@@ -145,7 +145,7 @@
                 <div class="row">
                     <div class="col-md-6" style="margin-bottom: 10px;">
                         <div id="close">
-                             <a href="{{route('show.event', $evento->id)}}" class="btn btn-success btn-block">VER DETALLES DEL EVENTO</a>
+                             <a href="{{route('show.event', $evento->id)}}" class="btn btn-danger btn-block">VER DETALLES DEL EVENTO</a>
                         </div> 
                         <div id="open" style="display: none;">
                             @if (Auth::user()->rol_id == 2)
@@ -155,10 +155,10 @@
                                         <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                         <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">
                                         
-                                        <button type="submit" class="btn btn-success btn-block">ENTRAR AL LIVE</button>  
+                                        <button type="submit" class="btn btn-danger btn-block">ENTRAR AL LIVE</button>  
                                     </form>
                                 @else
-                                    <a href="{{route('show.event', $evento->id)}}" class="btn btn-success btn-block">VER DETALLES DEL EVENTO</a>
+                                    <a href="{{route('show.event', $evento->id)}}" class="btn btn-danger btn-block">VER DETALLES DEL EVENTO</a>
                                 @endif
                             @else
                                 @if ($statusLive == 'live')
@@ -167,10 +167,10 @@
                                         <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                         <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">
                                         
-                                        <button type="submit" class="btn btn-success btn-block">ENTRAR AL LIVE</button>  
+                                        <button type="submit" class="btn btn-danger btn-block">ENTRAR AL LIVE</button>  
                                     </form>
                                 @else
-                                    <a href="{{route('show.event', $evento->id)}}" class="btn btn-success btn-block">VER DETALLES DEL EVENTO</a>
+                                    <a href="{{route('show.event', $evento->id)}}" class="btn btn-danger btn-block">VER DETALLES DEL EVENTO</a>
                                 @endif
                             @endif
                         </div> 
@@ -190,7 +190,7 @@
                 <h5 style="color:#CF202F; margin-top: -20px; padding-left: 10px;">{{$evento->mentor->display_name}}</h5>
                 <p style="color: white; padding-left: 10px;">{{$evento->mentor->profession}}</p>
                 <p style="color:#FFFFFF; font-size: 18px; margin-top: 0px;padding-left: 10px"> {{$evento->mentor->about}}</p>
-                <a href="{{ url('courses/mentor/'.$evento->mentor->ID) }}" target="_blank" class="btn btn-success btn-block">NIVEL: {{$evento->subcategory->title}}</a>
+                <a href="{{ url('courses/mentor/'.$evento->mentor->ID) }}" target="_blank" class="btn btn-danger btn-block">NIVEL: {{$evento->subcategory->title}}</a>
             </div>
         </div>
     </div>

@@ -2,9 +2,9 @@
     <div class="box box-info" style="border-radius: 10px;">
         <div class="box-body">
 
-<h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; background-color: #6f42c1; color: white;">Informacion Personal
+<h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; color: white;">Informacion Personal
  @if(Auth::user()->ID == $data['principal']->ID || Auth::user()->rol_id == 0)
-    <button type="button" class="btn btn-success" onclick="activarPersonal()" style="float: right !important;"><i class="fas fa-edit"></i> Editar</button>
+    <button type="button" class="btn btn-danger" onclick="activarPersonal()" style="float: right !important; background-color: #CF202F!important; border-color: #CF202F!important;"><i class="fas fa-edit"></i> Editar</button>
         @endif
 </h3>
 

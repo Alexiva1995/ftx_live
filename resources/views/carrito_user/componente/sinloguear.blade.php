@@ -79,7 +79,7 @@
                 
     <div class="row" style="margin-top: 10px; ">
         <div class="col-md-12">
-            <button type="submit" class="btn btn-success btn-block" style="padding: 5px;">Acceder</button>
+            <button type="submit" class="btn btn-danger btn-block" style="padding: 5px;">Acceder</button>
         </div>
     </div>
      <br>
@@ -141,7 +141,7 @@
                             
                             <div class="row" style="margin-top:20px;">
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-success btn-block" style="padding: 5px;">Registrarme</button>
+                                    <button type="submit" class="btn btn-danger btn-block" style="padding: 5px;">Registrarme</button>
                                 </div>
                             </div>
                             <br>

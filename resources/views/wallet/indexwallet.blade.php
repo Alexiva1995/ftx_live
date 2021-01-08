@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="col-xs-12">
-  <div class="box box-info" style="background-color: #007bff; border-radius: 10px;">
+  <div class="box box-info" style="background-color: #CF202F; border-radius: 10px;">
     <div class="box-body">
 
       <h4 class="box-title white">
@@ -26,7 +26,7 @@
                 
                 
                 <div class="form-group col-xs-12 col-md-2" style="margin-top:20px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit" style="background-color:#dc3545!important;border-color:#dc3545!important;">
                         buscar
                     </button>
                 </div>
@@ -47,7 +47,7 @@
                     <input class="form-control" type="date" name="fecha2" required>
                 </div>
                 <div class="form-group col-xs-12 col-md-4" style="margin-top: 20px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit" style="background-color:#dc3545!important;border-color:#dc3545!important;">
                         buscar
                     </button>
                 </div>
@@ -167,7 +167,7 @@
                 </tbody>
             </table>
 
-            <div class="col-md-2" style="background-color: #28a745; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
+            <div class="col-md-2" style="background-color: #CF202F; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
              Total: 
              @if ($moneda->mostrar_a_d)
                 {{$moneda->simbolo}} {{$total}}
@@ -211,7 +211,7 @@
                     <input class="form-control" type="date" name="fecha4" required>
                 </div>
                 <div class="col-xs-12 col-md-2" style="margin-top: 23px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit" style="background-color:#dc3545!important;border-color:#dc3545!important;">
                         buscar
                     </button>
                 </div>
@@ -252,7 +252,7 @@
                 </tbody>
             </table>
 
-            <div class="col-md-2" style="background-color: #28a745; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
+            <div class="col-md-2" style="background-color: #CF202F; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
              Total: 
              @if ($moneda->mostrar_a_d)
               {{$moneda->simbolo}} {{$totalcompleto}}
@@ -277,7 +277,7 @@
 
 
 <div class="col-xs-12">
-    <div class="box box-info" style="background-color: #28a745; border-radius: 10px;">
+    <div class="box box-info" style="background-color: #CF202F; border-radius: 10px;">
         <div class="box-body">
 
             <h4 class="box-title white">
@@ -299,7 +299,7 @@
                     <input class="form-control" type="date" name="fecha4" required>
                 </div>
                 <div class="col-xs-12 col-md-2" style="margin-top: 23px;">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit" style="background-color:#dc3545!important;border-color:#dc3545!important;">
                         buscar
                     </button>
                 </div>
@@ -346,7 +346,7 @@
                 </tbody>
             </table>
 
-            <div class="col-md-2" style="background-color: #28a745; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
+            <div class="col-md-2" style="background-color: #CF202F; color: white; padding: 5px 10px;border-radius: 20px; text-align: center">
              Total: 
              @if ($moneda->mostrar_a_d)
               {{$moneda->simbolo}} {{$totalrecarga}}

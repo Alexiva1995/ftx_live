@@ -15,7 +15,7 @@
 
 @section('content')
 <div class="col-md-12">
-        <div class="col-md-12 ticket-box"><h4 class="white">Tickets/Resueltos</h4></div>
+        <div class="col-md-12"><h2 class="white">Tickets/Resueltos</h2></div>
         <div class="box" style="margin-top: 100px; border-radius:10px!important; background:#2f343a!important;">
             <div class="box-body">
                 @if(!$tickets->isEmpty())

@@ -10,12 +10,12 @@
 <h2 class="white font-weight-bold">Preguntas más frecuentes</h2><hr>
 <div style="float:right;">
      @if(Auth::user()->rol_id == 0)
-    <a href="{{route('soporte.tickets.team')}}" class="btn btn-info"><i class="fas fa-ticket-alt"></i> Tickets/Soporte</a>
-    <a href="{{route('soporte')}}" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i> Inicio</a>
+    <a href="{{route('soporte.tickets.team')}}" class="btn btn-danger"><i class="fas fa-ticket-alt"></i> Tickets/Soporte</a>
+    <a href="{{route('soporte')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Inicio</a>
     @endif
     @if(Auth::user()->rol_id != 0)
-    <a href="{{route('soporte.tickets')}}" class="btn btn-info"><i class="fa fa-plus-circle"></i> Crear ticket</a>
-    <a href="{{route('soporte')}}" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i> Inicio</a>
+    <a href="{{route('soporte.tickets')}}" class="btn btn-danger"><i class="fa fa-plus-circle"></i> Crear ticket</a>
+    <a href="{{route('soporte')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Inicio</a>
     @endif
 </div><br><br><br>
 @if(!$tickets->isEmpty())

@@ -311,7 +311,7 @@ td, th {
     padding: 10px;
 }
 .academy-question-search{
-    background:#2A91FF;
+    background:#CF202F;
     color:white;
     border:none!important;
 }
@@ -426,7 +426,7 @@ border: 2px solid #5878ca;
     height: var(--size);
     top: 0;
     transform: rotate(-10deg);
-    background:#2A91FF;
+    background:#CF202F;
     border-radius: 50%;
     text-align: center;
     box-shadow: 1px 1px 0 #999;
@@ -459,4 +459,14 @@ border: 2px solid #5878ca;
   
   height: 100px;
   
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color:#fff!important;
+  background-color: #CF202F!important;
+  border: 1px solid #CF202F!important;
+}
+.swal2-styled.swal2-confirm {
+
+  background-color: #CF202F!important;
 }

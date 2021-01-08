@@ -87,7 +87,7 @@
 								<td class="text-center white">{!!$article->description!!}</td>
 								<td class="text-center">
 									<a class="btn btn-info editar" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="editarArticle(this.id);"><i class="fa fa-edit"></i></a>
-                                    <a class="btn btn-success" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="showArticle(this.id);"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-danger" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="showArticle(this.id);"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-danger" href="{{ route('admin.soporte.delete.article', $article->id) }}"><i class="fa fa-trash"></i></a>
 								</td>
                             </tr>

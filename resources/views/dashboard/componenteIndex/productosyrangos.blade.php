@@ -15,7 +15,7 @@
   <div class="col-md-12">
     <div class="info-box border-radius" style="border-radius: 20px;">
       <div class="box-body" style="padding: 15px 20px;">
-        <h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; background-color: #007bff; color: white;">Últimos Pedidos</h3>
+        <h3 class="box-title white" style="margin-top: -5px; margin-bottom: 20px; padding: 15px 20px;border-radius: 20px; color: white;">Últimos Pedidos</h3>
           
           <div class="table-responsive">
           <table class="table" style="border-spacing: 0px 10px; border-collapse: separate;">

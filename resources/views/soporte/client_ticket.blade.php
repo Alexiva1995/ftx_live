@@ -66,10 +66,10 @@
         </div>
     @endif
     <br><br><br>
-        <div class="col-md-12 ticket-box"><h4 class="white">Mis tickets</h4></div><br><br><br>
+        <div class="col-md-12"><h2 class="white">Mis tickets</h2></div><br><br><br>
         <div style="float:right;">
-                <a href="{{route('soporte.tickets')}}" class="btn btn-info"><i class="fa fa-plus-circle"></i> Crear ticket</a>
-                <a href="{{route('soporte.academy')}}" class="btn btn-success"><i class="fas fa-arrow-circle-left"></i> Volver al menú</a>
+                <a href="{{route('soporte.tickets')}}" class="btn btn-danger"><i class="fa fa-plus-circle"></i> Crear ticket</a>
+                <a href="{{route('soporte.academy')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú</a>
         </div>
 
         <div class="box" style="margin-top: 100px; border-radius:10px!important; background:#2f343a!important;">
@@ -102,7 +102,7 @@
                                     <td class="text-center white">{{$ticket->status}}</td>
                                     <td class="text-center white">
                                         <a href="javascript:void(0)" data-route="{{ route('admin.soporte.ticket.edit', $ticket->id) }}" id="{{$ticket->id}}" onclick="editarTicket(this.id);" class="btn btn-info"><i class="fa fa-edit"></i></a>
-                                        <a href="javascript:void(0)" class="btn btn-success" data-route="{{ route('admin.soporte.ticket.edit', $ticket->id) }}" id="{{$ticket->id}}" onclick="showTicket(this.id);"><i class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0)" class="btn btn-danger" data-route="{{ route('admin.soporte.ticket.edit', $ticket->id) }}" id="{{$ticket->id}}" onclick="showTicket(this.id);"><i class="fa fa-eye"></i></a>
                                         <a href="{{ route('admin.soporte.delete.ticket', $ticket->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                     </td>
                             </tr>

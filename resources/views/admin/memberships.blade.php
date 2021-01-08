@@ -69,7 +69,7 @@
                                     <td class="text-center">{{ number_format($membresia->discount_annual, 0, ',', '.') }}</td>
                                     <td class="text-center">
 										<a class="btn btn-info" onclick="editar({{$membresia}});"><i class="fa fa-edit"></i></a>
-										<a class="btn btn-success" onclick="editarMensaje({{$membresia->upgrade_message}});" title="Editar Mensaje de Upgrade"><i class="fa fa-file"></i></a>
+										<a class="btn btn-danger" onclick="editarMensaje({{$membresia->upgrade_message}});" title="Editar Mensaje de Upgrade"><i class="fa fa-file"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
