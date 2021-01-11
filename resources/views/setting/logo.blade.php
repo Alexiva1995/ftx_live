@@ -20,7 +20,7 @@
       </div>
       
       <div class="col-sm-12 col-xs-12">
-      <a href="{{route('setting-traductor')}}" class="btn btn-info btn-block">@if($settings->traductor == '1') Desactivar @else Activar @endif</a>
+      <a href="{{route('setting-traductor')}}" class="btn btn-danger btn-block">@if($settings->traductor == '1') Desactivar @else Activar @endif</a>
       </div>
       
     </div>
@@ -121,7 +121,7 @@
      
       
     <div class="box-footer">
-      <button class="btn green btn-block mostrar toggle">Editar</button>
+      <button class="btn btn-danger btn-block mostrar toggle">Editar</button>
     </div>
   </div>
 </div>
@@ -150,7 +150,7 @@
                 <input type="text" class="form-control" name="edad_minima" value="{{$settings->edad_minino}}" required>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary"> Guardar <span
+                <button type="submit" class="btn btn-danger"> Guardar <span
                     class="glyphicon glyphicon-floppy-disk"></span>
                 </button>
               </div>
@@ -180,7 +180,7 @@
                 <input type="file" class="form-control" name="logo" value="" accept="image/x-png" required>
               </div>
               <div class="form-group sisi">
-                <button type="submit" class="btn btn-primary"> Guardar <span
+                <button type="submit" class="btn btn-danger"> Guardar <span
                     class="glyphicon glyphicon-floppy-disk"></span>
                 </button>
               </div>
@@ -210,7 +210,7 @@
                     <input type="file" class="form-control" name="favicon" accept="image/x-icon" value="" required>
                   </div required>
                   <div class="form-group sisi">
-                    <button type="submit" class="btn btn-primary"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
+                    <button type="submit" class="btn btn-danger"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
                     </button>
                   </div>
                 </form>
@@ -240,7 +240,7 @@
                     <input type="file" class="form-control" name="banner" accept="image/x-png" value="" required>
                   </div required>
                   <div class="form-group sisi">
-                    <button type="submit" class="btn btn-primary"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
+                    <button type="submit" class="btn btn-danger"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
                     </button>
                   </div>
                 </form>
@@ -272,7 +272,7 @@
                     <input type="file" class="form-control" name="formulario" accept="image/x-png" value="" required>
                   </div required>
                   <div class="form-group sisi">
-                    <button type="submit" class="btn btn-primary"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
+                    <button type="submit" class="btn btn-danger"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
                     </button>
                   </div>
                 </form>
@@ -303,7 +303,7 @@
                     <input type="file" class="form-control" name="inicio" accept="image/x-png" value="" required>
                   </div required>
                   <div class="form-group sisi">
-                    <button type="submit" class="btn btn-primary"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
+                    <button type="submit" class="btn btn-danger"> Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
                     </button>
                   </div>
                 </form>

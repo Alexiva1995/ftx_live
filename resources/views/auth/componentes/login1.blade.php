@@ -1,6 +1,6 @@
 <div class="login-box">
     <div class="login-logo">
-        <img src="{{ asset('assets/img/logo-light.png') }}" alt="" style="height: 170px;">
+        <img src="{{ asset('iamges/FTXlive-logo.png') }}" alt="">
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

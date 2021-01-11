@@ -65,7 +65,7 @@
 		<div class="box">
 			<div class="box-body">
 				<div style="text-align: right;">
-					<a data-toggle="modal" data-target="#modal-article-new" class="btn btn-info descargar"><i class="fa fa-plus-circle"></i> Nuevo Artículo</a>
+					<a data-toggle="modal" data-target="#modal-article-new" class="btn btn-danger descargar"><i class="fa fa-plus-circle"></i> Nuevo Artículo</a>
 				</div>
 
 				<br class="col-xs-12">
@@ -86,7 +86,7 @@
 								<td class="text-center white">{{$article->title}}</td>
 								<td class="text-center white">{!!$article->description!!}</td>
 								<td class="text-center">
-									<a class="btn btn-info editar" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="editarArticle(this.id);"><i class="fa fa-edit"></i></a>
+									<a class="btn btn-danger editar" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="editarArticle(this.id);"><i class="fa fa-edit"></i></a>
                                     <a class="btn btn-danger" data-route="{{ route('admin.soporte.article.edit', $article->id) }}" id="{{$article->id}}" onclick="showArticle(this.id);"><i class="fa fa-eye"></i></a>
                                     <a class="btn btn-danger" href="{{ route('admin.soporte.delete.article', $article->id) }}"><i class="fa fa-trash"></i></a>
 								</td>

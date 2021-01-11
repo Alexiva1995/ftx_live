@@ -428,7 +428,6 @@ class ShoppingCartController extends Controller
                 }
             }
         }
-        
         $membresias = DB::table('memberships')->orderBy('id', 'ASC')->get();
 
         return view('admin.purchasesRecord')->with(compact('compras', 'membresias'));

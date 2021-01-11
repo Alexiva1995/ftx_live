@@ -32,12 +32,12 @@
 <video src="{{asset('/fondovideo/video.mp4')}}" type="video/mp4" autoplay="" muted loop="" id="video_background"></video>
 
  <center>
-    <img src="{{asset('/images/logo-login.png')}}" style="width: 100px; height: 100px; margin-top: 80px; margin-bottom: 40px;">
+    <img src="{{asset('/images/FTXlive-logo.png')}}" class="ïmg-fluid" style="margin-top: 80px; margin-bottom: 40px;">
 </center>
             
  <div class="d-flex justify-content-center">  
     
-<div class="col-md-5" style="background-color: #2a91ff; border-radius: 15px;">
+<div class="col-md-5" style="background-color:  #B70F1E; border-radius: 15px;">
     <div class="d-flex justify-content-center">
                         
       <div class="col-md-11" style="margin-top: 50px;">
@@ -143,7 +143,7 @@
                             
                             <div class="row" style="margin-top:20px;">
                                 <div class="col-md-12">
-                                    <button type="submit" class="btn btn-success btn-block" style="border-radius: 20px; padding: 10px;">Registrarme</button>
+                                    <button type="submit" class="btn btn-dark btn-block" style="border-radius: 20px; padding: 10px;">Registrarme</button>
                                 </div>
                             </div>
                             <br>
@@ -158,7 +158,7 @@
 </div>
 
 <div class="col-md-12" style="text-align: center; margin-top: 30px; color: white;">
-<img src="{{asset('/images/logo.png')}}" style="width: 35px; height: 35px;"> 2020 My Business Academy Pro All Rigth Reserved
+<img src="{{asset('/images/logo.png')}}"> 2020 My Business Academy Pro All Rigth Reserved
 
 </div>
 

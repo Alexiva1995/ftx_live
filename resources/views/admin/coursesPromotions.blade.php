@@ -37,7 +37,7 @@
             <div class="box box-info">
                 <div class="box-body">
 					<div style="text-align: right;">
-						<a data-toggle="modal" data-target="#modal-create" class="btn btn-info descargar"><i class="fa fa-plus-circle"></i> Nueva Promoción</a>
+						<a data-toggle="modal" data-target="#modal-create" class="btn btn-danger descargar"><i class="fa fa-plus-circle"></i> Nueva Promoción</a>
 					</div>
 
 					<br class="col-xs-12">
@@ -60,7 +60,7 @@
                                     <td class="text-center">{!! $promocion->description !!}</td>
                                     <td class="text-center"><img src="{{ asset('uploads/images/coursesPromotions/'.$promocion->banner) }}" style="width: 400px; height: 200px;"></td>
                                     <td class="text-center">
-                                        <a class="btn btn-info" onclick="editar({{$promocion}});"><i class="fa fa-edit"></i></a>
+                                        <a class="btn btn-danger" onclick="editar({{$promocion}});"><i class="fa fa-edit"></i></a>
                                         @if ($promocion->status == 1)
                                             <a class="btn btn-danger" href="{{ route('admin.promotions.change-status', [$promocion->id, 0]) }}" title="Deshabilitar"><i class="fa fa-ban"></i></a>
                                         @else
@@ -78,9 +78,9 @@
 
     <div class="modal fade" id="modal-create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
+    		<div class="modal-content" style="background-color: black;">
       			<div class="modal-header">
-        			<h5 class="modal-title">Crear Promoción</h5>
+        			<h5 class="modal-title white">Crear Promoción</h5>
       			</div>
       			<form action="{{ route('admin.promotions.store') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -89,19 +89,19 @@
 	    					<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Título</label>
+										<label class="white">Título</label>
 										<input type="text" class="form-control" name="title" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
-						                <label>Descripción</label>
+						                <label class="white">Descripción</label>
 						            	<textarea class="ckeditor form-control" name="description"></textarea>
 						            </div>
 						        </div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Banner</label>
+										<label class="white">Banner</label>
 										<input type="file" class="form-control" name="banner" required>
 									</div>
 								</div>
@@ -109,8 +109,8 @@
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -119,9 +119,9 @@
 
     <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
+    		<div class="modal-content" style="background-color: black;">
       			<div class="modal-header">
-        			<h5 class="modal-title">Modificar Promoción</h5>
+        			<h5 class="modal-title white">Modificar Promoción</h5>
       			</div>
       			<form action="{{ route('admin.promotions.update') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -131,19 +131,19 @@
 	    					<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Título</label>
+										<label class="white">Título</label>
 										<input type="text" class="form-control" name="title" id="title" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
-						                <label>Descripción</label>
+						                <label class="white">Descripción</label>
 						            	<textarea class="ckeditor form-control" name="description" id="description"></textarea>
 						            </div>
 						        </div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Banner</label>
+										<label class="white">Banner</label>
 										<input type="file" class="form-control" name="banner">
 									</div>
 								</div>
@@ -151,8 +151,8 @@
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>

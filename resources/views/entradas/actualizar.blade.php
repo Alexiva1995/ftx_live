@@ -13,39 +13,39 @@
           <input type="hidden" name="id" value="{{$entradas->id}}">
 
           <div class="col-md-12">
-             <label>Titulo</label>
+             <label class="white">Titulo</label>
               <input class="form-control" type="text" name="titulo" value="{{$entradas->titulo}}" required>
           </div>
 
           <div class="col-md-12">
-             <label>Autor</label>
+             <label class="white">Autor</label>
               <input class="form-control" type="text" name="autor" value="{{$entradas->autor}}" required>
           </div>
 
           <div class="col-md-12">
-             <label>Resumen</label>
+             <label class="white">Resumen</label>
               <textarea class="form-control" type="textarea" name="contenido">
               {{(!empty($entradas->descripcion)) ? $entradas->descripcion : ''}}</textarea>
           </div>
 
           <div class="col-md-12">
-            <label>Artículo completo</label>
+            <label class="white">Artículo completo</label>
              <textarea class="form-control" type="textarea" name="articulo">
              {{(!empty($entradas->descripcion_completa)) ? $entradas->descripcion_completa : ''}}</textarea>
          </div>
 
 
           <div class="col-sm-12">
-            <label class="control-label " style="text-align: center; margin-top:4px;">Imagen destacada</label>
+            <label class="white" style="text-align: center; margin-top:4px;">Imagen destacada</label>
             <input type="file" name="destacada" accept="image/*">
           </div>
           <div class="col-sm-12">
-                <label class="control-label " style="text-align: center; margin-top:4px;">Banner</label>
+                <label class="white" style="text-align: center; margin-top:4px;">Banner</label>
                 <input type="file" name="banner" accept="image/*">
           </div>
 
 
-             <button type="submit" class="btn btn-primary btn-block">Aceptar</button>
+             <button type="submit" class="btn btn-danger btn-block">Aceptar</button>
         </form>
 
    </div>

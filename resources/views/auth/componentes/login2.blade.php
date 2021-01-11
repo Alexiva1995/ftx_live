@@ -2,7 +2,7 @@
     <div class="col-md-12" style="background-color:white;">
         
         <div class="login-logo">
-        <img src="{{ asset('assets/img/logo-light.png') }}" alt="" style="height: 120px;">
+        <img src="{{ asset('images/FTXlive-logo.png') }}" alt="">
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

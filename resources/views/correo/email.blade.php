@@ -19,7 +19,7 @@
 <div class="col-xs-12">
   <div class="box box-info">
     <div class="box-header">
-      <div class="box-title">
+      <div class="white box-title">
         Enviar Correo
       </div>
     </div>
@@ -33,13 +33,13 @@
         
        
         <div class="col-sm-12">
-          <label class="control-label " style="text-align: center; margin-top:4px;">Asunto</label>
+          <label class="white" style="text-align: center; margin-top:4px;">Asunto</label>
           <input class="form-control" type="text" name="asunto"
             required />
         </div>
         
         <div class="col-sm-12">
-          <label class="control-label " style="text-align: center; margin-top:4px;">Contenido</label>
+          <label class="white" style="text-align: center; margin-top:4px;">Contenido</label>
           <textarea type="textarea" cols="30" rows="10"
             name="contenido" required>
               </textarea>
@@ -47,7 +47,7 @@
         
         <div class="col-sm-12">
            <div class="form-group">
-                <label for="">Variables que pueden usar</label>
+                <label for="" class="white">Variables que pueden usar</label>
                 <span class="var">@usuario</span>
                 <span class="var">@idpatrocinio</span>
                 <span class="var">@correo</span>
@@ -56,7 +56,7 @@
         @if($modal == 0)
         
         <div class="col-md-12">
-             <label class="control-label " style="text-align: center; margin-top:4px;">Destinatarios</label>
+             <label class="white" style="text-align: center; margin-top:4px;">Destinatarios</label>
         <select class="form-control" name="detalles" id="opcion" onchange="seleccionado()">
         <option value="1">Todos los afiliados</option>
         <option value="2">Todos los afiliados activos</option>
@@ -82,7 +82,7 @@
         <input name="id" type="hidden" value="{{$modal}}">
         
          <div class="col-md-12">
-             <label class="control-label " style="text-align: center; margin-top:4px;">Destinatarios</label>
+             <label class="white" style="text-align: center; margin-top:4px;">Destinatarios</label>
         <select class="form-control" name="detalles" disabled>
         <option value="5">Afiliado especifico</option>
         </select>
@@ -98,7 +98,7 @@
        
         <div class="col-sm-12">
           <div class="col-sm-6 col-md-offset-3" style="padding-left: 10px;">
-              <button class="btn btn-success btn-block" type="submit" id="btn"
+              <button class="btn btn-danger btn-block" type="submit" id="btn"
                 style="margin-bottom: 5px; margin-top: 8px;">Aceptar</button>
             </div>
         </div>

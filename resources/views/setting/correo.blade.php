@@ -14,7 +14,7 @@
                     <div class="box-header">
                         
                         <div class="col-md-3">
-                          <button class="btn btn-info btn-block mostrar hh toggle">Editar Plantillas</button>
+                          <button class="btn btn-danger btn-block mostrar hh toggle">Editar Plantillas</button>
                         </div>
                         
                     </div>

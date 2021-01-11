@@ -7,7 +7,7 @@
                     
         <div class="login-logo">
         <a href="{{route('login')}}">    
-        <img src="{{ asset('assets/img/logo-light.png') }}" alt="" style="height: 100px;">
+        <img src="{{ asset('iamges/FTXlive-logo.png') }}" alt="">
         </a>
         
         {{-- mensajes del sistema --}}

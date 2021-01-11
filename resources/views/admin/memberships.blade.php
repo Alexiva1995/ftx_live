@@ -68,7 +68,7 @@
                                     <td class="text-center">{{ number_format($membresia->price_annual, 0, ',', '.') }}</td>
                                     <td class="text-center">{{ number_format($membresia->discount_annual, 0, ',', '.') }}</td>
                                     <td class="text-center">
-										<a class="btn btn-info" onclick="editar({{$membresia}});"><i class="fa fa-edit"></i></a>
+										<a class="btn btn-danger" onclick="editar({{$membresia}});" style="background-color: rgb(23, 21, 21)!important; border-color:rgb(23, 21, 21)!important;"><i class="fa fa-edit"></i></a>
 										<a class="btn btn-danger" onclick="editarMensaje({{$membresia->upgrade_message}});" title="Editar Mensaje de Upgrade"><i class="fa fa-file"></i></a>
                                     </td>
                                 </tr>
@@ -82,9 +82,9 @@
 
     <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
+    		<div class="modal-content" style="background-color: black;">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Modificar Membresía</h5>
+        			<h5 class="modal-title white" id="exampleModalLabel">Modificar Membresía</h5>
       			</div>
       			<form action="{{ route('admin.memberships.update') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -94,37 +94,37 @@
 								<input type="hidden" name="membership_id" id="membership_id">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Nombre</label>
+										<label class="white">Nombre</label>
 										<input type="text" class="form-control" name="name" id="name" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Precio Mensual</label>
+										<label class="white">Precio Mensual</label>
 										<input type="text" class="form-control" name="price" id="price" required>
 									</div>
                                 </div>
                                 <div class="col-md-12">
 									<div class="form-group">
-										<label>Precio Anual</label>
+										<label class="white">Precio Anual</label>
 										<input type="text" class="form-control" name="price_annual" id="price_annual" required>
 									</div>
                                 </div>
                                 <div class="col-md-12">
 									<div class="form-group">
-										<label>Precio Mensual Preferencial</label>
+										<label class="white">Precio Mensual Preferencial</label>
 										<input type="text" class="form-control" name="descuento" id="discount" required>
 									</div>
                                 </div>
                                 <div class="col-md-12">
 									<div class="form-group">
-										<label>Precio Anual Preferencial</label>
+										<label class="white">Precio Anual Preferencial</label>
 										<input type="text" class="form-control" name="discount_annual" id="discount_annual" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Imagen</label>
+										<label class="white">Imagen</label>
 										<input type="file" class="form-control" name="image" >
 									</div>
 								</div>
@@ -132,8 +132,8 @@
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -142,9 +142,9 @@
     
     <div class="modal fade" id="modal-edit-message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
+    		<div class="modal-content" style="background-color: black;">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Modificar Mensaje de Upgrade</h5>
+        			<h5 class="modal-title white" id="exampleModalLabel">Modificar Mensaje de Upgrade</h5>
       			</div>
       			<form action="{{ route('admin.memberships.update-message') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -154,19 +154,19 @@
 								<input type="hidden" name="message_id" id="message_id">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Título</label>
+										<label class="white">Título</label>
 										<input type="text" class="form-control" name="title" id="message_title" required>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Descripción</label>
+										<label class="white">Descripción</label>
 										<textarea class="form-control" name="description" id="message_description"></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Imagen</label>
+										<label class="white">Imagen</label>
 										<input type="file" class="form-control" name="image" >
 									</div>
 								</div>
@@ -174,8 +174,8 @@
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>

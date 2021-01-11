@@ -38,9 +38,9 @@
 <div class="col-xs-12">
 	<div class="box">
 		<div class="box-body">
-			<a href="{{route('downloadred')}}" class="btn btn-info btn-block descargar">Descargar Red</a>
+			<a href="{{route('downloadred')}}" class="btn btn-danger btn-block descargar">Descargar Red</a>
 			
-			<button data-toggle="modal" data-target="#editar" class="btn btn-info btn-block">Editar la contraseña de todos</button>
+			<button data-toggle="modal" data-target="#editar" class="btn btn-danger btn-block">Editar la contraseña de todos</button>
 			
 			<br class="col-xs-12">
 			<table id="mytable" class="table">
@@ -109,7 +109,7 @@
 						@endif
 						
 						<td class="text-center">
-							<a class="btn btn-info" href="{{ route('users.edit', $usuario->ID) }}">
+							<a class="btn btn-danger" href="{{ route('users.edit', $usuario->ID) }}">
 								<i class="fa fa-edit"></i></a>
 
 							@if($usuario['ID'] != 1)

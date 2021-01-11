@@ -13,7 +13,7 @@
       <form method="POST" action="{{ route('setting-up') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         
-        <a href="{{route('setting-desactivaciom-pop')}}" class="btn btn-info btn-block">{{($pop->activado == 0) ? 'Activar' : 'Desactivar'}}</a>
+        <a href="{{route('setting-desactivaciom-pop')}}" class="btn btn-danger btn-block">{{($pop->activado == 0) ? 'Activar' : 'Desactivar'}}</a>
         
         <div class="col-md-12">
             <label for="" class="white">Titulo</label>
@@ -30,7 +30,7 @@
             style="margin-bottom: 5px; margin-top: 8px;">Cancelar</a>
         </div>
         <div class="col-sm-6" style="padding-left: 10px;">
-          <button class="btn btn-info btn-block" type="submit" id="btn"
+          <button class="btn btn-danger btn-block" type="submit" id="btn"
             style="margin-bottom: 5px; margin-top: 8px;">Aceptar</button>
         </div>
       </form>

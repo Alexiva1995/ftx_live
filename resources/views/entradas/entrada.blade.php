@@ -4,10 +4,10 @@
 
 
 <div class="col-xs-12">
+
+<a class="btn btn-danger btn-block" data-toggle="modal" data-target="#anexar" style="margin:10px;">Agregar Entrada</a>
   <div class="box box-info">
     <div class="box-body">
-
-      <a class="btn btn-info btn-block" data-toggle="modal" data-target="#anexar">Agregar Entrada</a>
 
       <table id="mytable" class="table">
                 <thead>
@@ -49,7 +49,7 @@
                         </td>
 
                         <td class="text-center">
-                           <a class="btn btn-info" href="{{route('admin-actual-entrada', $ent->id)}}">Editar</a>
+                           <a class="btn btn-danger" href="{{route('admin-actual-entrada', $ent->id)}}">Editar</a>
                            <a class="btn btn-danger" href="{{route('admin-delet-entrada', $ent->id)}}">Eliminar</a>
                         </td>
 

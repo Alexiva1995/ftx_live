@@ -29,7 +29,7 @@ hr {
 <div class="col-md-12" style="margin-top:20px;">
     <div class="col-md-5 col-xs-12">
         <div class="card text-white bg-color" align="center">
-           <img src="{{ asset('assets/img/logo-light.png') }}" alt="" style="height: 120px;">
+           <img src="{{ asset('images/FTXlive-logo.png') }}" alt="">
         </div>
         <div class="card-body" style="background-color: white;">
             <div class="pag" id="inicio">

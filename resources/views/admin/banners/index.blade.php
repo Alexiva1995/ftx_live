@@ -42,7 +42,7 @@
 		<div class="box">
 			<div class="box-body">
 				<div style="text-align: right;">
-					<a data-toggle="modal" data-target="#modal-new" class="btn btn-info descargar"><i class="fa fa-plus-circle"></i> Nuevo Banner</a>
+					<a data-toggle="modal" data-target="#modal-new" class="btn btn-danger descargar"><i class="fa fa-plus-circle"></i> Nuevo Banner</a>
 				</div>
 
 				<br class="col-xs-12">
@@ -63,8 +63,8 @@
 								<td class="text-center">{{ $banner->page }}</td>
                                 <td class="text-center">@if (!is_null($banner->url)) {{ $banner->url }} @else - @endif</td>
 								<td class="text-center">
-                                    <a class="btn btn-info" onclick="editar({{$banner}});"><i class="fa fa-edit"></i></a>
-                                    <a class="btn btn-info" data-source="{{ asset('uploads/images/banners/'.$banner->image) }}" id="image-{{$banner->id}}" onclick="showImg(this.id);"><i class="fa fa-image"></i></a>
+                                    <a class="btn btn-danger" onclick="editar({{$banner}});"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-danger" data-source="{{ asset('uploads/images/banners/'.$banner->image) }}" id="image-{{$banner->id}}" onclick="showImg(this.id);"><i class="fa fa-image"></i></a>
 									<a class="btn btn-danger" href="{{ route('admin.banners.change-status', [$banner->id, 0]) }}" title="Deshabilitar"><i class="fa fa-ban"></i></a>
 								</td>
 							</tr>
@@ -78,8 +78,8 @@
 	<!-- Modal Agregar Banner-->
 	<div class="modal fade" id="modal-new" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-      			<div class="modal-header">
+    		<div class="modal-content" style="background-color: black;">
+      			<div class="modal-header white">
         			<h5 class="modal-title" id="exampleModalLabel">Crear Banner</h5>
       			</div>
       			<form action="{{ route('admin.banners.store') }}" method="POST" enctype="multipart/form-data">
@@ -89,13 +89,13 @@
 	    					<div class="row">
 						        <div class="col-md-12">
 						            <div class="form-group">
-						                <label>Título del Banner</label>
+						                <label class="white">Título del Banner</label>
 						            	<input type="text" class="form-control" name="title" required>
 						            </div>
 						        </div>
 						        <div class="col-md-12">
 						            <div class="form-group">
-						                <label>Ubicación</label>
+						                <label class="white">Ubicación</label>
 						                <select class="form-control" name="page" required>
 						                	<option value="" selected disabled>Seleccione una ubicación..</option>
                                             <option value="Home">Home</option>
@@ -111,17 +111,17 @@
 						            </div>
 								</div>
 								<div class="col-md-12 text-center">
-									<label>Dimensiones para el banner <br><span style="color: red;">350px  x  450px</span></label>
+									<label class="white">Dimensiones para el banner <br><span style="color: red;">350px  x  450px</span></label>
 								</div>
 						        <div class="col-md-12">
 						            <div class="form-group">
-						                <label>Imagen</label>
+						                <label class="white">Imagen</label>
 						            	<input type="file" class="form-control" name="image" required>
 						            </div>
 						        </div>
 						        <div class="col-md-12">
 						            <div class="form-group">
-						                <label>Link (Opcional)</label>
+						                <label class="white">Link (Opcional)</label>
 						            	<input type="url" class="form-control" name="url">
 						            </div>
 						        </div>
@@ -129,8 +129,8 @@
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Crear Banner</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Crear Banner</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -140,8 +140,8 @@
 	<!-- Modal Editar Banner-->
 	<div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-      			<div class="modal-header">
+    		<div class="modal-content" style="background-color: black;">
+      			<div class="modal-header white">
         			<h5 class="modal-title" id="exampleModalLabel">Modificar Banner</h5>
       			</div>
       			<form action="{{ route('admin.banners.update') }}" method="POST" enctype="multipart/form-data">
@@ -151,13 +151,13 @@
 				        <div class="container-fluid" id="content-modal">
                             <div class="col-md-12">
 						        <div class="form-group">
-						            <label>Título del Banner</label>
+						            <label class="white">Título del Banner</label>
 						            <input type="text" class="form-control" name="title" id="title" required>
 						        </div>
 						    </div>
 						    <div class="col-md-12">
 						        <div class="form-group">
-						            <label>Ubicación</label>
+						            <label class="white">Ubicación</label>
 						            <select class="form-control" name="page" id="page" required>
                                         <option value="Home">Home</option>
                                         <option value="Membresias">Membresías</option>
@@ -173,21 +173,21 @@
 						    </div>
 						    <div class="col-md-12">
 						        <div class="form-group">
-					                <label>Imagen</label>
+					                <label class="white">Imagen</label>
 					            	<input type="file" class="form-control" name="image">
 					            </div>
 					        </div>
 						    <div class="col-md-12">
 						        <div class="form-group">
-					                <label>Link (Opcional)</label>
+					                <label class="white">Link (Opcional)</label>
 					            	<input type="url" class="form-control" name="url" id="url">
 					            </div>
 					        </div>
 						</div>
 				    </div>
 	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -198,8 +198,8 @@
 	<!-- Modal Ver Imagen Destacada-->
 	<div class="modal fade" id="modal-image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   		<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-      			<div class="modal-header">
+    		<div class="modal-content" style="background-color: black;">
+      			<div class="modal-header white">
         			Imagen del Banner
       			</div>
 				<div class="modal-body">
@@ -212,7 +212,7 @@
 				    </div>
 				</div>
 	      		<div class="modal-footer">
-	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+	        		<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 	      		</div>
     		</div>
   		</div>

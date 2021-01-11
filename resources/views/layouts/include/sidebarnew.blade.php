@@ -137,7 +137,7 @@
     <div class="modal-dialog">
        <div class="modal-content" style="background-color: black;">
           <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Actualizar imagen Landing</h5>
+             <h5 class="modal-title white" id="exampleModalLabel" style="color: white;">Actualizar imagen Landing</h5>
              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
              </button>
@@ -146,20 +146,20 @@
             <form action="{{route('admin.update.image.landing')}}" enctype="multipart/form-data" method="post">
                 @csrf
                 <div class="form-group">
-                    <h5 for="">Imagen Actual</h5>
+                    <h5 for="" class="white">Imagen Actual</h5>
                     <img src="{{asset($settings->id_no_comision)}}" alt="" height="200" width="200">
                 </div>
                 <div class="form-group">
-                    <label for="">Nueva Imagen</label>
+                    <label for="" class="white">Nueva Imagen</label>
                     <input type="file" name="image_landing" class="form-control" accept="image/png, image/jpeg">
                 </div>
                 <div class="form-group text-center">
-                    <button type="submit" class="btn btn-success">Subir</button>
+                    <button type="submit" class="btn btn-danger">Subir</button>
                 </div>
             </form>
           </div>
           <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+             <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
           </div>
        </div>
     </div>
