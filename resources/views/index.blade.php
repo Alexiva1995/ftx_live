@@ -90,10 +90,10 @@
                         @if($contador <= 3)
                            <div class="col-md-4" style="margin-top: 20px;">
 
-                              @if ($proxima->cover == null)
+                              @if ($proxima->miniatura == null)
                                  <img src="{{ asset('uploads/avatar/'.$proxima->mentor->avatar) }}" class="card-img-top img-prox-events" alt="...">
                               @else
-                                 <img src="{{ asset('uploads/images/miniatura/'.$proxima->cover) }}" clRECass="card-img-top img-prox-events" alt="...">
+                                 <img src="{{ asset('uploads/images/miniatura/'.$proxima->miniatura) }}" class="card-img-top img-prox-events" alt="...">
                               @endif
                               <div class="card-img-overlay d-flex flex-column" style="margin-left: 10px; margin-right: 10px;">
                                   <div class="mt-auto">
