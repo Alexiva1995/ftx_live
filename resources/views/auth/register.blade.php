@@ -253,12 +253,13 @@
                             </div>
                         </div>
                     </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <a class="btn btn-danger col-sm-6" href="{{ url('/') }}" style="background-color: rgb(23, 21, 21)!important; border-color:rgb(23, 21, 21)!important;">Cancelar</a>
+                            <button class="btn btn-danger col-sm-6" type="submit" id="btn">Registrarme</button>
+                        </div>
                 </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                    <a class="btn btn-danger col-sm-6" href="{{ url('/') }}">Cancelar</a>
-                    <button class="btn btn-info col-sm-6" type="submit" id="btn">Registrarme</button>
-                </div>
+               
             </form>
         </div>
     </div>

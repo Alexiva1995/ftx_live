@@ -509,7 +509,6 @@ class EventsController extends Controller
             } else {
                 $lastEvent = Events::all()->last();
                 $evento = Events::find($request->sigEvent);
-
                 if ($lastEvent->id == $evento->id) {
                     $nextEvent = Events::where('date', '>=', Carbon::now())->first();
                     //return dd($lastEvent, $total_eventos, $nextEvent);

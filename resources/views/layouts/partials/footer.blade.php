@@ -5,7 +5,7 @@
                         <div class="col-md-12">
 
                             <div class="mb-2 text-center text-white" style="margin-top: 10px;">
-                            <a href="#" target="_blank" class="btn btn-footer-yt btn-footer-redes "><i class="text-white fa fa-youtube fa-2x"></i></a>
+                                    <a href="https://youtube.com/channel/UCBEWMVfwwPDMa1metYobEqg" target="_blank" class="btn btn-footer-yt btn-footer-redes "><i class="text-white fa fa-youtube fa-2x"></i></a>
                                     <a href="https://www.instagram.com/ftxlive/" target="_blank" class="btn btn-footer-ig  btn-footer-redes "><i class="text-white fa fa-instagram fa-2x"></i></a>
                                     <a href="https://www.linkedin.com/in/fenttix-live-6993441b2/" target="_blank" class="btn btn-footer-in btn-footer-redes "><i class="text-white fa fa-linkedin fa-2x"></i></a>
                                     <a href="https://www.facebook.com/FTXlive" target="_blank" class="btn btn-footer-fb btn-footer-redes "><i class="text-white fa fa-facebook-f fa-2x"></i></a>

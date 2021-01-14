@@ -48,37 +48,37 @@
 
             $('#' + elem).append(
 
-               '<p class="p-1 bd-highlight" style="font-size: 80px; font-weight:800;">' +
+               '<p class="p-1 text-center clock-live-text">' +
                t.remainDays +
-               '<p style="margin-left: -40px; margin-top: 100px; font-weight:800;">DIAS</p>' +
+               '<p> DÍAS</p>' +
                '</p>' +
 
-               '<p class="p-2 bd-highlight" style="font-size: 70px; font-weight:800;">' +
-               ':' +
+               '<p class="p-2 text-danger text-center clock-live-text">' +
+               ',' +
                '</p>' +
 
-               '<p class="p-1 bd-highlight" style="font-size: 80px; font-weight:800;">' +
+               '<p class="p-1 clock-live-text">' +
                t.remainHours +
-               '<p style="margin-left: -68px; margin-top: 100px; font-weight:800;">HORAS</p>' +
+               '<p> HORAS</p>' +
                '</p>' +
 
-               '<p class="p-2 bd-highlight" style="font-size: 70px; font-weight:800;">' +
-               ':' +
+               '<p class="p-2 text-danger clock-live-text">' +
+               ',' +
                '</p>' +
 
-               '<p class="p-1 bd-highlight" style="font-size: 80px; font-weight:800;">' +
+               '<p class="p-1 clock-live-text">' +
                t.remainMinutes +
 
-               '<p style="margin-left: -80px; margin-top: 100px; font-weight:800;">MINUTOS</p>' +
+               '<p> MINUTOS</p>' +
                '</p>' +
 
-               '<p class="p-2 bd-highlight" style="font-size: 70px; font-weight:800;">' +
-               ':' +
+               '<p class="p-2 text-danger clock-live-text">' +
+               'Y' +
                '</p>' +
-               '<p class="p-1 bd-highlight" style="font-size: 80px; font-weight:800;">' +
+               '<p class="p-1 clock-live-text">' +
                t.remainSeconds +
 
-               '<p style="margin-left: -85px; margin-top: 100px; font-weight:800;">SEGUNDOS</p>' +
+               '<p> SEGUNDOS</p>' +
                '</p>'
 
             )
@@ -87,12 +87,18 @@
       }, 1000)
    };
    //Verificar que cuando no exista el evento no lo tome
-   countdown('{{($evento != null) ? $evento->date.'
-      '.$evento->time : $fechaActual}}', 'clock');
+   //countdown({{($evento != null) ? $evento->date.' '.$evento->time : $fechaActual}}, 'clock');
+   if (document.getElementById('isset_event').value == 1){
+       countdown('{{$evento->date.' '.$evento->time}}', 'clock');
+   }else{
+       countdown('{{$fechaActual}}', 'clock');
+   }
+   //
 </script>
 @endpush
 
 @if(!empty($evento))
+   <input type="hidden" id="isset_event" value="1" >
 <div>
 
    @if (Session::has('msj-exitoso'))
@@ -131,10 +137,9 @@
                     TIEMPO PARA INICIAR EL LIVE
          </div>
 
-          <div class="d-flex justify-content-center bd-highlight mb-1 text-white clock-text" style="" id="clock">
+         <div class="d-flex mb-1 text-center text-white clock-live-text" id="clock">
                     
          </div>
-
 
       </div>
    </div>
@@ -151,7 +156,7 @@
 
       <div style="margin-top: 60px;">
 
-         <div class="row">
+         <div class="row" style="padding-right: 20px;!important">
             <div class="col-md-6" style="margin-bottom: 10px;">
                @if (Auth::guest())
                   {{-- USUARIOS INVITADOS --}}
@@ -181,7 +186,7 @@
                            @if ( ($statusLive == 'ended') || ($statusLive == 'cancelled') )
                               <a href="{{route('show.event', $evento->id)}}" class="btn btn-danger btn-block">VER DETALLES DEL EVENTO</a>
                            @else
-                              <form action="https://streaming.mybusinessacademypro.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST" class="mostrar d-none">
+                              <form action="https://streaming.ftxlive.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST" class="mostrar d-none">
                                  @csrf
                                  <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                  <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">
@@ -427,6 +432,7 @@
 
 @else
 <div class="row">
+    <input type="hidden" id="isset_event" value="0" >
    No se encontraron próximas transmisiones...
 </div>
 

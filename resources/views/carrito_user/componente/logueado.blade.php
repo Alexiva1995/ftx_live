@@ -18,10 +18,10 @@
         
         <h5 class="">Selecione medio de pago</h5>
         <div class="form-group">
-            <button class="btn text-white btn-color-green" onclick="pagarS()">Tarjeta</button>
-            <button class="btn text-white btn-color-green" onclick="pagarC()">Cripto</button>
-            <button class="btn text-white btn-color-green" onclick="pagarPaypal()">Paypal</button>
-            <button class="btn text-white btn-color-green" onclick="pagarB()">Billetera</button><br><br>
+            <button class="btn text-white btn-color-green pt-1" onclick="pagarS()">Tarjeta</button>
+            <button class="btn text-white btn-color-green pt-1" onclick="pagarC()">Cripto</button>
+            <button class="btn text-white btn-color-green pt-1" onclick="pagarPaypal()">Paypal</button>
+            <button class="btn text-white btn-color-green pt-1" onclick="pagarB()">Billetera</button><br><br>
         </div>
         @endif
     </div>
@@ -73,10 +73,10 @@
             </div>
             <h5 class="">Selecione medio de pago</h5>
             <div class="form-group">
-                <button class="btn text-white btn-color-green" onclick="pagarS2()">Tarjeta</button>
-                <button class="btn text-white btn-color-green" onclick="pagarC2()">Cripto</button>
-                <button class="btn text-white btn-color-green" onclick="pagarPaypal2()">Paypal</button>
-                <button class="btn text-white btn-color-green" onclick="pagarB2()">Billetera</button><br><br>
+                <button class="btn text-white btn-color-green mt-1" onclick="pagarS2()">Tarjeta</button>
+                <button class="btn text-white btn-color-green mt-1" onclick="pagarC2()">Cripto</button>
+                <button class="btn text-white btn-color-green mt-1" onclick="pagarPaypal2()">Paypal</button>
+                <button class="btn text-white btn-color-green mt-1" onclick="pagarB2()">Billetera</button><br><br>
             </div>
         </div>
         <div id="stripe2" class="stripe2 d-none">

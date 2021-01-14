@@ -179,7 +179,7 @@ i.fa.fa-user.referrers-icon {
 
 .d-flex.justify-content-center.bd-highlight.mb-1.text-white p {
     letter-spacing: 22px;
-    font-size: 92px !important;
+    font-size: 92px;
 }
 
 .col-md-8.kol p {
@@ -654,7 +654,10 @@ h5.title-level {
     .icon-bar {
         display: none;
     }
-
+    .clock-live-text {
+        font-size: 20px!important;
+        font-weight: 800!important;
+    }
 }
 
 
@@ -699,6 +702,10 @@ h5.title-level {
     }
     .card-comisiones-two {
         height: 200px!important;
+    }
+    .clock-live-text {
+        font-size: 30px!important;
+        font-weight: 800!important;
     }
     
 }
@@ -746,6 +753,11 @@ h5.title-level {
     .clock-text {
         font-size: 25px!important;
         font-weight: 400!important;
+    }
+
+    .clock-live-text {
+        font-size: 11px!important;
+        font-weight: 800!important;
     }
     .title-status-live {
         font-size: 20px!important;
@@ -811,7 +823,6 @@ h5.title-level {
     {
         padding-top: 0px!important;
     }
-    
 }
 
 @media (min-width: 768px) and (max-width: 768px) {
@@ -2326,6 +2337,13 @@ p.card-text.font-weight-bold.mr-2 {
     justify-content: center;
 }
 
+.clock-live-text {
+    font-size: 40px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center!important;
+}
+
 .title-remain {
     font-size: 25px;
     font-weight: 600;
@@ -2492,4 +2510,8 @@ max-height: 405px;
     -ms-transform: rotate(10deg);
     transform: rotate(10deg);
 
+}
+
+.streaming{
+    color: #dc3545!important;
 }

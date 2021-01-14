@@ -86,7 +86,7 @@
                                 @case(2)
                                     <div class="col-lg-4 mt-4 mb-5">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-header-orange-price" style="position: absolute;">
+                                            <div class="card-header-orange-price" style="position: absolute; background-color: #cc4e49 !important;">
                                                 <h1 class="card-title text-white text-uppercase text-center">{{$membresia->name}}</h1>
                                             </div>
                                             <div class="card-body" style="position: relative; top:55px; z-index: 1;">
@@ -129,7 +129,7 @@
                                 @case(3)
                                     <div class="col-lg-4 mt-4 mb-5">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-header-verde-price" style="position: absolute;">
+                                            <div class="card-header-verde-price" style="position: absolute; background-color: #CF202F !important;">
                                                 <h1 class="card-title text-white text-uppercase text-center" >{{$membresia->name}}</h1>
                                             </div>
                                             <div class="card-body" style="position: relative; top:55px; z-index: 1;">

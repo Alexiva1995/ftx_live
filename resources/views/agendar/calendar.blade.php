@@ -114,7 +114,7 @@
         @endif
         <div class="card-img-overlay d-flex flex-column" style="margin-left: 10px; margin-right: 10px;">
           <div class="mt-auto">
-            <a href="{{ route('timeliveEvent', $agendado->id) }}"><h2 class="streaming">{{$agendado->title}}</h2></a>
+            <a href="{{ route('timeliveEvent', $agendado->id) }}" class="streaming"><h2 class="streaming">{{$agendado->title}}</h2></a> 
 
             <p class="mr-2 text-white" style="margin-top: -10px; font-size: 14px;"> 
               <i class="far fa-calendar mr-2" style="font-size: 18px !important;padding: 5px;"> </i>

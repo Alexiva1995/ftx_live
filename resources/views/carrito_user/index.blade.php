@@ -37,7 +37,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
              <div class="d-block d-sm-block d-md-none float-right">
-               <a class="btn btn-primary " href="{{route('shopping-cart.membership')}}"><i class="fas fa-chevron-circle-left"></i> Atrás</a> 
+               <a class="btn btn-dark " href="{{route('shopping-cart.membership')}}" style="background-color: rgb(23, 21, 21)!important; border-color:rgb(23, 21, 21)!important;"><i class="fas fa-chevron-circle-left"></i> Atrás</a> 
             </div><br>
             @auth
             @include('carrito_user.componente.logueado')

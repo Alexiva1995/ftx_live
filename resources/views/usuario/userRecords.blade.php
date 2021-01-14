@@ -40,7 +40,7 @@
 		<div class="box-body">
 			<a href="{{route('downloadred')}}" class="btn btn-danger btn-block descargar">Descargar Red</a>
 			
-			<button data-toggle="modal" data-target="#editar" class="btn btn-danger btn-block">Editar la contraseña de todos</button>
+			<!--<button data-toggle="modal" data-target="#editar" class="btn btn-danger btn-block">Editar la contraseña de todos</button>-->
 			
 			<br class="col-xs-12">
 			<table id="mytable" class="table">
