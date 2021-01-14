@@ -24,6 +24,7 @@ class Events extends Model
         'title',
         'user_id',
         'category_id',
+        'streaming_type',
         'description',
         'date',
         'time',
@@ -37,7 +38,7 @@ class Events extends Model
         'miniatura'
     ];
 
-
+    
     public function users(){
         return $this->belongsToMany('App\Models\User', 'events_users', 'event_id', 'user_id')->withPivot('date', 'time', 'favorite')->withTimestamps();
     }
@@ -79,11 +80,10 @@ class Events extends Model
     public function subcategory(){
         return $this->belongsTo('App\Models\Subcategory');
     }
-
     public function countries(){
         return $this->belongsToMany('App\Models\Paises', 'event_countries', 'event_id', 'country_id')->withPivot('date', 'time');
     }
-
+    
     public function notes()
     {
         return $this->hasMany('App\Models\Note');

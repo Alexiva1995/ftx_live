@@ -18,6 +18,7 @@
 	            success:function(ans){
 	                $("#event_id").val(ans.id);
 	                $("#title").val(ans.title);
+	                $("#streaming_type option[value="+ans.streaming_type+"]").attr("selected", true);
 	                $("#category_id option[value="+ans.category_id+"]").attr("selected", true);
 	                $("#user_id option[value="+ans.user_id+"]").attr("selected", true);
                  	CKEDITOR.instances["description"].setData(ans.description);
@@ -117,6 +118,16 @@
 						            	<input type="text" class="form-control" name="title" required>
 						            </div>
 						        </div>
+						        <div class="col-md-12">
+						            <div class="form-group">
+						                <label class="white">Tipo de Evento</label>
+						                <select class="form-control" name="streaming_type" required>
+						                	<option value="" selected disabled>Seleccione una opción..</option>
+						                	<option value="webinar">Webinar</option>
+											<option value="video_conference">Video Conferencia</option>
+						                </select>
+						            </div>
+								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
 						                <label class="white">Mentor</label>
@@ -227,6 +238,16 @@
 									<input type="text" class="form-control" name="title" id="title" required>
 								</div>
 							</div>
+							<div class="col-md-12">
+						        <div class="form-group">
+						            <label class="white">Tipo de Evento</label>
+						            <select class="form-control" name="streaming_type" id="streaming_type" required>
+						                <option value="" selected disabled>Seleccione una opción..</option>
+						                <option value="webinar">Webinar</option>
+										<option value="video_conference">Video Conferencia</option>
+						            </select>
+						       </div>
+						    </div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="white">Mentor</label>

@@ -111,7 +111,8 @@ class EventsController extends Controller
         $evento = new Events($request->all());
         $evento->uuid = $meetingUuid;
         $evento->subcategory_id = 2;
-        $evento->url_streaming = 'https://streaming.mybusinessacademypro.com/app/live/meetings/' . $evento->uuid;
+        $evento->streaming_type = $request->streaming_type;
+        $evento->url_streaming = 'https://streaming.ftxlive.com/app/live/meetings/' . $evento->uuid;
         $evento->status = 1;
         $evento->save();
 

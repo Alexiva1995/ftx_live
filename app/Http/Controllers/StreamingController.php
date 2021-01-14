@@ -13,13 +13,13 @@ use Auth; use Carbon\Carbon; use DB;
 class StreamingController extends Controller{
 
     public function setToken(){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
         $response = $client->request('POST', 'api/auth/login', [
             'headers' => ['Accept' => 'application/json', 'Content-Type' => 'application/x-www-form-urlencoded'],
             'form_params' => [
-                'email' => 'mbapro',
-                'password' => 'mbapro2020',
+                'email' => 'ftxlive',
+                'password' => 'ftxlive2020',
                 'device_name' => 'admin-device',
             ]
         ]);
@@ -32,7 +32,7 @@ class StreamingController extends Controller{
     }
 
     public function newMeeting(Request $request, $userId){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
         $headers = [
             'Accept'        => 'application/json',
@@ -60,7 +60,7 @@ class StreamingController extends Controller{
         $result = json_decode($creacionEvento->getBody());
 
         $meeting = Meeting::where('uuid', '=', $result->meeting->uuid)->first();
-        $meeting->type = 'webinar';
+        $meeting->type = $request->streaming_type;
         $meeting->user_id = $userId;
         $meeting->save();
 
@@ -68,7 +68,7 @@ class StreamingController extends Controller{
     }
 
     public function updateMeeting(Request $request, $uuid){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
         $headers = [
             'Accept'        => 'application/json',
@@ -100,7 +100,7 @@ class StreamingController extends Controller{
     }
     
     public function getStatus($uuid){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
         $headers = [
             'Accept'        => 'application/json',
