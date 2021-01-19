@@ -26,7 +26,7 @@
                 $('#' + elem).empty()
             
                 if (t.remainTime <= 1) {
-                    var route = "https://mybusinessacademypro.com/academia/change-meeting-status/{{$evento->id}}";
+                    var route = "https://fxtlive.com/office/change-meeting-status/{{$evento->id}}";
                     $.ajax({
                         url:route,
                         type:'GET',
@@ -150,7 +150,7 @@
                         <div id="open" style="display: none;">
                             @if (Auth::user()->rol_id == 2)
                                 @if ( ($statusLive == 'scheduled') || ($statusLive == 'live') )
-                                    <form action="https://streaming.mybusinessacademypro.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
+                                    <form action="https://streaming.fxtlive.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
                                         @csrf
                                         <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                         <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">
@@ -162,7 +162,7 @@
                                 @endif
                             @else
                                 @if ($statusLive == 'live')
-                                    <form action="https://streaming.mybusinessacademypro.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
+                                    <form action="https://streaming.fxtlive.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
                                         @csrf
                                         <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                         <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">
