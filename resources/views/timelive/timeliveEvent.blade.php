@@ -150,7 +150,7 @@
                         <div id="open" style="display: none;">
                             @if (Auth::user()->rol_id == 2)
                                 @if ( ($statusLive == 'scheduled') || ($statusLive == 'live') )
-                                    <form action="https://streaming.fxtlive.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
+                                    <form action="https://streaming.ftxlive.com/connect-mba/{{$evento->id}}/{{Auth::user()->ID}}" method="POST">
                                         @csrf
                                         <input type="hidden" name="email" value="{{ Auth::user()->user_email }}">
                                         <input type="hidden" name="password" value="{{ decrypt(Auth::user()->clave) }}">

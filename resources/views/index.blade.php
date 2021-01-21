@@ -1,6 +1,12 @@
 @extends('layouts.landing')
 
 @section('content')
+   @if (app('request')->input('logout') == "1")
+      <script>
+         document.getElementById('logout-form').submit();
+      </script>
+   @endif
+
 @if (!Auth::guest())
 <div class="title-page-course col-md"><span class="text-white">
     <h3 class="mb-4"><span class="text-white">Hola</span><span class="text-danger"> {{Auth::user()->display_name}}</span><span class="text-white"> ¡Nos alegra verte hoy!</span></h3>

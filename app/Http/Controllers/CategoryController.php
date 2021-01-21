@@ -28,14 +28,14 @@ class CategoryController extends Controller{
      * Admin / Cursos / Gestionar Categorías / Agregar Categoría
      */
     public function add_category(Request $request){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
-        if (is_null(Auth::user()->streaming_token)){
+
             $response = $client->request('POST', 'api/auth/login', [
-                'headers' => ['Accept' => 'application/json', 'Content-Type' => 'application/x-www-form-urlencoded'],
+            'headers' => ['Accept' => 'application/json', 'Content-Type' => 'application/x-www-form-urlencoded'],
                 'form_params' => [
-                    'email' => 'mbapro',
-                    'password' => 'mbapro2020',
+                    'email' => 'ftxlive',
+                    'password' => 'ftxlive2020',
                     'device_name' => 'admin-device',
                 ]
             ]);
@@ -45,12 +45,12 @@ class CategoryController extends Controller{
             DB::table('wp98_users')
                 ->where('ID', '=', Auth::user()->ID)
                 ->update(['streaming_token' => $result->token]);
-        }
+        
 
         $headers = [
             'Accept'        => 'application/json',
             'Content-Type' => 'application/x-www-form-urlencoded',
-            'Authorization' => 'Bearer '.Auth::user()->streaming_token
+            'Authorization' => 'Bearer '.$result->token
         ];
         
         $slug = Str::slug($request->title);
@@ -96,14 +96,14 @@ class CategoryController extends Controller{
      * Admin / Cursos / Gestionar Categorías / Actualizar Categoría
      */
     public function update_category(Request $request){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
-        if (is_null(Auth::user()->streaming_token)){
+       
             $response = $client->request('POST', 'api/auth/login', [
                 'headers' => ['Accept' => 'application/json', 'Content-Type' => 'application/x-www-form-urlencoded'],
                 'form_params' => [
-                    'email' => 'mbapro',
-                    'password' => 'mbapro2020',
+                    'email' => 'ftxlive',
+                    'password' => 'ftxlive2020',
                     'device_name' => 'admin-device',
                 ]
             ]);
@@ -113,12 +113,12 @@ class CategoryController extends Controller{
             DB::table('wp98_users')
                 ->where('ID', '=', Auth::user()->ID)
                 ->update(['streaming_token' => $result->token]);
-        }
+        
 
         $headers = [
             'Accept'        => 'application/json',
             'Content-Type' => 'application/x-www-form-urlencoded',
-            'Authorization' => 'Bearer '.Auth::user()->streaming_token
+            'Authorization' => 'Bearer '.$result->token
         ];
 
         $categoria = Category::find($request->category_id);
@@ -153,15 +153,15 @@ class CategoryController extends Controller{
      * Admin / Cursos / Gestionar Categorías / Eliminar Categoría
      */
     public function delete_category($categoria){
-        $client = new Client(['base_uri' => 'https://streaming.mybusinessacademypro.com']);
+        $client = new Client(['base_uri' => 'https://streaming.ftxlive.com']);
 
-        if (is_null(Auth::user()->streaming_token)){
+      
             $response = $client->request('POST', 'api/auth/login', [
                 'headers' => ['Accept' => 'application/json', 'Content-Type' => 'application/x-www-form-urlencoded'],
                 'form_params' => [
-                    'email' => 'mbapro',
-                    'password' => 'mbapro2020',
-                    'device_name' => 'luisana',
+                    'email' => 'ftxlive',
+                    'password' => 'ftxlive2020',
+                    'device_name' => 'admin-device',
                 ]
             ]);
 
@@ -170,12 +170,12 @@ class CategoryController extends Controller{
             DB::table('wp98_users')
                 ->where('ID', '=', Auth::user()->ID)
                 ->update(['streaming_token' => $result->token]);
-        }
+        
 
         $headers = [
             'Accept'        => 'application/json',
             'Content-Type' => 'application/x-www-form-urlencoded',
-            'Authorization' => 'Bearer '.Auth::user()->streaming_token
+            'Authorization' => 'Bearer '.$result->token
         ];
 
         $categoria = Category::find($categoria);
