@@ -8,10 +8,10 @@
         <div class="carousel-inner">
             <div class="carousel-item  active ">
               <div class="overlay"></div>
-                  <img src="{{ asset('nosotros/gratis-Blog/homegratis.png') }}" class="d-block w-100" alt="...">
+                  <img src="{{ asset('nosotros/gratis-Blog/homegratis.jpg') }}" class="d-block w-100" alt="...">
                    <div class="carousel-caption row align-items-center">
                   <div class="blog-title font-weight-bold">¡COMIENZA AHORA!
-                          <p style="font-size: 22px;">En este mundo tan acelerado, es la preparaci贸n lo que conduce el futuro de la vida.</p>
+                          <p style="font-size: 22px;">En este mundo tan acelerado, es la preparación lo que conduce el futuro de la vida.</p>
                         </div>
               </div>
           </div>   
@@ -27,7 +27,7 @@
   <div class="row" style="margin-bottom: 30px;">
      <div class="col-md-4">
         <a data-toggle="modal" data-target="#video1">
-       <img src="{{ asset('nosotros/fundadores/bienvenido.png') }}" class="card-img-top" alt="..." style="border: solid 0;">
+       <img src="{{ asset('nosotros/gratis-Blog/bienvenido.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
        <div class="card-body">
             <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Bienvenido</h6>
         </div>
@@ -37,7 +37,7 @@
      
      <div class="col-md-4">
       <a data-toggle="modal" data-target="#video2"> 
-        <img src="{{ asset('nosotros/fundadores/pro.png') }}" class="card-img-top" alt="..." style="border: solid 0;">
+        <img src="{{ asset('nosotros/gratis-Blog/pro.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
         <div class="card-body">
             <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Ser Pro</h6>
         </div>
@@ -47,7 +47,7 @@
      
      <div class="col-md-4">
       <a data-toggle="modal" data-target="#video3">         
-          <img src="{{ asset('nosotros/fundadores/cambio.png') }}" class="card-img-top" alt="..." style="border: solid 0;">
+          <img src="{{ asset('nosotros/gratis-Blog/cambio.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
         <div class="card-body">
             <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">El Cambio</h6>
         </div>

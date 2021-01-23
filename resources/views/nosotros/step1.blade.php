@@ -50,7 +50,7 @@
                      <h4 class="m-4 card-title align-items-center d-flex justify-content-center text-center"> Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en práctica el conocimiento adquirido en cada uno de los eventos y transmisiones que tengamos. </h4>
                 </div>
             </div>
-                <div class="col-md-6" style="min-height: 300px; background-image: url('{{ asset('nosotros/nosotros/02.png') }}'); background-size: cover; background-position: top;">
+                <div class="col-md-6" style="min-height: 300px; background-image: url('{{ asset('nosotros/nosotros/02.jpg') }}'); background-size: cover; background-position: top;">
                 </div>
         </div>
     </div>
@@ -59,12 +59,12 @@
     <div class="col-md-8 offset-md-2" style="margin-top: 50px;">
       <div class="card" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
-            <div class="col-md-4" style="min-height: 200px; background-image: url('{{ asset('nosotros/nosotros/03.png') }}'); background-size: cover; background-position: top;">
+            <div class="col-md-4" style="min-height: 200px; background-image: url('{{ asset('nosotros/nosotros/03.jpg') }}'); background-size: cover; background-position: top;">
             </div>
             <div class="col-md-4 nosotros-text" style="background-color: #CF202F; text-align: center; color: #fff;">
               <p class="mt-2" style="padding: 30px 30px;">Formamos parte de un grupo de empresas digitales y de alcance global, dedicadas a la educación y el desarrollo de emprendedores y empresarios</p>
             </div>
-             <div class="col-md-4" style="min-height: 200px; background-image: url('{{ asset('nosotros/nosotros/04.png') }}'); background-size: cover; background-position: top;">
+             <div class="col-md-4" style="min-height: 200px; background-image: url('{{ asset('nosotros/nosotros/04.jpg') }}'); background-size: cover; background-position: top;">
             </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <!--<div class="card" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
            <div class="col-md-4">
-              <img src="{{ asset('nosotros/nosotros/05.png') }}" class="card-img" alt="...">
+              <img src="{{ asset('nosotros/nosotros/05.jpg') }}" class="card-img" alt="...">
            </div>
           <div class="col-md-8 nosotros-text" style="background-color: #fff;">
             <div class="card-body row align-items-center justify-content-center">
@@ -91,7 +91,7 @@
             </div>
           </div>
            <div class="col-md-4">
-              <img src="{{ asset('nosotros/nosotros/06.png') }}" class="card-img" alt="...">
+              <img src="{{ asset('nosotros/nosotros/06.jpg') }}" class="card-img" alt="...">
            </div>
          </div>
        </div>
@@ -100,7 +100,7 @@
        <div class="card mb-3" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
            <div class="col-md-4">
-              <img src="{{ asset('nosotros/nosotros/07.png') }}" class="card-img" alt="...">
+              <img src="{{ asset('nosotros/nosotros/07.jpg') }}" class="card-img" alt="...">
            </div>
           <div class="col-md-8 nosotros-text" style="color: #fff; background-color: #CF202F;">
             <div class="card-body row align-items-center">
@@ -153,7 +153,7 @@
     <div class="card" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
             <div class="col-md-6">
-              <img src="{{ asset('nosotros/fundadores/josegordo.png') }}" style="width: 100%;">
+              <img src="{{ asset('nosotros/fundadores/josegordo.jpg') }}" style="width: 100%;">
             </div>
             <div class="col-md-6 align-items-center d-flex justify-content-center" style="color: #fff; background-color: #1c1d21;">
             <div class="card-body">
@@ -190,7 +190,7 @@
             </div>
            </div>
             <div class="col-md-6">
-              <img src="{{ asset('nosotros/fundadores/mujer.png') }}" style="width: 100%;">
+              <img src="{{ asset('nosotros/fundadores/mujer.jpg') }}" style="width: 100%;">
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
             </div>
           </div>
           <div class="col-md-4" style="background-color: #EDEDED;">
-              <img src="{{ asset('nosotros/nosotros/17.png') }}" class="card-img" alt="...">
+              <img src="{{ asset('nosotros/nosotros/17.jpg') }}" class="card-img" alt="...">
               <div class="card-img-overlay d-flex flex-column" style="color: #fff; text-align: center;">
                <div class="mt-auto">
                   <div class="new-course-title" style="background-color: #333; padding: 8px; float: left; color: #CF202F;">

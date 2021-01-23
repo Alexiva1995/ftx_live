@@ -825,6 +825,22 @@ h5.title-level {
     }
 }
 
+@media (min-width: 320px) and (max-width: 575px) {
+    .title-remain {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+    .clock-text {
+        font-size: 25px!important;
+        font-weight: 400!important;
+    }
+
+    .title-status-live {
+        font-size: 20px!important;
+        font-weight: 400!important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 768px) {
     .icon-miscursos img {
         display: none;
@@ -1097,7 +1113,7 @@ h4.section-title-landing.text-primary.text-center {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: 1px;
-    border-radius: 20px;
+    border-radius: 20px!important;
     height: 242px;
 }
 
