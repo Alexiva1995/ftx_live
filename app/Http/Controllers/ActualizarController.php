@@ -59,16 +59,13 @@ class ActualizarController extends Controller
 
         $insignia = '';
         $insigniaUser = InsigniaUser::where('status', 1)->take(1)->orderBy('id', 'desc')->first();
-            
-            if(!is_null($insigniaUser)){
-                $model_insignia = Insignia::find($insigniaUser->insignia_id);
+        if (!is_null($insigniaUser)){
+             $model_insignia = Insignia::find($insigniaUser->insignia_id);
             if ($model_insignia != null) {
                 $insignia = asset($model_insignia->insignia);
             }
-            }
-            
+        }
        
-        
         
         $data = [
             'principal' => $user,
@@ -95,7 +92,6 @@ class ActualizarController extends Controller
         view()->share('title', 'Editar Perfil');
         $data = $this->infoUsuario($id);
         $yo = null;
-        
         $notes = Note::where('user_id', Auth::user()->ID)->with('streaming')->get();
         return view('usuario.userEdit')->with(compact('data','yo', 'notes'));
     }
@@ -232,7 +228,6 @@ class ActualizarController extends Controller
                         $userStreaming->password = $user->password;
                         $userStreaming->save();
                     }
-                    
                 }
                 
                 $user->save();
@@ -329,7 +324,7 @@ class ActualizarController extends Controller
             if (!is_null($userStreaming)) {
                 $usuarioStre = UserStreaming::find($userStreaming->id);
                 $nombre2 = $usuarioStre->id.'.'.$imagen->getClientOriginalExtension();
-                copy('/home/ftxl/public_html/office/uploads/avatar/'.$nombre_imagen, '/home/ftxl/public_html/streaming/storage/app/public/avatar/'.$nombre2);
+                copy('/home/mytrady/public_html/office/uploads/avatar/'.$nombre_imagen, '/home/mytrady/public_html/streaming/storage/app/public/avatar/'.$nombre2);
                 $usuarioStre->avatar = '/storage/avatar/'.$nombre2;
                 $usuarioStre->save();
             }
