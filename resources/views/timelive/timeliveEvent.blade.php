@@ -26,7 +26,7 @@
                 $('#' + elem).empty()
             
                 if (t.remainTime <= 1) {
-                    var route = "https://fxtlive.com/office/change-meeting-status/{{$evento->id}}";
+                    var route = "https://ftxlive.com/office/change-meeting-status/{{$evento->id}}";
                     $.ajax({
                         url:route,
                         type:'GET',

@@ -8,6 +8,26 @@
 			$('#mytable').DataTable( {
 				responsive: true,
 			});
+
+			CKEDITOR.instances["description"].on('blur', function(){
+				var description = CKEDITOR.instances["description"].getData();
+    			if (description.length < 50){
+    			    alert("La descripción del evento debe tener al menos 50 caracteres.");
+    			    $("#btn-store").prop('disabled', true);
+    			}else{
+    			    $("#btn-store").prop('disabled', false);
+    			}
+		    });
+		    
+		    CKEDITOR.instances["description2"].on('blur', function(){
+				var description = CKEDITOR.instances["description2"].getData();
+    			if (description.length < 50){
+    			    alert("La descripción del evento debe tener al menos 50 caracteres.");
+    			    $("#btn-update").prop('disabled', true);
+    			}else{
+    			    $("#btn-update").prop('disabled', false);
+    			}
+		    });
 		});
 
 		function editar($id){
@@ -21,7 +41,7 @@
 	                $("#streaming_type option[value="+ans.streaming_type+"]").attr("selected", true);
 	                $("#category_id option[value="+ans.category_id+"]").attr("selected", true);
 	                $("#user_id option[value="+ans.user_id+"]").attr("selected", true);
-                 	CKEDITOR.instances["description"].setData(ans.description);
+                 	CKEDITOR.instances["description2"].setData(ans.description);
 	                $("#date").val(ans.date);
 	                $("#time").val(ans.time);
 	                $("#duration").val(ans.duration);
@@ -29,6 +49,7 @@
 	            }
 	        });
 		}
+
 		$("#selectall").on("click", function() {
 			$(".countries").prop("checked", this.checked);
 		});
@@ -153,7 +174,7 @@
 								<div class="col-md-12">
 						            <div class="form-group">
 						                <label class="white">Descripción</label>
-										<textarea class="ckeditor form-control" name="description"></textarea>
+										<textarea class="ckeditor form-control" name="description" id="description"></textarea>
 								    </div>
 						        </div>
 								<div class="col-md-12 text-center">
@@ -213,7 +234,7 @@
 				    </div>
 	      			<div class="modal-footer">
 	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-danger">Crear Evento</button>
+	        			<button type="submit" class="btn btn-danger" id="btn-store" disabled>Crear Evento</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -271,7 +292,7 @@
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="white">Descripción</label>
-									<textarea class="ckeditor form-control" name="description" id="description"></textarea>
+									<textarea class="ckeditor form-control" name="description" id="description2"></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -304,7 +325,7 @@
 				    </div>
 	      			<div class="modal-footer">
 	        			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-danger">Guardar Cambios</button>
+	        			<button type="submit" class="btn btn-danger" id="btn-update">Guardar Cambios</button>
 	      			</div>
 	      		</form>
     		</div>

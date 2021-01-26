@@ -129,16 +129,18 @@
 						            	<textarea class="form-control" name="description"></textarea>
 						            </div>
 								</div>
-                                <div class="col-md-12">
+                               <div class="col-md-12">
 						            <div class="form-group">
 						                <label>URL Español</label>
-						            	<input type="url" class="form-control" name="url" required>
+						            	<input type="url" class="form-control" name="url" pattern="https://vimeo.com/[0-9]{7}" title="El formato debe coincidir con el mostrado en la leyenda" required>
+						            	<label style="color: red;">Formato <i class="fa fa-arrow-right"></i> https://vimeo.com/1234567</label>
 						            </div>
 								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
 						                <label>URL Inglés</label>
-						            	<input type="url" class="form-control" name="english_url" required>
+						            	<input type="url" class="form-control" name="english_url"  pattern="https://vimeo.com/[0-9]{7}" title="El formato debe coincidir con el mostrado en la leyenda" required>
+						            	<label style="color: red;">Formato <i class="fa fa-arrow-right"></i> https://vimeo.com/1234567</label>
 						            </div>
 								</div>
 								<div class="col-md-12">
