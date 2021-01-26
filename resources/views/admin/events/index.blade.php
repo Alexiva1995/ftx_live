@@ -136,7 +136,7 @@
 						        <div class="col-md-12">
 						            <div class="form-group">
 						                <label class="white">Título del Evento</label>
-						            	<input type="text" class="form-control" name="title" required>
+						            	<input type="text" class="form-control" name="title" minlength="5" required>
 						            </div>
 						        </div>
 						        <div class="col-md-12">
@@ -256,7 +256,7 @@
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="white">Título del Evento</label>
-									<input type="text" class="form-control" name="title" id="title" required>
+									<input type="text" class="form-control" name="title" id="title" minlength="5" required>
 								</div>
 							</div>
 							<div class="col-md-12">
