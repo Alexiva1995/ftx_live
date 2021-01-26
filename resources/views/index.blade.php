@@ -1,13 +1,86 @@
 @extends('layouts.landing')
 
+@push('styles')
+    <style>
+        .banner-text{
+            color: white; font-size: 50px; font-weight: bold;
+        }
+        .banner-title{
+            width: 70%; 
+            line-height: 50px;
+        }
+        .banner-buttons{
+            font-size: 35px; 
+            padding-top: 60px;
+        }
+        .banner-next-text{
+            font-weight: bold; 
+            width: 180px; 
+            font-size: 28px; 
+            color: #CF202F;
+        }
+        .banner-date{
+            font-size: 20px;
+            color: #fff;
+            font-weight: 300;
+            padding-top: 10px;
+        }
+        @media (max-width: 1000px) {
+            .banner-text{
+                font-size: 30px; 
+            }
+            .banner-title{
+                width: 70%; 
+                line-height: 30px;
+            }
+            .banner-buttons{
+                font-size: 25px; 
+                padding-top: 30px;
+            }
+            .banner-next-text{
+                font-size: 22px;
+            }
+            .section-title-landing{
+                font-size: 24px;
+            }
+            .reciente-mentor-name {
+                top: 50%;
+            }
+        }
+        @media (max-width: 500px) {
+            .banner-text{
+                font-size: 26px; 
+            }
+            .banner-title{
+                width: 70%; 
+                line-height: 26px;
+            }
+            .banner-buttons{
+                font-size: 18px; 
+                padding-top: 5px;
+            }
+            .banner-next-text{
+                font-size: 16px;
+            }
+            .banner-date{
+                font-size: 14px;
+                padding-top: 5px;
+            }
+            .section-title-landing{
+                font-size: 18px;
+            }
+        }
+    </style>
+@endpush
 @section('content')
-   @if (app('request')->input('logout') == "1")
-      <script>
-         document.getElementById('logout-form').submit();
-      </script>
-   @endif
 
-   @if (Session::has('msj-exitoso'))
+@if (app('request')->input('logout') == "1")
+    <script>
+        document.getElementById('logout-form').submit();
+    </script>
+@endif
+
+@if (Session::has('msj-exitoso'))
         <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
             <strong>{{ Session::get('msj-exitoso') }}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -15,7 +88,6 @@
             </button>
         </div>
     @endif
-
 @if (!Auth::guest())
 <div class="title-page-course col-md"><span class="text-white">
     <h3 class="mb-4"><span class="text-white">Hola</span><span class="text-danger"> {{Auth::user()->display_name}}</span><span class="text-white"> ¡Nos alegra verte hoy!</span></h3>
@@ -25,16 +97,16 @@
       <div style="width: 100%; position: relative; display: inline-block;">
          <img src="{{ asset('uploads/images/banner/'.$evento_actual->image) }}" alt="" style="width:100%; opacity: 0.5;">
          <div style="position: absolute; top: 2%; left: 5%;">
-            <div style="color: white; font-size: 70px; font-weight: bold;">
-               <a style="font-weight: bold; width: 180px; font-size: 28px; color: #CF202F;">PRÓXIMO STREAMING</a><br>
-               <div style="width: 60%; line-height: 70px;">
+            <div class="banner-text">
+               <a class="banner-next-text">PRÓXIMO STREAMING</a><br>
+               <div class="banner-title">
                   <a href="{{ route('timelive')}}" class="text-white">{{$evento_actual->title}}</a>
                </div>
-             <div class="next-streaming-date">
+                <div class="banner-date">
                     <i class="fa fa-calendar"></i> {{\Carbon\Carbon::parse($evento_actual->date)->formatLocalized(' %d de %B')}}
                     <i class="fa fa-clock" style="padding-left: 20px;"></i>{{\Carbon\Carbon::parse($evento_actual->time)->format('g:i a')}}
                 </div>
-               <div style="font-size: 35px; padding-top: 60px;">
+               <div class="banner-buttons">
                   @if (Auth::guest())
                      {{-- USUARIOS INVITADOS --}}
                      <a href="{{route('shopping-cart.membership')}}" class="btn btn-danger" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADQUIRIR MEMBRESÍA</a>
@@ -269,37 +341,34 @@
          @if($finalizados->isNotEmpty())
             @foreach($finalizados as $fin)
                <div class="col-md-4" style="margin-top: 20px;">
-                   <div class="card">
-                            <a href="" style="color: white;">
+                    <div class="card">
+                        <a href="" style="color: white;" class="position-relative">
                             @if($fin->cover == null)
-                                 <img src="{{ asset('uploads/images/miniatura/'.$fin->miniatura) }}" class="card-img-top new-course-img" alt="..." >
-                              
-                              @else
-                                 <img src="{{ asset('uploads/images/miniatura/'.$fin->cover) }}" class="card-img-top new-course-img" alt="..." >
-                              @endif
-                            <div class="card-img-overlay d-flex flex-column mentor-overlay">
+                                <img src="{{ asset('uploads/images/miniatura/'.$fin->miniatura) }}" class="card-img-top new-course-img" alt="..." >
+                            @else
+                                <img src="{{ asset('uploads/images/miniatura/'.$fin->cover) }}" class="card-img-top new-course-img" alt="..." >
+                            @endif
+                            <div class="card-img-overlay d-flex flex-column reciente-mentor-name">
+                                
                                 <div class="mt-auto">
                                     <div class="text-sm text-white" style="line-height:1;">
                                         <div class="row">
                                             <div class="col-md-10">
-                                                <a  href="" style="color:#fff"></a>
+                                               <h6 class="card-title">{{$fin->mentor->display_name}}</h6>
                                             </div>
                                         </div>    
                                     </div>
-                                    
-                                   
                                 </div>
                             </div>
                           </a>
-                     </div><!--CARD IMG-->
-                  <div class="card-img-overlay reciente-mentor-name">
-                     <h6 class="card-title">{{$fin->mentor->display_name}}</h6>
-                  </div>
-
-                  <div class="card-body" style="background-color: #2f343a;">
-                     <h6 class="card-title" style="margin-top: -15px;"><img src="{{ asset('images/icons/play-button.svg') }}" alt="" height="25px" width="25px">  {{$fin->title}}</h6>
-                     <h6 style="font-size: 10px; margin-left: 40px; margin-top: -10px;">{{$fin->category->title}}</h6>
-                  </div>
+                    </div><!--CARD IMG-->
+                    <!--<div class="card-img-overlay reciente-mentor-name">
+                        <h6 class="card-title">{{$fin->mentor->display_name}}</h6>
+                    </div>-->
+                    <div class="card-body" style="background-color: #2f343a;">
+                        <h6 class="card-title" style="margin-top: -15px;"><img src="{{ asset('images/icons/play-button.svg') }}" alt="" height="25px" width="25px">  {{$fin->title}}</h6>
+                        <h6 style="font-size: 10px; margin-left: 40px; margin-top: -10px;">{{$fin->category->title}}</h6>
+                    </div>
                </div>
             @endforeach
          @else
