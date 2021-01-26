@@ -7,6 +7,15 @@
       </script>
    @endif
 
+   @if (Session::has('msj-exitoso'))
+        <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+            <strong>{{ Session::get('msj-exitoso') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+
 @if (!Auth::guest())
 <div class="title-page-course col-md"><span class="text-white">
     <h3 class="mb-4"><span class="text-white">Hola</span><span class="text-danger"> {{Auth::user()->display_name}}</span><span class="text-white"> ¡Nos alegra verte hoy!</span></h3>
