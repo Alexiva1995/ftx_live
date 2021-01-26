@@ -8,17 +8,15 @@
    </div>
 </div>
 <div class="col-md-12 py-5" style="background-color: #cc3333;">
-<div class="row">
+<div class="row  d-flex align-items-center">
     <div class="col-md-6">
-    <!--<img src="{{ asset('nosotros/afiliados/laptop.png') }}" class="img-fluid img-laptop" alt="...">-->
+    <img src="{{ asset('nosotros/afiliados/responsive.png') }}" class="img-fluid" alt="...">
    </div>
-   <div class="col-md-6  d-flex align-items-center subtitle-laptop-one">
+   <div class="col-md-6">
       <h3 class="text-white text-center">Nuestro modelo se basa en el marketing de recomendación.</h3>
+      <h5 class="text-white pt-2">Esta confirmado por múltiples y reconocidas firmas auditoras y de análisis de mercados globales, que el 95% de los consumidores confía en las recomendaciones de amigos y familiares y un 80% tiene mejor disposición de compra cuando recibe información a través de personas que conoce. Por eso, cada vez son más las empresas que han digitalizado esta técnica para ganar eficiencia, reducir en costes y conseguir más atención entre los clientes potenciales.</h5>
    </div>
 
-</div>
-<div class="col-md-6 offset-md-6 mt-4">
-      <h5 class="text-white">Esta confirmado por múltiples y reconocidas firmas auditoras y de análisis de mercados globales, que el 95% de los consumidores confía en las recomendaciones de amigos y familiares y un 80% tiene mejor disposición de compra cuando recibe información a través de personas que conoce. Por eso, cada vez son más las empresas que han digitalizado esta técnica para ganar eficiencia, reducir en costes y conseguir más atención entre los clientes potenciales.</h5>
 </div>
 </div>
 
@@ -35,7 +33,7 @@
 						<div class="col-md-4">
                 <div class="card card-comisiones-two" style="background-color: #FFF!important;">
                   <div class="card-body text-center">
-                    <img src="{{ asset('images/icons/form.svg') }}" alt="" height="50px" width="50px">
+                    <img src="{{ asset('nosotros/afiliados/1.png') }}" alt="" height="50px" width="50px">
                     <p class="card-text"><b>Registrate</b> (No olvides poner en donde quieres que paguemos tus ganancias)</p>
                   </div>
                 </div>
@@ -43,7 +41,7 @@
 						<div class="col-md-4 mt-2">
               <div class="card card-comisiones-two" style="background-color: #FFF!important;">
                 <div class="card-body text-center">
-                  <img src="{{ asset('images/icons/name.svg') }}" alt="" height="50px" width="50px">
+                  <img src="{{ asset('nosotros/afiliados/2.png') }}" alt="" height="50px" width="50px">
                   <p class="card-text">Selecciona su <b>membresía</b> y medio de pago</p>
                 </div>
               </div>
@@ -52,7 +50,7 @@
 						<div class="col-md-4 mt-2">
                 <div class="card card-comisiones-two" style="background-color: #FFF!important;">
                   <div class="card-body text-center">
-                    <img src="{{ asset('images/icons/reproductor-de-video.svg') }}" alt="" height="50px" width="50px">
+                    <img src="{{ asset('nosotros/afiliados/3.png') }}" alt="" height="50px" width="50px">
                     <p class="card-text">Disfruta de su contenido</p>
 
                   </div>
@@ -68,7 +66,7 @@
 						<div class="col-md-4 mt-2">
                 <div class="card card-comisiones-two" style="background-color: #FFF!important;">
                   <div class="card-body text-center">
-                    <img src="{{ asset('images/icons/pulgares-hacia-arriba.svg') }}" alt="" height="50px" width="50px">
+                    <img src="{{ asset('nosotros/afiliados/4.png') }}" alt="" height="50px" width="50px">
                     <p class="card-text"><b>Recomienda</b> el que más te guste con su link de referido</p>
                   </div>
                 </div>
@@ -76,7 +74,7 @@
 						<div class="col-md-4 mt-2">
               <div class="card card-comisiones-two" style="background-color: #FFF!important;">
                 <div class="card-body text-center">
-                  <img src="{{ asset('images/icons/dolar.svg') }}" alt="" height="50px" width="50px">
+                  <img src="{{ asset('nosotros/afiliados/5.png') }}" alt="" height="50px" width="50px">
                   <p class="card-text">Empieza a ganar</p>
                 </div>
               </div>
