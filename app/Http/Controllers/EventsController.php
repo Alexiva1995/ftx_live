@@ -281,9 +281,12 @@ class EventsController extends Controller
         $meeting->meta = json_encode($info);
         $meeting->save();
 
-        return response()->json(
+        $statusLive =  'live';
+
+       /* return response()->json(
             true
-        );
+        );*/
+        return view('timelive.buttonsSection')->with(compact('evento', 'statusLive'));
     }
 
 
@@ -683,7 +686,7 @@ class EventsController extends Controller
         /*DATOS PARA PINTAR EL CALENDARIO*/
         $user_calendar = Calendario::where('iduser', Auth::user()->ID)->get();
         $usuario = Auth::user()->ID;
-        $eventos_agendados = Auth::user()->events->sortBy('id');;
+        $eventos_agendados = Auth::user()->events->sortByDesc('id');
 
         $paisUsuario = DB::table('user_campo')
                         ->select('pais')
