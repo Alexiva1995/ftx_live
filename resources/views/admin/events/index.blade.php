@@ -50,6 +50,29 @@
 	        });
 		}
 
+		function load_time(){
+			//var route = 'http://localhost:8000/admin/events/calculate-time';
+			var route = 'https://ftxlive.com/office/admin/events/calculate-time';
+			var formData = new FormData(document.getElementById("form_time"));
+ 			$.ajax({
+	            headers: {
+	                'X-CSRF-TOKEN': $("#meta_token").val()    
+	            },
+	            url: route,
+	            type: "POST",
+				 data: formData,
+				 processData: false,  // tell jQuery not to process the data
+				 contentType: false,
+	            success:function(ans){
+	            	var fecha = ans.split(" ");
+	                console.log(fecha);
+	                $("#date2").val(fecha[0]);
+	                $("#time2").val(fecha[1]);
+	                $("#modal-time").modal("hide");
+	            }
+	        });
+		}
+
 		$("#selectall").on("click", function() {
 			$(".countries").prop("checked", this.checked);
 		});
@@ -180,13 +203,16 @@
 								<div class="col-md-12 text-center">
 									<label class="white">Fecha y Hora del Sistema	 <br><span style="color: red;">{{ date('d-m-Y H:i A', strtotime($dateNow))}}</span></label>
 								</div>
+								<div class="col-md-12 text-center">
+									<label class="white"><a href="#" data-toggle="modal" data-target="#modal-time">Calcular Hora</a></label>
+								</div>
 								<div class="col-md-6">
 									<label class="white">Fecha</label>
-									<input type="date" class="form-control" name="date" required>
+									<input type="date" class="form-control" name="date" id="date2" required>
 								</div>
 								<div class="col-md-6">
 									<label class="white">Hora</label>
-									<input type="time" class="form-control" name="time" required>
+									<input type="time" class="form-control" name="time" id="time2" required>
 								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
@@ -328,6 +354,54 @@
 	        			<button type="submit" class="btn btn-danger" id="btn-update">Guardar Cambios</button>
 	      			</div>
 	      		</form>
+    		</div>
+  		</div>
+	</div>
+
+	<!-- Modal Calcular Hora-->
+	<div class="modal fade" id="modal-time" tabindex="-1" role="dialog" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content" style="background-color: black;">
+      			<div class="modal-header">
+        			<h5 class="modal-title white" id="exampleModalLabel">Calcular Hora</h5>
+      			</div>
+      			<input type="hidden" id="meta_token" value="{{ csrf_token() }}">
+				<div class="modal-body">
+				    <div class="container-fluid">
+				    	<form id="form_time">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="white">País</label>
+									<select class="form-control" name="country" id="country">
+										<option value="" selected disabled>Seleccione una opción...</option>
+										<option value="AR">Argentina</option>
+										<option value="CH">Chile</option>
+										<option value="CO">Colombia</option>
+										<option value="CR">Costa Rica</option>
+										<option value="EC">Ecuador</option>
+										<option value="ES">España</option>
+										<option value="EU">Estados Unidos</option>
+										<option value="PA">Panamá</option>
+										<option value="PE">Perú</option>
+										<option value="VE">Venezuela</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label class="white">Fecha</label>
+								<input type="date" class="form-control" name="date" id="date2">
+							</div>
+							<div class="col-md-6">
+								<label class="white">Hora</label>
+								<input type="time" class="form-control" name="time" id="time2">
+							</div>
+						</form>
+				    </div>
+				</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+	        		<button type="button" class="btn btn-danger" onclick="load_time();">Aceptar</button>
+	      		</div>
     		</div>
   		</div>
 	</div>

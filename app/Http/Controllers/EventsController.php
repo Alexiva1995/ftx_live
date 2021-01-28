@@ -190,6 +190,48 @@ class EventsController extends Controller
         return redirect('admin/events')->with('msj-exitoso', 'El evento ' . $evento->title . ' ha sido creado con éxito.');
     }
 
+    public function calculate_time(Request $request){
+        $p = $request->date."T".$request->time;
+        $carbon = new Carbon($p);
+
+        switch ($request->country) {
+            case 'AR':
+                $new = $carbon->addHours(3);
+            break;
+            case 'CH':
+                $new = $carbon->addHours(3);
+            break;
+            case 'CR':
+                $new = $carbon->addHours(6);
+            break;
+            case 'CO':
+                $new = $carbon->addHours(5);
+            break;
+            case 'EC':
+                $new = $carbon->addHours(5);
+            break;
+            case 'ES':
+                $new = $carbon->subHours(2);
+            break;
+            case 'EU':
+                $new = $carbon->addHours(6);
+            break;
+            case 'PA':
+                $new = $carbon->addHours(6);
+            break;
+            case 'PE':
+                $new = $carbon->addHours(6);
+            break;
+            case 'VE':
+                $new = $carbon->addHours(4);
+            break;
+        }
+
+        $nuevaFecha = explode("T", $new);
+        /*$newDate = $nuevaFecha[0];
+        $newTime = $nuevaFecha[1];*/
+        return response()->json($nuevaFecha[0]);
+    }
     /**
      * Display the specified resource.
      *
