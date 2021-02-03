@@ -124,8 +124,92 @@ class Menu
                   $automatico = 1;
               }
               
-             
-        return [
+        if (Auth::user()->rol_id == 2){
+            return [
+                'Inicio' => [
+                    'submenu' => 0,
+                    'ruta' => 'admin.index',
+                    'black'=> '0',
+                    'icono' => 'fa fa-home',
+                    'complementoruta' => '',
+                    'permisoAdmin' => 1,
+                    'activo' => 0,
+                ],
+
+                'Academia' => [
+                    'submenu' => 0,
+                    'ruta' => 'index',
+                    'black'=> '0',
+                    'icono' => 'fas fa-exchange-alt',
+                    'complementoruta' => '',
+                    'permisoAdmin' => 1,
+                    'activo' => 0,
+                ],
+
+                'Actualizar' => [
+                    'submenu' => 0,
+                    'ruta' => 'admin-update-all',
+                    'black'=> '0',
+                    'icono' => 'fas fa-sync',
+                    'complementoruta' => '',
+                    'permisoAdmin' => 1,
+                    'activo' => 0,
+                ],
+                 'Eventos' => [
+                    'submenu' => 1,
+                    'ruta' => 'javascript:;',
+                    'icono' => 'fas fa-calendar-day',
+                    'permisoAdmin' => 1,
+                    'activo' => request()->is('admin/events') ? 'active' : 0,
+                    'menus' => [
+                        'Listado de Eventos' => [
+                            'ruta' => 'admin.events.index',
+                            'complementoruta' => '',
+                            'black'=> '0',
+                            'oculto'=> 'activo',
+                        ],
+                       
+                    ]
+                ],
+                'Red De Usuario' => [
+                    'submenu' => 1,
+                    'ruta' => 'javascript:;',
+                    'icono' => 'fas fa-user',
+                    'permisoAdmin' => 1,
+                    'activo' => (request()->is('admin/red*')) ? 'active' : '',
+                    'menus' => [
+                        'Referidos' => [
+                            'ruta' => 'red.directos',
+                            'complementoruta' => '',
+                            'black'=> '0',
+                            'oculto'=> 'activo',
+                        ],
+                    ]
+                ],
+
+                'Billetera' => [
+                    'submenu' => 0,
+                    'ruta' => 'wallet-index',
+                    'black'=> '0',
+                    'icono' => 'fas fa-wallet',
+                    'complementoruta' => '',
+                    'permisoAdmin' => 1,
+                    'activo' => 0,
+                ],
+
+
+                'Informe de Comisiones' => [
+                    'submenu' => 0,
+                    'ruta' => 'wallet-repor-comision-new',
+                    'black'=> '0',
+                    'icono' => 'glyphicon glyphicon-list-alt',
+                    'complementoruta' => '',
+                    'permisoAdmin' => 1,
+                    'activo' => 0,
+                ],
+            ];
+        }else{
+            return [
             'Inicio' => [
                 'submenu' => 0,
                 'ruta' => 'admin.index',
@@ -155,7 +239,6 @@ class Menu
                 'permisoAdmin' => 1,
                 'activo' => 0,
             ],
-
             'Red De Usuario' => [
                 'submenu' => 1,
                 'ruta' => 'javascript:;',
@@ -193,6 +276,7 @@ class Menu
                 'activo' => 0,
             ],
         ];
+        }
     }
 
 

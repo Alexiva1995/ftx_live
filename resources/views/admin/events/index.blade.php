@@ -7,6 +7,9 @@
 		$(document).ready( function () {
 			$('#mytable').DataTable( {
 				responsive: true,
+				"order": [
+	                [0, 'desc']
+	            ]
 			});
 
 			CKEDITOR.instances["description"].on('blur', function(){
@@ -126,7 +129,6 @@
 								<td class="text-center">{{ App\Models\Events::findID($event->user_id) }}</td>
 								<td class="text-center">
 									<a class="btn btn-danger editar" data-route="{{ route('admin.events.edit', $event->id) }}" id="{{$event->id}}" onclick="editar(this.id);"><i class="fa fa-edit"></i></a>
-									<a class="btn btn-danger" href="{{ route('transmitir', $event->id) }}"><i class="fa fa-video"></i></a>
 									@if ($event->status == '1' )
 										<a class="btn btn-danger" href="{{ route('admin.events.change-status', [$event->id, 0]) }}" title="Deshabilitar" style="background-color: rgb(23, 21, 21)!important; border-color:rgb(23, 21, 21)!important;"><i class="fa fa-ban"></i></a>
 									@endif
@@ -172,17 +174,21 @@
 						                </select>
 						            </div>
 								</div>
-								<div class="col-md-12">
-						            <div class="form-group">
-						                <label class="white">Mentor</label>
-						                <select class="form-control" name="user_id" required>
-						                	<option value="" selected disabled>Seleccione un mentor..</option>
-						                	@foreach ($mentores as $mentor)
-						                		<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
-						                	@endforeach
-						                </select>
-						            </div>
-								</div>
+								@if (Auth::user()->rol_id != 2)
+									<div class="col-md-12">
+							            <div class="form-group">
+							                <label class="white">Mentor</label>
+							                <select class="form-control" name="user_id" @if (Auth::user()->rol_id != 2) required @endif>
+							                	<option value="" selected disabled>Seleccione un mentor..</option>
+							                	@foreach ($mentores as $mentor)
+							                		<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
+							                	@endforeach
+							                </select>
+							            </div>
+									</div>
+								@else
+									<input type="hidden" name="user_id" value="{{ Auth::user()->ID }}">
+								@endif
 								<div class="col-md-12">
 						            <div class="form-group">
 						                <label class="white">Categoría</label>
@@ -295,16 +301,20 @@
 						            </select>
 						       </div>
 						    </div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<label class="white">Mentor</label>
-									<select class="form-control" name="user_id" id="user_id" required>
-										@foreach ($mentores as $mentor)
-											<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
-										@endforeach
-									</select>
+						    @if (Auth::user()->rol_id != 2)
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="white">Mentor</label>
+										<select class="form-control" name="user_id" id="user_id" @if (Auth::user()->rol_id != 2) required @endif>
+											@foreach ($mentores as $mentor)
+												<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
+											@endforeach
+										</select>
+									</div>
 								</div>
-							</div>
+							@else
+								<input type="hidden" name="user_id" id="user_id" value="{{ Auth::user()->ID }}">
+							@endif
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="white">Categoría</label>

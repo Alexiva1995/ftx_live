@@ -45,8 +45,15 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $events = Events::orderBy('id', 'DESC')->get();
+    {   
+        if (Auth::user()->rol_id = 2){
+            $events = Events::where('user_id', '=', Auth::user()->ID)
+                        ->orderBy('id', 'DESC')
+                        ->get();
+        }else{
+            $events = Events::orderBy('id', 'DESC')->get();
+        }
+        
 
         $mentores = DB::table('wp98_users')
             ->select('ID', 'user_email')
@@ -102,9 +109,9 @@ class EventsController extends Controller
             $contactId = $streamingConnect->newContact($requestContact);
         }
 
-        if (is_null(Auth::user()->streaming_token)) {
+        //if (is_null(Auth::user()->streaming_token)) {
             $streamingConnect->setToken();
-        }
+        //}
 
         $meetingUuid = $streamingConnect->newMeeting($request, $userId);
 

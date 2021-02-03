@@ -95,6 +95,7 @@ class HomeController extends Controller{
           $finalizados = Events::where('date', '<=',date('Y-m-d'))
          ->where('time', '<', date('H:i:s'))
          ->orwhere('date', '<',date('Y-m-d'))
+         ->take(12)
          ->get();
  
        $misEventosArray = [];
@@ -128,6 +129,7 @@ class HomeController extends Controller{
          $finalizados = Events::where('date', '<=',date('Y-m-d'))
          ->where('time', '<', date('H:i:s'))
          ->orwhere('date', '<',date('Y-m-d'))
+         ->take(12)
          ->get();
          $total = count($proximos);
  
