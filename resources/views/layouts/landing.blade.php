@@ -149,6 +149,9 @@
                                     <img src="{{ asset('images/logo-fxtlive.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
                                     <img src="{{ asset('images/mytradinglogo.png')}}" alt="" height="35px" class="mr-md-2 mr-3">
                                     <img src="{{ asset('images/logo-jose.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
+                                    <img src="{{ asset('images/revolutte.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
+                                    <img src="{{ asset('images/revolutte-insurance.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
+                                    <img src="{{ asset('images/revolutte-real-state.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
                                 </div>
                                 <div class="mb-2 text-center text-white" style="margin:20px;">
                                     PAISES EN DONDE ESTAMOS PRESENTES
