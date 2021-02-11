@@ -15,7 +15,7 @@
               <div class="overlay"></div>
                   <img src="{{ asset('images/streaming-1.jpg') }}" class="d-block w-100" alt="...">
                    <div class="carousel-caption">
-                    <div class="col-md-5 offset-md-5">
+                    <div class="col-md-5 offset-md-4">
                     <div class="estilostreaming">STREAMING</div>
                     <div class="estilostreamingtwo">Disfruta de <b> Sesiones en vivo <b></div>
                   </div>

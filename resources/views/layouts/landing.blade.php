@@ -129,14 +129,17 @@
             <div class="bg-dark-gray" id="page-content-wrapper">
                 @include('layouts.partials.header')
 
-                @yield('content')
-                     <div class="icon-bar">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/intent/tweet?text=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.ftxlive.com/office/&title=FTX%20Live&summary=&source=" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="#" class="btn btn-social-media-icon btn-rounded email-icon mt-2 mb-2" target="_blank"><i class="fas fa-envelope"></i></a>
-                        <a href="https://youtube.com/channel/UCBEWMVfwwPDMa1metYobEqg" class="btn btn-social-media-icon btn-rounded youtube" target="_blank"><i class="fa fa-youtube"></i></a>
-                     </div>
+                <div class="container">      
+                @yield('content') 
+               
+
+                <div class="icon-bar">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.ftxlive.com/office/&title=FTX%20Live&summary=&source=" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-social-media-icon btn-rounded email-icon mt-2 mb-2" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <!--<a href="https://youtube.com/channel/UCBEWMVfwwPDMa1metYobEqg" class="btn btn-social-media-icon btn-rounded youtube" target="_blank"><i class="fa fa-youtube"></i></a>-->
+                </div>
 
                 <div class="section-paises">
                     <div class="container">
@@ -210,6 +213,7 @@
                 </div>
 
                 @include('layouts.partials.footer')
+                </div>
             </div>
             <!-- /#page-content-wrapper -->
         </div>

@@ -29,7 +29,7 @@
         <a data-toggle="modal" data-target="#video1">
        <img src="{{ asset('nosotros/gratis-Blog/bienvenido.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
        <div class="card-body">
-            <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Bienvenido</h6>
+            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Bienvenido</h6>
         </div>
         </a>
      </div>
@@ -39,7 +39,7 @@
       <a data-toggle="modal" data-target="#video2"> 
         <img src="{{ asset('nosotros/gratis-Blog/pro.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
         <div class="card-body">
-            <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Ser Pro</h6>
+            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Ser Pro</h6>
         </div>
         </a>
      </div>
@@ -49,7 +49,7 @@
       <a data-toggle="modal" data-target="#video3">         
           <img src="{{ asset('nosotros/gratis-Blog/cambio.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
         <div class="card-body">
-            <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">El Cambio</h6>
+            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">El Cambio</h6>
         </div>
         </a>
     </div>

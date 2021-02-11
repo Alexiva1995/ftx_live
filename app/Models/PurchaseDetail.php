@@ -17,4 +17,8 @@ class PurchaseDetail extends Model
     public function membership(){
         return $this->belongsTo('App\Models\Membership');
     }
+
+    public function offer(){
+        return $this->belongsTo('App\Models\OffersLive');
+    }
 }

@@ -16,27 +16,26 @@
 
 @section('content')
 
-<div class="container-fluid courses-slider" style="background-color: #1C1D21;margin-bottom: 0px; padding-bottom: 0px;">
-    <div class="container-fluid courses-slider" style="padding-bottom: 0px;">
-      <div id="mainSlider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item  active ">
-              <div class="overlay"></div>
+   <div class="container-fluid courses-slider" style="background-color: #1C1D21;margin-bottom: 0px; padding-bottom: 0px;">
+      <div class="container-fluid courses-slider" style="padding-bottom: 0px;">
+         <div id="mainSlider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item  active ">
                   <img src="{{ asset('nosotros/nosotros/nosotros.png') }}" class="d-block w-100" alt="...">
-                   <div class="carousel-caption">
-                    <div class="col-md-8 offset-md-4">
-                    <div class="estilobusiness">FTX LIVESTREAMING</div>
+                  <div class="carousel-caption">
+                     <div class="col-md-8 offset-md-4">
+                        <div class="estilobusiness">FTX LIVESTREAMING</div>
+                     </div>
                   </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
 <div class="col-md-12" style="background-color: #EDEDED;">
    <div class="col-md-8 offset-md-2" style="padding: 50px 50px; text-align: center;">
-  <h4>Somos el mejor espacio de entrenamientos en vivo para emprendedores y empresarios.</h4>
+  <h3>Somos el mejor espacio de entrenamientos en vivo para emprendedores y empresarios.</h3>
    </div>
   </div>
 
@@ -45,9 +44,9 @@
         <div class="row no-gutters">
             <div class="col-md-6" style="background-color: #CF202F; color: #fff; padding: 40px !important;">
                 <div class="card-body">
-                     <h3 class="card-title text-center">Nuestra propuesta de valor se distingue por ofrecer:</h3>
+                     <h4 class="card-title text-center">Nuestra propuesta de valor se distingue por ofrecer:</h4>
                      <!--<p class="card-text" style="text-align: center;">Te hacemos crecer personalmente con mucho contenido de desarrollo personal.</p>-->
-                     <h4 class="m-4 card-title align-items-center d-flex justify-content-center text-center"> Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en práctica el conocimiento adquirido en cada uno de los eventos y transmisiones que tengamos. </h4>
+                     <p class="m-4 card-title align-items-center d-flex justify-content-center text-center"> Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en práctica el conocimiento adquirido en cada uno de los eventos y transmisiones que tengamos. </p>
                 </div>
             </div>
                 <div class="col-md-6" style="min-height: 300px; background-image: url('{{ asset('nosotros/nosotros/02.jpg') }}'); background-size: cover; background-position: top;">
@@ -147,7 +146,7 @@
 
 <div class="col-md-12" style="background-color: #1C1D21;">
      <div class="section-title-landing new-courses-section-title" style="text-align: center; padding: 30px; color: #CF202F;">
-      <h2 style="font-weight: 800; font-size: 40px;">NUESTROS FUNDADORES</h2>
+      <h2 style="font-weight: 800; font-size: 35px;">NUESTROS FUNDADORES</h2>
     </div>
 
     <div class="card" style="max-width: 100%; margin-bottom: 0rem!important;">
@@ -158,14 +157,14 @@
             <div class="col-md-6 align-items-center d-flex justify-content-center" style="color: #fff; background-color: #1c1d21;">
             <div class="card-body">
 
-                <h2 class="card-title" style="text-align: right; color: #CF202F; font-size: 35px; font-weight: bold;">
+                <h3 class="card-title" style="text-align: right; color: #CF202F; font-size: 30px; font-weight: bold;">
                     JOSÉ GORDO
-                </h2>
+                </h3>
 
-               <p class="card-text align-items-center d-flex justify-content-center" style="font-weight: 500; font-size: 19px; line-height: 1.6em; color: #CF202F; text-align: right;">
+               <p class="card-text align-items-center d-flex justify-content-center" style="font-weight: 500; font-size: 16px; line-height: 1.6em; color: #CF202F; text-align: right;">
                 Especialista en desarrollo de negocios rentables, sostenibles y de expansión global.
                </p>
-               <p class="card-text align-items-center d-flex justify-content-center" style="text-align: right; line-height: 30px; font-weight: 500; font-size: 19px;">
+               <p class="card-text align-items-center d-flex justify-content-center" style="text-align: right; line-height: 24px; font-weight: 500; font-size: 16px;">
                 15 años de experiencia en el mundo financiero, eterno aprendiz y emprendedor, amante de las finanzas, la innovación, y los proyectos de impacto social. Con la experiencia ganada a través los años y su pasión por el desarrollo personal y profesional de sus equipos de trabajo, ha creado diferentes técnicas de entrenamientos altamente efectivo, además de ser escritor y autor de 4 libros de negocios, 2 best seller. Fundador y Co-creador de My Business Academy Pro, así como de Piense y Hágase Rico, El Legado. Su compromiso es dejar huella en todo país que pise y persona que lo acompañe</p>
             </div>
           </div>
@@ -178,14 +177,14 @@
           <div class="col-md-6 align-items-center d-flex justify-content-center" style="color: #fff; background-color: #1c1d21;">
           <div class="card-body">
 
-              <p class="card-title" style="text-align: left; color: #CF202F; font-size: 35px; font-weight: bold;">
+              <p class="card-title" style="text-align: left; color: #CF202F; font-size: 30px; font-weight: bold;">
                     TANIA TOSTADO
                 </p>
 
-               <p class="card-text align-items-center d-flex justify-content-center" style="font-weight: 500; font-size: 19px; line-height: 1.6em; color: #CF202F; text-align: left;">
+               <p class="card-text align-items-center d-flex justify-content-center" style="font-weight: 500; font-size: 16px; line-height: 1.6em; color: #CF202F; text-align: left;">
                 Licenciada en Marketing con Especialidad en Negocios Internacionales, Filántropa, Exitosa Empresaria y Conferencista de empresas con expansión global.
                </p>
-               <p class="card-text align-items-center d-flex justify-content-center" style="text-align: left; line-height: 30px; font-weight: 500; font-size: 19px;">
+               <p class="card-text align-items-center d-flex justify-content-center" style="text-align: left; line-height: 24px; font-weight: 500; font-size: 16px;">
                  Experta en la apertura de nuevos mercados y mentora de grandes equipos de trabajo de la industria del Multinivel. Su compromiso es influir positivamente en mujeres y hombres para sacar al líder que llevan dentro e impulsarlos a cumplir sus sueños.</p>
             </div>
            </div>
@@ -199,7 +198,7 @@
 
     <div class="col-md-12 py-5" style="background-color: #EDEDED;">
      <div class="section-title-landing new-courses-section-title" style="text-align: center; padding: 30px; color: #CF202F;">
-      <h2 style="font-weight: 800; font-size: 40px;">NUESTROS ESPECIALISTAS</h2>
+      <h2 style="font-weight: 800; font-size: 35px;">NUESTROS ESPECIALISTAS</h2>
     </div>
 
 <div class="col-md-10 offset-md-1">
@@ -209,9 +208,9 @@
           <div class="col-md-8" style="background-color: #EDEDED;">
               <div class="card-body">
 
-               <p class="card-text" style="color: #CF202F; font-size: 35px; font-weight: bold;">Erick Reynaga</p>
+               <p class="card-text" style="color: #CF202F; font-size: 30px; font-weight: bold;">Erick Reynaga</p>
 
-               <p class="card-text" style="text-align: left; line-height: 30px; font-weight: 500; font-size: 19px;">Especialista con 6 años de experiencia en el mundo del Trading, Forex y las Criptodivisas, así como de fondos de inversión con marcas de reconocimiento internacional. Cuenta con una maestría en administración y negocios, es líder de proyectos educativos financieros para diferentes cúpulas de negocios de jóvenes empresarios en México y es promotor de una Sociedad Financiera de Operación Múltiple en la que se operan diversas transacciones con crypto.</p>
+               <p class="card-text" style="text-align: left; line-height: 24px; font-weight: 500; font-size: 16px;">Especialista con 6 años de experiencia en el mundo del Trading, Forex y las Criptodivisas, así como de fondos de inversión con marcas de reconocimiento internacional. Cuenta con una maestría en administración y negocios, es líder de proyectos educativos financieros para diferentes cúpulas de negocios de jóvenes empresarios en México y es promotor de una Sociedad Financiera de Operación Múltiple en la que se operan diversas transacciones con crypto.</p>
             </div>
           </div>
           <div class="col-md-4" style="background-color: #EDEDED;">

@@ -8,7 +8,7 @@
         <div class="carousel-inner">
             <div class="carousel-item  active ">
               <div class="overlay"></div>
-                  <img src="{{ asset('nosotros/gratis-Blog/HomeBlog.png') }}" class="d-block w-100" alt="...">
+                  <img src="{{ asset('nosotros/gratis-Blog/homeblog.jpg') }}" class="d-block w-100" alt="...">
                    <div class="carousel-caption row align-items-center">
                   <div class="blog-title font-weight-bold">BLOG | FTX LIVE
                </div>

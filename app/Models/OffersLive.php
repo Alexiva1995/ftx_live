@@ -13,4 +13,8 @@ class OffersLive extends Model
     protected $fillable = [
         'event_id', 'title', 'price', 'url_resource'
     ];
+
+    public function purchases(){
+        return $this->hasMany('App\Models\PurchaseDetail');
+    }
 }

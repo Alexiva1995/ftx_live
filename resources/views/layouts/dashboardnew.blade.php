@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 
-<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+<link rel="shortcut icon" href="{{ asset('icon.png') }}" />
 
     {{-- traductor de google  --}}
     

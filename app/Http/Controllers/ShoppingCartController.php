@@ -74,19 +74,19 @@ class ShoppingCartController extends Controller
                         $total = $membresia->price_annual;
                     }  
                 }else{
-                    if ( (Auth::user()->sponsor_id != 0) && (!is_null(Auth::user()->sponsor_id)) ){
+                    //if ( (Auth::user()->sponsor_id != 0) && (!is_null(Auth::user()->sponsor_id)) ){
                         if ($item->period == 'Mensual'){
                             $total = $membresia->descuento;
                         }else{
                             $total = $membresia->discount_annual;
                         }
-                    }else{
+                    /*}else{
                         if ($item->period == 'Mensual'){
                             $total = $membresia->price;
                         }else{
                             $total = $membresia->price_annual;
                         }   
-                    }
+                    }*/
                 }
 
                 $item->curso = [

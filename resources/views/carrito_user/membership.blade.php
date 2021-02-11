@@ -7,7 +7,7 @@
         }
 
         .btn-color-green {
-            background: #cc4e49;
+            background: #28a745;
         }
 
         .bg-grey-alt {
@@ -15,7 +15,7 @@
         }
 
         .btn-color-red{
-            background: #CF202F;
+            background: #cc4e49;
         }
     </style>
 @endpush
@@ -50,10 +50,10 @@
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
                                                     @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-danger mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-danger" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
+                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
                                                     @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price}}</del> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del><br> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
                                                     @endif
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
@@ -63,14 +63,14 @@
                                                 <h5 class="p-2 text-white text-center">Tendrás acceso a:</h5>
                                                 <h4 class="p-2 text-azul-claro text-center">+ 2 LIVE STREAMING <br> AL MES</h4>
                                                 @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-danger mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-danger" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
+                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
                                                 @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
                                                 @endif
                                                     
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
@@ -93,10 +93,10 @@
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
                                                     @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-danger mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-danger" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
+                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
                                                     @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price}}</del> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del><br> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
                                                     @endif
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
@@ -105,14 +105,14 @@
                                                 <h5 class="p-2 text-white text-center">Disfrutarás de todo el contenido de este nivel y del anterior</h5>
                                                 <h4 class="p-2 text-orange text-center">+ 4 STREAMING <br> AL MES</h4>
                                                 @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-danger mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-danger" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
+                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
                                                 @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
                                                 @endif
                                                 
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
@@ -136,10 +136,10 @@
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
                                                     @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-danger mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-danger" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
+                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
                                                     @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price}}</del> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
                                                     @endif
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
@@ -148,14 +148,14 @@
                                                 <h5 class="p-2 text-white text-center">Accederás:</h5>
                                                 <h4 class="p-2 text-verde-claro text-center">+ 6 STREAMING <br> AL MES</h4>
                                                 @if (Auth::guest())
-                                                        <h4 class="card-price text-rojo text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-danger mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-danger" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
+                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
+                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
                                                 @else
-                                                        <h4 class="card-price text-rojo text-center"><del style="font-size: 30px;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
+                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
                                                 @endif
                                                 
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
