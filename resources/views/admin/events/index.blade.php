@@ -174,7 +174,7 @@
 						                </select>
 						            </div>
 								</div>
-								@if (Auth::user()->rol_id != 2)
+								@if (Auth::user()->ID == 1)
 									<div class="col-md-12">
 							            <div class="form-group">
 							                <label class="white">Mentor</label>

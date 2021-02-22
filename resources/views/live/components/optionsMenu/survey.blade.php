@@ -59,7 +59,7 @@
                                     </div>
                                 @endif
                             @endif
-                            @if(Auth::user()->rol_id==2)
+                            @if ( (Auth::user()->rol_id==2) || (Auth::user()->rol_id == 0) )
                                 @if(!empty($resources_survey))
                                     <div id="charts-slider" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">

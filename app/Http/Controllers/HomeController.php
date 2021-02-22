@@ -316,7 +316,7 @@ class HomeController extends Controller{
         public function show_event_category($category_id)
         {
 
-            $events = Event::where('category_id','=', $category_id)->get();
+            $events = Events::where('category_id','=', $category_id)->get();
             $category_name = Category::where('id', '=', $category_id)->first();
  
              return view('events.events_by_category', compact('events','category_name'));
