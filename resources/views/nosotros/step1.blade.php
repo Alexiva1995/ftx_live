@@ -80,8 +80,6 @@
           </div>
          </div>
        </div>
-
-
        <div class="card mb-3" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
           <div class="col-md-8 nosotros-text" style="background-color: #fff;">
@@ -94,8 +92,6 @@
            </div>
          </div>
        </div>
-
-
        <div class="card mb-3" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
            <div class="col-md-4">
@@ -182,14 +178,14 @@
                 </p>
 
                <p class="card-text align-items-center d-flex justify-content-center" style="font-weight: 500; font-size: 16px; line-height: 1.6em; color: #CF202F; text-align: left;">
-                Licenciada en Marketing con Especialidad en Negocios Internacionales, Filántropa, Exitosa Empresaria y Conferencista de empresas con expansión global.
+                  Licenciada en Administración financiera con especialidad en finanzas corporativas.
                </p>
                <p class="card-text align-items-center d-flex justify-content-center" style="text-align: left; line-height: 24px; font-weight: 500; font-size: 16px;">
-                 Experta en la apertura de nuevos mercados y mentora de grandes equipos de trabajo de la industria del Multinivel. Su compromiso es influir positivamente en mujeres y hombres para sacar al líder que llevan dentro e impulsarlos a cumplir sus sueños.</p>
+                 Ha colaborado con bancos de talla mundial como: UBS, Credit Suisse y Deutche Bank en Suiza, Bank Hapoalim en Israel, Baern Stearns Securities en EUA, entre muchos otros. En 2008, fue ganadora del premio Best Development, otorgado por la International Property Awards y CNBC. Como consultora independiente, asesora a múltiples y reconocidas empresas en latinoamérica para hacer importantes transacciones con cifras de millones de dólares.</p>
             </div>
            </div>
             <div class="col-md-6">
-              <img src="{{ asset('nosotros/fundadores/mujer.jpg') }}" style="width: 100%;">
+              <img src="{{ asset('nosotros/fundadores/tania-tostado.jpg') }}" style="width: 100%;">
             </div>
           </div>
         </div>
