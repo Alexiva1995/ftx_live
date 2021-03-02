@@ -15,7 +15,16 @@
         }
 
         .btn-color-red{
-            background: #cc4e49;
+            background-color: #CF202F;
+        }
+        .btn-color-red2{
+            background-color: #af1a30;
+        }
+        .btn-color-red3{
+            background-color: #cc4e49;
+        }
+        .btn-color-blue{
+            background-color: #2b93ff;
         }
     </style>
 @endpush
@@ -43,34 +52,25 @@
                                     <!-- Free Tier -->
                                     <div class="col-lg-4 mt-4 mb-5">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-header-azul-price" style="position: absolute;">
+                                            <div class="card-header-azul-price" style="position: absolute; background-color: #CF202F;">
                                                 <h1 class="card-title text-white text-uppercase text-center">{{$membresia->name}}</h1>
                                             </div>
                                             <div class="card-body" style="position: relative; top:55px; z-index: 1;">
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
-                                                    @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
-                                                    @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del><br> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
-                                                    @endif
+                                                        <h5 class="text-center" style="color: #CF202F; font-size: 28px;"><del> ${{$membresia->price}}/Mes</del></h5>
+                                                        <h4 class="card-price text-success mt-2 p-1 text-center" style="font-weight: bold; font-size: 40px;"> ${{$membresia->descuento}}/Mes</h4>
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
                                                 </div>
                                                 <h5 class="p-2 text-white text-center">Esta membresía es para los amantes del aprendizaje </h5><br>
-                                                <h5 class="p-2 text-white text-center"><strong class="text-azul-claro">Podrás conectarte a todo el contenido en vivo, solo en formato de streaming</strong></h5><br>
-                                                <h5 class="p-2 text-white text-center">Tendrás acceso a:</h5>
-                                                <h4 class="p-2 text-azul-claro text-center">+ 2 LIVE STREAMING <br> AL MES</h4>
-                                                @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
-                                                @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
-                                                @endif
+                                                <h5 class="text-white text-center"><strong class="text-azul-claro">Podrás conectarte a todo el contenido en vivo, solo en formato de streaming</strong></h5><br>
+                                                <h5 class="text-white text-center">Tendrás acceso a:</h5>
+                                                <h4 class="text-center" style="color: #CF202F;">+ 2 LIVE STREAMING <br> AL MES</h4>
+                                                <h4 class="pb-4 card-price text-success text-center" style="font-size: 35px;"><del style="font-size: 28px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}/<span style="font-size: 25px;">Anual</span></h4>
                                                     
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-blue text-white btn-block">Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
@@ -86,37 +86,28 @@
                                 @case(2)
                                     <div class="col-lg-4 mt-4 mb-5">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-header-orange-price" style="position: absolute; background-color: #cc4e49 !important;">
+                                            <div class="card-header-orange-price" style="position: absolute; background-color: #af1a30 !important;">
                                                 <h1 class="card-title text-white text-uppercase text-center">{{$membresia->name}}</h1>
                                             </div>
                                             <div class="card-body" style="position: relative; top:55px; z-index: 1;">
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
-                                                    @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
-                                                    @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del><br> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
-                                                    @endif
+                                                        <h5 class="text-center" style="color: #af1a30; font-size: 28px;"><del> ${{$membresia->price}}/Mes</del></h5>
+                                                        <h4 class="card-price text-success mt-2 p-1 text-center" style="font-weight: bold; font-size: 40px;"> ${{$membresia->descuento}}/Mes</h4>
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
                                                 </div>
-                                                <h5 class="p-2 text-orange text-center">Esta membresía es para los que quieren recibir y compartir conocimiento con nuestra red general de mentores y afiliados.</h5><br>
-                                                <h5 class="p-2 text-white text-center">Disfrutarás de todo el contenido de este nivel y del anterior</h5>
-                                                <h4 class="p-2 text-orange text-center">+ 4 STREAMING <br> AL MES</h4>
-                                                @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
-                                                @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
-                                                @endif
+                                                <h5 class="text-white text-center">Esta membresía es para los que quieren recibir y compartir conocimiento con nuestra red general de mentores y afiliados.</h5><br>
+                                                <h5 class="text-white text-center"><strong class="text-azul-claro">Disfrutarás de todo el contenido de este nivel y del anterior</strong></h5>
+                                                <h4 class="text-center" style="color: #af1a30;">+ 4 LIVE STREAMING <br> AL MES</h4>
+                                               <h4 class="pb-4 card-price text-success text-center" style="font-size: 35px;"><del style="font-size: 28px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}/<span style="font-size: 25px;">Anual</span></h4>
                                                 
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red2 text-white btn-block">Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-blue text-white btn-block">Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
-                                                    <h5 class="p-2 text-white text-center" style="font-size: 12px!important;">SI ADQUIERES TU MEMBRESIA EN FORMATO ANUAL TENDRÁS ACCESO A LOS  <b class="text-orange">6 STREAMING + CONTENIDO VIP
+                                                    <h5 class="p-2 text-white text-center" style="font-size: 12px!important;">SI ADQUIERES TU MEMBRESIA EN FORMATO ANUAL TENDRÁS ACCESO A LOS  <b class="text-azul-claro">6 STREAMING + CONTENIDO VIP
                                                     +</b> <b class="text-danger"> 2 MODULOS GRATIS </b> DE NUESTRO PARTNER <b class="text-danger">MTA PRO </b></h5>
                                                     </div>
                                                 </div>
@@ -129,37 +120,28 @@
                                 @case(3)
                                     <div class="col-lg-4 mt-4 mb-5">
                                         <div class="card mb-5 mb-lg-0">
-                                            <div class="card-header-verde-price" style="position: absolute; background-color: #CF202F !important;">
+                                            <div class="card-header-verde-price" style="position: absolute; background-color: #cc4e49 !important;">
                                                 <h1 class="card-title text-white text-uppercase text-center" >{{$membresia->name}}</h1>
                                             </div>
                                             <div class="card-body" style="position: relative; top:55px; z-index: 1;">
                                                 <div class="row" style="padding:20px;">
                                                     <div class="col-md-12">
-                                                    @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price}}<span class="period">/Mensual</span></h4>
-                                                        <h5 class="text-success mt-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->descuento}}<span class="period text-success" style="font-size:12px;">/Mensual</span> <span class="text-white">registrándote</span></h5>
-                                                    @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price}}</del> ${{$membresia->descuento}}<span class="period">/Mensual</span></h4>
-                                                    @endif
+                                                        <h5 class="text-center" style="color: #cc4e49; font-size: 28px;"><del> ${{$membresia->price}}/Mes</del></h5>
+                                                        <h4 class="card-price text-success mt-2 p-1 text-center" style="font-weight: bold; font-size: 40px;"> ${{$membresia->descuento}}/Mes</h4>
                                                     </div>
                                                     <h1 class="text-center text-white">. . . . . . . . . . . . . .</h1><br><br>
                                                 </div>
-                                                <h5 class="p-2 text-verde-claro text-center">Esta membresía te permite además de acceder a los beneficios de los niveles anteriores, también tendrás una sala exclusiva para tu contenido e impulso comercial por parte de FTX LIVE + Proyección con nuestro Partner de MBA Pro. </h5>
-                                                <h5 class="p-2 text-white text-center">Accederás:</h5>
-                                                <h4 class="p-2 text-verde-claro text-center">+ 6 STREAMING <br> AL MES</h4>
-                                                @if (Auth::guest())
-                                                        <h4 class="card-price text-white text-center"> ${{$membresia->price_annual}}<span class="period">/Anual</span></h4>
-                                                        <h5 class="text-success mt-4 mb-4 p-1 text-center"><span class="text-white">Obtén precio preferencial</span> ${{$membresia->discount_annual}}<span class="period text-success" style="font-size:12px;">/Anual</span> <span class="text-white">registrándote</span></h5>
-                                                @else
-                                                        <h4 class="card-price text-white text-center"><del style="font-size: 30px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}<span class="period">/Anual</span></h4>
-                                                @endif
+                                                <h5 class="text-white text-center">Esta membresía te permite además de acceder a los beneficios de los niveles anteriores, también tendrás una sala exclusiva para tu contenido e impulso comercial por parte de FTX LIVE + Proyección con nuestro Partner de MBA Pro. </h5>
+                                                <h5 class="text-center"><strong class="text-azul-claro">Accederás:</strong></h5>
+                                                <h4 class="text-center" style="color:  #cc4e49;">+ 6 LIVE STREAMING <br> AL MES</h4>
+                                               <h4 class="pb-4 card-price text-success text-center" style="font-size: 35px;"><del style="font-size: 28px; color: red;">${{$membresia->price_annual}}</del> ${{$membresia->discount_annual}}/<span style="font-size: 25px;">Anual</span></h4>
                                                 
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red text-white btn-block">Comprar Plan Mensual</a>
-                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-green text-white btn-block">Comprar Plan Anual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Mensual'])}}" class="btn btn-color-red3 text-white btn-block">Plan Mensual</a>
+                                                <a href="{{route('shopping-cart.store', [$membresia->id, 'membresia', 'Anual'])}}" class="btn btn-color-blue text-white btn-block">Plan Anual</a>
                                                 <br>
                                                 <div class="card">
                                                     <div class="card-body">
-                                                    <h5 class="p-2 text-white text-center" style="font-size: 12px!important;">SI ADQUIERES TU MEMBRESIA EN FORMATO ANUAL TENDRÁS ACCESO A LOS  <b class="text-verde-claro">6 STREAMING + CONTENIDO VIP
+                                                    <h5 class="p-2 text-white text-center" style="font-size: 12px!important;">SI ADQUIERES TU MEMBRESIA EN FORMATO ANUAL TENDRÁS ACCESO A LOS  <b class="text-azul-claro">6 STREAMING + CONTENIDO VIP
                                                     +</b> <b class="text-danger"> 3 MODULO GRATIS </b> DE NUESTRO PARTNER <b class="text-danger">MTA PRO </b></h5>
                                                     </div>
                                                 </div>

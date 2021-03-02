@@ -76,7 +76,13 @@ class HomeController extends Controller{
    }
 
    public function index(){
-       
+      $modalVisitante = 0;
+      if (Auth::guest()){
+        if (redirect()->getUrlGenerator()->previous() == "https://ftxlive.com/"){
+          $modalVisitante = 1;
+        }
+      }
+      
       setlocale(LC_TIME, 'es_ES.UTF-8'); //Para el server
       // setlocale(LC_TIME, 'es');//Local
        Carbon::setLocale('es');
@@ -89,6 +95,10 @@ class HomeController extends Controller{
                         ->get()
                         ->first();
                         // dd(Empty($evento_actual));
+      $cursosDestacados = Course::where('featured', '=', 1)
+                              ->where('status', '=', 1)
+                              ->orderBy('featured_at', 'DESC')
+                              ->get();
      if(Empty($evento_actual))
      {
          $proximos = null;
@@ -116,7 +126,7 @@ class HomeController extends Controller{
                         ->take(9)
                         ->get();
 
-         return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category'));
+         return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category', 'cursosDestacados', 'modalVisitante'));
  
      }else{
          $proximos = Events::where('date', '>', date('Y-m-d'))
@@ -150,8 +160,8 @@ class HomeController extends Controller{
         $events_category = Category::withCount('events')
         ->take(9)
         ->get();
- 
-       return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category'));
+      
+       return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category', 'cursosDestacados', 'modalVisitante'));
      }
    }
 

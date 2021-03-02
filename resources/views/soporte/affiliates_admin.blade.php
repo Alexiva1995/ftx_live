@@ -50,7 +50,7 @@ ol {
 <div class="col-xs-12">
 <h2 class="white font-weight-bold">Afiliados</h2><hr>
 <div  style="float:right;">
-    <a href="{{route('soporte')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Soporte</a>
+    <a href="{{route('soporte')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú principal</a>
 </div><br>
 <h4 class="col-md-8 white">Te damos la bienvenida a <b class="text-danger">uno de los mejores y más geniales</b> programas de marketing de Afiliados del
 mundo.</h4>

@@ -49,7 +49,7 @@
             <div class="box-body">
                 <div style="float:right;">
                     <a href="{{route('soporte.tickets.solved')}}" class="btn btn-danger"><i class="fas fa-ticket-alt"></i> Ver tickets resueltos</a>
-                    <a href="{{route('soporte.academy')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Menú de Soporte</a>
+                    <a href="{{route('soporte.academy')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú principal</a>
                 </div>
                 @if(!$tickets->isEmpty())
                 <table  id="mytable" class="table" style="width: 100%!important;">
@@ -98,8 +98,8 @@
                 @else
                     <h3 class="white">No existen tickets generados...</h3>
                 @endif
-    </div>
-    </div>
+            </div>
+        </div>
     </div>
 
     @if(!$tickets->isEmpty())

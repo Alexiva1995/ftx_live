@@ -814,14 +814,14 @@ class Menu
                 ]
             ],
             
-            /*'Cursos' => [
+            'Grabaciones' => [
                 'submenu' => 1,
                 'ruta' => 'javascript:;',
                 'icono' => 'fab fa-discourse',
                 'permisoAdmin' => (!empty($permiso)) ? $permiso->cursos : 0,
                 'activo' => 0,
                 'menus' => [
-                    'Listado de Cursos' => [
+                    'Listado Grabaciones' => [
                         'ruta' => 'admin.courses.index',
                         'complementoruta' => '',
                         'black'=> '0',
@@ -852,21 +852,21 @@ class Menu
                         'oculto'=> 'activo',
                     ],
 
-                    'Estadisticas de Cursos' => [
+                    'Estadisticas de Grabaciones' => [
                         'ruta' => 'admin.courses.estadistica',
                         'complementoruta' => '',
                         'black'=> '0',
                         'oculto'=> 'activo',
                     ],
                     
-                    'Cursos mas vistos' => [
+                    'Grabaciones mas vistas' => [
                         'ruta' => 'admin.courses.vistos',
                         'complementoruta' => '',
                         'black'=> '0',
                         'oculto'=> 'activo',
                     ],
                 ]
-            ],*/
+            ],
             'Eventos' => [
                 'submenu' => 1,
                 'ruta' => 'javascript:;',

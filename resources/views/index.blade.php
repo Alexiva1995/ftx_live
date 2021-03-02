@@ -72,6 +72,14 @@
         }
     </style>
 @endpush
+
+@push('scripts')
+  <script>
+    if ({{$modalVisitante}} == 1){
+      $('#visitante-modal').modal();
+    }
+  </script>
+@endpush
 @section('content')
 
 @if (app('request')->input('logout') == "1")
@@ -88,6 +96,50 @@
             </button>
         </div>
     @endif
+
+   {{-- SLIDER --}}
+   @if ($cursosDestacados->count() > 0)
+      <div class="container-fluid courses-slider">
+         <div id="mainSlider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+            @if ($cursosDestacados->count() > 1)
+               @php $contCD = 0; @endphp
+               <ol class="carousel-indicators">
+                  @foreach ($cursosDestacados as $cd)
+                     <li data-target="#mainSlider" data-slide-to="{{ $contCD }}" @if ($contCD == 0) class="active" @endif></li>
+                     @php $contCD++; @endphp
+                  @endforeach
+               </ol>
+            @endif
+            <div class="carousel-inner">
+               @php $cont = 0; @endphp
+               @foreach ($cursosDestacados as $cursoDestacado)
+                  @php $cont++; @endphp
+                  <div class="carousel-item @if ($cont == 1) active @endif">
+                     <div class="overlay" ></div>
+                     <img src="{{ asset('uploads/images/courses/featured_covers/'.$cursoDestacado->featured_cover) }}" class="d-block w-100 img-fluid" alt="...">
+                     <div class="carousel-caption">
+                        <p style="color:#007bff; font-size: 22px; font-weight: bold; margin-top: -20px;">NUEVA GRABACIÓN</p>
+                        <div class="course-autor text-white">{{$cursoDestacado->mentor->display_name}}</div>
+                        <div class="course-title"> <a href="{{ route('courses.show', [$cursoDestacado->slug, $cursoDestacado->id]) }}" style="color: white;">{{ $cursoDestacado->title }}</a></div>
+                        <!--<div class="course-category">{{ $cursoDestacado->category->title }}</div>-->
+                     </div>
+                  </div>
+               @endforeach
+            </div>
+            @if ($cursosDestacados->count() > 1)
+               <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            @endif
+         </div>
+      </div>
+   @endif
+   {{-- FIN DEL SLIDER --}}
 @if (!Auth::guest())
 <div class="title-page-course col-md"><span class="text-white">
     <h3 class="mb-4"><span class="text-white">Hola</span><span class="text-danger"> {{Auth::user()->display_name}}</span><span class="text-white"> ¡Nos alegra verte hoy!</span></h3>
@@ -408,6 +460,22 @@
         </div>
     </div>
 
-
+     <div class="modal fade" id="visitante-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:white;">REGÍSTRATE AHORA</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-white pl-5 pr-5 text-center">
+                    Cierra esta ventana si deseas seguir explorando como visitante...
+                    <br><br>
+                    <a type="button" class="btn btn-primary btn-register-header" href="{{ route('log').'?act=1' }}">REGISTRO</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection

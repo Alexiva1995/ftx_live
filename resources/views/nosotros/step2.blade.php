@@ -26,33 +26,27 @@
 
   <div class="row" style="margin-bottom: 30px;">
      <div class="col-md-4">
-        <a data-toggle="modal" data-target="#video1">
-       <img src="{{ asset('nosotros/gratis-Blog/bienvenido.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
-       <div class="card-body">
-            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Bienvenido</h6>
+        <img src="{{ asset('nosotros/gratis-Blog/video1.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
+        <div style="background-color: #222021; color: white; padding-top: 12px; padding-bottom: 12px; text-align: center; font-weight: bold;">
+          <img src="{{ asset('nosotros/gratis-Blog/play-icon.png') }}" style="width: 16px;"> <a href="#" data-toggle="modal" data-target="#video1" style="text-decoration: none; color: white;">Click para ver</a>
         </div>
-        </a>
      </div>
      
      
      <div class="col-md-4">
-      <a data-toggle="modal" data-target="#video2"> 
-        <img src="{{ asset('nosotros/gratis-Blog/pro.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
-        <div class="card-body">
-            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">Ser Pro</h6>
+        <img src="{{ asset('nosotros/gratis-Blog/video2.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
+        <div style="background-color: #222021; color: white; padding-top: 12px; padding-bottom: 12px; text-align: center; font-weight: bold;">
+          <img src="{{ asset('nosotros/gratis-Blog/play-icon.png') }}" style="width: 16px;"> <a href="#" data-toggle="modal" data-target="#video2" style="text-decoration: none; color: white;">Click para ver</a>
         </div>
-        </a>
      </div>
      
      
-     <div class="col-md-4">
-      <a data-toggle="modal" data-target="#video3">         
-          <img src="{{ asset('nosotros/gratis-Blog/cambio.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
-        <div class="card-body">
-            <h6 class="card-title" style="padding-left: 0px; font-size: 22px !important; font-weight: 700!important; text-align:center;">El Cambio</h6>
+      <div class="col-md-4">    
+        <img src="{{ asset('nosotros/gratis-Blog/video3.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
+        <div style="background-color: #222021; color: white; padding-top: 12px; padding-bottom: 12px; text-align: center; font-weight: bold;">
+          <img src="{{ asset('nosotros/gratis-Blog/play-icon.png') }}" style="width: 16px;"> <a href="#" data-toggle="modal" data-target="#video3" style="text-decoration: none; color: white;">Click para ver</a>
         </div>
-        </a>
-    </div>
+      </div>
     
   </div>
 </div>  
@@ -71,7 +65,7 @@
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-              <video src="{{ asset('nosotros/videos/introduccion.mp4') }}" controls poster="{{ asset('nosotros/fundadores/cambio.png') }}"></video>
+              <video src="{{ asset('nosotros/videos/introduccion.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video1.jpg') }}"></video>
           </div>
 
       </div>
@@ -92,7 +86,7 @@
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-              <video src="{{ asset('nosotros/videos/v1.mp4') }}" controls poster="{{ asset('nosotros/fundadores/cambio.png') }}"></video>
+              <video src="{{ asset('nosotros/videos/v1.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video2.jpg') }}"></video>
           </div>
           
       </div>
@@ -113,7 +107,7 @@
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-            <video src="{{ asset('nosotros/videos/v2.mp4') }}" controls poster="{{ asset('nosotros/fundadores/cambio.png') }}"></video>
+            <video src="{{ asset('nosotros/videos/v2.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video3.jpg') }}"></video>
           </div>
           
       </div>

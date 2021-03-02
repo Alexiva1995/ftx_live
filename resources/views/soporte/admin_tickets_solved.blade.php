@@ -18,6 +18,9 @@
         <div class="col-md-12"><h2 class="white">Tickets/Resueltos</h2></div>
         <div class="box" style="margin-top: 100px; border-radius:10px!important; background:#2f343a!important;">
             <div class="box-body">
+                <div style="float:right;">
+                    <a href="{{route('soporte.academy')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú principal</a>
+                </div>
                 @if(!$tickets->isEmpty())
                 <table  id="mytable" class="table" style="width: 100%!important;">
                         <thead>

@@ -69,7 +69,7 @@
         <div class="col-md-12"><h2 class="white">Mis tickets</h2></div><br><br><br>
         <div style="float:right;">
                 <a href="{{route('soporte.tickets')}}" class="btn btn-danger"><i class="fa fa-plus-circle"></i> Crear ticket</a>
-                <a href="{{route('soporte.academy')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú</a>
+                <a href="{{route('soporte')}}" class="btn btn-danger"><i class="fas fa-arrow-circle-left"></i> Volver al menú principal</a>
         </div>
 
         <div class="box" style="margin-top: 100px; border-radius:10px!important; background:#2f343a!important;">

@@ -3,8 +3,6 @@
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="{{asset('assets/AdminLTE-2.4.12/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
 
-<!-- favicon -->
-<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 <!-- Font Awesome -->
 <link rel="stylesheet"
     href="{{asset('assets/fontawesome/css/all.min.css')}}">

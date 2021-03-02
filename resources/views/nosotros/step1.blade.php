@@ -112,30 +112,27 @@
 
 <div class="container-fluid img-background-razones" style="padding:50px;">
 <div class="col-md-8 offset-sm-0 offset-md-2 mb-4">
-<h3 class="text-center"><b class="text-white">Nuestro Ecosistema</b></h3>
+<h3 class="text-center"><b style="color: red;">Nuestro Ecosistema</b></h3>
 </div>
 
     <div class="row">
-          <div class="row">
-            <div class="col-md-3 align-self-start mt-2">
+         <div class="col-md-3 align-self-start mt-2 pt-4">
             <img src="{{ asset('nosotros/nosotros/mba.png') }}" class="card-img img-fluid logo-scale" alt="...">
-            <img src="{{ asset('nosotros/nosotros/fentix-1.png') }}" class="mt-2 card-img img-fluid ecosistema-img logo-scale" alt="...">
-            </div>
-            <div class="col align-self-center mt-2">
-            <img src="{{ asset('nosotros/nosotros/tierra-1.png') }}" class="card-img img-fluid logo-rotate" alt="...">
-            </div>
-            <div class="col-md-3 mt-2">
-            <img src="{{ asset('nosotros/nosotros/beyond-1.png') }}" class="card-img img-fluid logo-scale" alt="...">
-            <img src="{{ asset('nosotros/nosotros/platinum-1.png') }}" class="card-img img-fluid ecosistema-img logo-scale" alt="...">
-            </div>
-          </div>
-          <div class="row offset-sm-0 offset-md-2 mb-4">
-            <div class="col-md-3 mt-2"><img src="{{ asset('nosotros/nosotros/mta-1.png') }}" class="card-img img-fluid logo-scale" alt="..."></div>
-            <div class="col-md-2 mt-2"></div>
-            <div class="col-md-3 mt-2"><img src="{{ asset('nosotros/nosotros/no-work-1.png') }}" class="card-img img-fluid logo-scale" alt="..."></div>
-
-          </div>
-    </div>
+            <img src="{{ asset('nosotros/nosotros/fentix-1.png') }}" class="mt-5 pt-5 card-img img-fluid logo-scale" alt="...">
+            <img src="{{ asset('nosotros/nosotros/revolutte.png') }}" class="card-img img-fluid logo-scale mt-5 pt-5" alt="..." style="width: 200px;">
+         </div>
+         <div class="col align-self-center mt-2">
+            <img src="{{ asset('nosotros/nosotros/ftxl.png') }}" class="card-img img-fluid logo-rotate" alt="...">
+         </div>
+         <div class="col-md-3 mt-2 pt-4">
+          <img src="{{ asset('nosotros/nosotros/mta-1.png') }}" class="card-img img-fluid logo-scale" alt="...">
+          <img src="{{ asset('nosotros/nosotros/no-work-1.png') }}" class="card-img img-fluid logo-scale mt-5 pt-5" alt="...">
+          <img src="{{ asset('nosotros/nosotros/revolutte-real-state.png') }}" class="card-img img-fluid logo-scale mt-5 pt-5" alt="..." style="width: 200px;">
+         </div>
+         <div class="col-md-12 text-center">
+           <img src="{{ asset('nosotros/nosotros/revolutte-insurance.png') }}" class="card-img img-fluid logo-scale mt-3" alt="..." style="width: 200px;">
+         </div>
+      </div>
 </div>
 
 
@@ -153,7 +150,7 @@
             <div class="col-md-6 align-items-center d-flex justify-content-center" style="color: #fff; background-color: #1c1d21;">
             <div class="card-body">
 
-                <h3 class="card-title" style="text-align: right; color: #CF202F; font-size: 30px; font-weight: bold;">
+                <h3 class="card-title" style="text-align: right; color: white; font-size: 30px; font-weight: bold;">
                     JOSÉ GORDO
                 </h3>
 
@@ -173,7 +170,7 @@
           <div class="col-md-6 align-items-center d-flex justify-content-center" style="color: #fff; background-color: #1c1d21;">
           <div class="card-body">
 
-              <p class="card-title" style="text-align: left; color: #CF202F; font-size: 30px; font-weight: bold;">
+              <p class="card-title" style="text-align: left; color: white; font-size: 30px; font-weight: bold;">
                     TANIA TOSTADO
                 </p>
 
@@ -204,7 +201,7 @@
           <div class="col-md-8" style="background-color: #EDEDED;">
               <div class="card-body">
 
-               <p class="card-text" style="color: #CF202F; font-size: 30px; font-weight: bold;">Erick Reynaga</p>
+               <p class="card-text" style="font-size: 30px; font-weight: bold;">Erick Reynaga</p>
 
                <p class="card-text" style="text-align: left; line-height: 24px; font-weight: 500; font-size: 16px;">Especialista con 6 años de experiencia en el mundo del Trading, Forex y las Criptodivisas, así como de fondos de inversión con marcas de reconocimiento internacional. Cuenta con una maestría en administración y negocios, es líder de proyectos educativos financieros para diferentes cúpulas de negocios de jóvenes empresarios en México y es promotor de una Sociedad Financiera de Operación Múltiple en la que se operan diversas transacciones con crypto.</p>
             </div>
@@ -213,7 +210,7 @@
               <img src="{{ asset('nosotros/nosotros/17.jpg') }}" class="card-img" alt="...">
               <div class="card-img-overlay d-flex flex-column" style="color: #fff; text-align: center;">
                <div class="mt-auto">
-                  <div class="new-course-title" style="background-color: #333; padding: 8px; float: left; color: #CF202F;">
+                  <div class="new-course-title" style="background-color: #333; padding: 8px; float: left; color: white;">
                     Erick Reynaga
                   </div>
                 </div>

@@ -83,17 +83,6 @@
                             </div>-->
             </form>
         </div>
-        <!--<a href="{{ route('courses.show.all') }}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-graduation-cap"></i> Todos los cursos</a>-->
-        <!--<a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv" style="color: white;"><i class="far fa-list-alt"></i> Contenidos <i class="fas fa-angle-down"></i></a>-->
-       <!-- <div class="collapse" id="categoriesDiv" style="padding-left: 15px;">
-            @foreach ($categoriasSidebar as $categoria)
-            @if (!is_null($categoria->course))
-            <a class="list-group-item bg-dark-gray" href="{{ url ('courses/show/'.$categoria->course->slug.'/'.$categoria->course->id)}}" style="color: white;"><i class="{{ $categoria->icon }}"></i> {{ $categoria->title }} </a>
-            @else
-            <a class="list-group-item bg-dark-gray" href="{{ url ('courses/category/'.$categoria->id)}}" style="color: white;"><i class="{{ $categoria->icon }}"></i> {{ $categoria->title }} </a>
-            @endif
-            @endforeach
-        </div>-->
 
         @if(Auth::user())
             @if(Auth::user()->rol_id == 0)
@@ -108,22 +97,21 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                      @csrf
             </form>
-        @endif
+        @endif 
+        <a href="#" id="menu-toggle2" class="list-group-item bg-dark-gray" style="color: white;"><i class="fa fa-arrow-left"></i> Ocultar</a>
         @guest
             <a type="button" class="btn btn-register-header d-md-block m-2" href="{{ route('log').'?act=1' }}">REGISTRARME</a>
             <a type="button" class="btn btn-register-header d-md-block m-2" href="{{ route('log').'?act=0' }}">ENTRAR</a>
         @endguest
+
 
         @if (!is_null($banner))
             <div class="text-center p-2">
                 <img src="{{ asset('uploads/images/banners/'.$banner->image) }}" alt="" width="200" style="margin-top:80px">
             </div>
         @endif
-        <!--@if (!empty($settings->id_no_comision))
-            <div class="text-center p-2">
-                <img src="{{asset($settings->id_no_comision)}}" alt="" width="200" style="margin-top:80px">
-            </div>
-        @endif-->
+
+
     </div>
 </div>
 <!-- /#sidebar-wrapper -->

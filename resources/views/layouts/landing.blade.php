@@ -133,7 +133,7 @@
                 @yield('content') 
                
 
-                <div class="icon-bar">
+                <div class="icon-bar d-block" id="icon-bar">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
                     <a href="https://twitter.com/intent/tweet?text=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
                     <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.ftxlive.com/office/&title=FTX%20Live&summary=&source=" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -145,16 +145,19 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 py-5">
-                                <div class="mb-2 text-center">
-                                    <img src="{{ asset('images/icf.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/no_work_no_money.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/logo-fentix.png')}}" alt="" height="35px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/logo-fxtlive.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/mytradinglogo.png')}}" alt="" height="35px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/logo-jose.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/revolutte.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/revolutte-insurance.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
-                                    <img src="{{ asset('images/revolutte-real-state.png')}}" alt="" height="32px" class="mr-md-2 mr-3">
+                                <div class="mb-5 text-center">
+                                    <img src="{{ asset('images/mba.png')}}" alt="" height="40px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/no_work_no_money.png')}}" alt="" height="40px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/logo-fentix.png')}}" alt="" height="40px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/logo-fxtlive.png')}}" alt="" height="40px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/mytradinglogo.png')}}" alt="" height="40px" class="mr-md-2 mr-4 ml-4">
+                                </div>
+                                <div class="mb-25 text-center">
+                                    <img src="{{ asset('images/icf.png')}}" alt="" height="50px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/logo-jose.png')}}" alt="" height="50px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/revolutte.png')}}" alt="" height="50px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/revolutte-insurance.png')}}" alt="" height="50px" class="mr-md-2 mr-4 ml-4">
+                                    <img src="{{ asset('images/revolutte-real-state.png')}}" alt="" height="50px" class="mr-md-2 mr-4 ml-4">
                                 </div>
                                 <div class="mb-2 text-center text-white" style="margin:20px;">
                                     PAISES EN DONDE ESTAMOS PRESENTES
@@ -298,6 +301,24 @@
             $("#menu-toggle").click(function(e) {
                 e.preventDefault();
                 $("#wrapper").toggleClass("toggled");
+                if ($("#icon-bar").hasClass("d-block")){
+                    $("#icon-bar").removeClass("d-block");
+                    $("#icon-bar").addClass("d-none");
+                }else{
+                    $("#icon-bar").removeClass("d-none");
+                    $("#icon-bar").addClass("d-block");
+                }
+            });
+            $("#menu-toggle2").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+                if ($("#icon-bar").hasClass("d-block")){
+                    $("#icon-bar").removeClass("d-block");
+                    $("#icon-bar").addClass("d-none");
+                }else{
+                    $("#icon-bar").removeClass("d-none");
+                    $("#icon-bar").addClass("d-block");
+                }
             });
         </script>
         <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>

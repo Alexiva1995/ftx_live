@@ -33,6 +33,7 @@
                 @if(Auth::user()->rol_id == 0)
                 <a href="{{route('soporte.tickets.team')}}" class="nav-link"><i class="fas fa-tools text-danger"></i> Tickets/Soporte</a>
                 @endif
+                <a href="{{route('soporte')}}" class="nav-link"><i class="fa fa-arrow-circle-left text-danger"></i> Volver al menú principal</a>
                 </div>
             </div>
     </div>
@@ -66,6 +67,7 @@
             <!--AFILIADOS END-->
         </div>
     </div>
+
 
 </div>
 

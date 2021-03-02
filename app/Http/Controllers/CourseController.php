@@ -79,7 +79,7 @@ class CourseController extends Controller{
 
     public function index(){
         // TITLE
-        view()->share('title', 'Listado de Cursos');
+        view()->share('title', 'Listado de Grabaciones');
 
         $username = NULL;
         $leccion_info = NULL;
@@ -293,7 +293,7 @@ class CourseController extends Controller{
      */
     public function record(){
         // TITLE
-        view()->share('title', 'Listado de Cursos');
+        view()->share('title', 'Listado de Grabaciones');
 
 
         $cursos = Course::withCount('lessons')

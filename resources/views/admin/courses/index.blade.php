@@ -68,7 +68,7 @@
 		<div class="box">
 			<div class="box-body">
 				<div style="text-align: right;">
-					<a data-toggle="modal" data-target="#modal-new" class="btn btn-info descargar"><i class="fa fa-plus-circle"></i> Nuevo Curso</a>
+					<a data-toggle="modal" data-target="#modal-new" class="btn btn-info descargar"><i class="fa fa-plus-circle"></i> Nueva Grabación</a>
 				</div>
 
 				<br class="col-xs-12">
@@ -122,7 +122,7 @@
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Crear Curso</h5>
+        			<h5 class="modal-title" id="exampleModalLabel">Crear Grabación</h5>
       			</div>
       			<form action="{{ route('admin.courses.store') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -131,7 +131,7 @@
 	    					<div class="row">
 						        <div class="col-md-12">
 						            <div class="form-group">
-						                <label>Título del Curso</label>
+						                <label>Título</label>
 						            	<input type="text" class="form-control" name="title" required>
 						            </div>
 						        </div>
@@ -176,7 +176,7 @@
 						        </div>
 								<div class="col-md-12">
 						            <div class="form-group">
-						                <label>Duración del Curso</label>
+						                <label>Duración</label>
 						            	<input type="text" class="form-control" name="duration" >
 						            </div>
 								</div>
@@ -224,7 +224,7 @@
 				    </div>
 	      			<div class="modal-footer">
 	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Crear Curso</button>
+	        			<button type="submit" class="btn btn-primary">Crear Grabación</button>
 	      			</div>
 	      		</form>
     		</div>
@@ -236,7 +236,7 @@
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Modificar Curso</h5>
+        			<h5 class="modal-title" id="exampleModalLabel">Modificar Grabación</h5>
       			</div>
       			<form action="{{ route('admin.courses.update') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -246,7 +246,7 @@
 								<input type="hidden" name="course_id" id="course_id_edit">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>Título del Curso</label>
+										<label>Título</label>
 										<input type="text" class="form-control" name="title" id="title" required>
 									</div>
 								</div>
@@ -288,7 +288,7 @@
 								</div>
 								<div class="col-md-12">
 						            <div class="form-group">
-						                <label>Duración del Curso</label>
+						                <label>Duración</label>
 						            	<input type="text" class="form-control" name="duration" id="duration" >
 						            </div>
 						        </div>
@@ -340,7 +340,7 @@
   		<div class="modal-dialog" role="document">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<h5 class="modal-title" id="exampleModalLabel">Destacar Curso</h5>
+        			<h5 class="modal-title" id="exampleModalLabel">Destacar Grabación</h5>
       			</div>
       			<form action="{{ route('admin.courses.add-featured') }}" method="POST" enctype="multipart/form-data">
 			        {{ csrf_field() }}
@@ -359,7 +359,7 @@
 				    </div>
 	      			<div class="modal-footer">
 	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	        			<button type="submit" class="btn btn-primary">Destacar Curso</button>
+	        			<button type="submit" class="btn btn-primary">Destacar Grabación</button>
 	      			</div>
 	      		</form>
     		</div>

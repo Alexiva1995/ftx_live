@@ -71,7 +71,7 @@
             <div class="col-md-6" style="margin-top:5%;">
                <h1 class="text-danger font-weight-bold">ACCESO</h1>
                <h5 class="text-white mt-4">
-               El acceso será exclusivo para las personas que sean socios de Beyond y tengan un login de acceso. Dentro de las principales ventajas de este canal, es su fácil acceso, su increíble diseño, así como su chat interactivo, el cual permitirá tener vinculación inmediata y más cercana a la red, ya que la inmediatez y naturalidad en que son transmitidos los enlaces, permitirá a los espectadores participar, haciendo preguntas acerca del contenido que se este explorando, pudiendo aclarar sus dudas de manera inmediata.
+               El acceso será exclusivo para las personas que sean socios de FTXLive y tengan un login de acceso. Dentro de las principales ventajas de este canal, es su fácil acceso, su increíble diseño, así como su chat interactivo, el cual permitirá tener vinculación inmediata y más cercana a la red, ya que la inmediatez y naturalidad en que son transmitidos los enlaces, permitirá a los espectadores participar, haciendo preguntas acerca del contenido que se este explorando, pudiendo aclarar sus dudas de manera inmediata.
                </h5>
             
             </div>
