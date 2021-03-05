@@ -41,7 +41,7 @@
             </div>
       </div>
    </div>
-	
+  
 </div>
 <hr style="height: 1px;background-color: #707070;">
 <div class="container-fluid" style="background-color: #1C1D21;">
@@ -59,7 +59,7 @@
             </div>
       </div>
    </div>
-	
+  
 </div>
 <hr style="height: 1px;background-color: #707070;">
 <div class="container-fluid" style="background-color: #1C1D21;">
@@ -77,7 +77,7 @@
             </div>
       </div>
    </div>
-	
+  
 </div>
 <hr style="height: 1px;background-color: #707070;">
 

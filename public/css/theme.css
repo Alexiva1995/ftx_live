@@ -529,6 +529,7 @@ h5.title-level {
 }
 
 @media (max-width: 450px) {
+
     .course-category-caption a {
         font-size: 23px;
     }
@@ -711,6 +712,9 @@ h5.title-level {
 }
 
 @media (max-width: 768px) {
+    .list-sidebar{
+        text-align: center;
+    }
     .mentor-index-seccion {
         display: block !important;
     }

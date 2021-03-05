@@ -13,12 +13,21 @@
         </div>
 </nav>-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom" style="height: 70px;">
-        <button class="btn" id="menu-toggle" style="background-color: #B70F1E !important; color: #fff"><i class="fas fa-bars"></i></button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-gray border-bottom" style="height: 70px; position: fixed; z-index: 1000; width: 100%;">
+    <div class="sidebar-heading pr-3 pt-3" style="height: 70px">
+        <!--<div class="row pt-3">
+            <div class="col-4">
+                <img src="{{ asset('images/FTXlive-logo.png') }}">
+            </div>
+        </div>-->
+        <img src="{{ asset('images/FTXlive-logo.png') }}">
+    </div>
+    <button class="btn ml-3" id="menu-toggle" style="background-color: #B70F1E !important; color: #fff"><i class="fas fa-bars"></i></button>
 
-        <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler d-none" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarItems" style="z-index: 1000;">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0 header-list">
             <li class="nav-item active">
@@ -47,6 +56,9 @@
             @endif-->
             <li class="nav-item">
                 <a class="nav-link items-header" href="{{route('transmisiones')}}">STREAMING</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link items-header" href="{{route('legal')}}">LEGAL</a>
             </li>
             @if (Auth::guest())
                 <!--<li class="nav-item dropdown">

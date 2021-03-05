@@ -112,7 +112,7 @@
 
 <div class="container-fluid img-background-razones" style="padding:50px;">
 <div class="col-md-8 offset-sm-0 offset-md-2 mb-4">
-<h3 class="text-center"><b style="color: red;">Nuestro Ecosistema</b></h3>
+<h3 class="text-center"><b style="color: red; font-weight: 800; font-size: 35px;">NUESTRO ECOSISTEMA</b></h3>
 </div>
 
     <div class="row">
