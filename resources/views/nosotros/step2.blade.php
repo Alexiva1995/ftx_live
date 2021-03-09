@@ -1,5 +1,26 @@
 @extends('layouts.landing')
 
+@push('scripts')
+  <script>
+    $(function(){    
+      $('.close-trailer').on('click', function(){
+        var vid = document.getElementById("video-trailer1");
+        vid.pause();
+      });
+
+      $('.close-trailer2').on('click', function(){
+        var vid = document.getElementById("video-trailer2");
+        vid.pause();
+      });
+
+      $('.close-trailer3').on('click', function(){
+        var vid = document.getElementById("video-trailer3");
+        vid.pause();
+      });
+    });
+  </script>
+@endpush
+
 @section('content')
 
 <div class="container-fluid courses-slider" style="background-color: #1C1D21;">
@@ -58,14 +79,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Bienvenido</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+        <button type="button" class="close close-trailer" data-dismiss="modal" aria-label="Close"> 
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-              <video src="{{ asset('nosotros/videos/introduccion.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video1.jpg') }}"></video>
+              <video src="{{ asset('nosotros/videos/introduccion.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video1.jpg') }}" id="video-trailer1"></video>
           </div>
 
       </div>
@@ -79,14 +100,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Ser Pro</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+        <button type="button" class="close close-trailer2" data-dismiss="modal" aria-label="Close"> 
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-              <video src="{{ asset('nosotros/videos/v1.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video2.jpg') }}"></video>
+              <video src="{{ asset('nosotros/videos/v1.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video2.jpg') }}" id="video-trailer2"></video>
           </div>
           
       </div>
@@ -100,14 +121,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">El Cambio</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+        <button type="button" class="close close-trailer3" data-dismiss="modal" aria-label="Close"> 
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
           
           <div class="embed-responsive embed-responsive-16by9">
-            <video src="{{ asset('nosotros/videos/v2.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video3.jpg') }}"></video>
+            <video src="{{ asset('nosotros/videos/v2.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video3.jpg') }}" id="video-trailer3"></video>
           </div>
           
       </div>

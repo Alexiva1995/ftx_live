@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta property="og:title" content="FTXLIVE"/>
+        <meta property="og:site_name" content="FTX Live"/>
+        <meta property="og:url" content="https://ftxlive.com"/>
+        <meta property="og:description" content="Somos el mejor espacio de entrenamientos en vivo para emprendedores y empresarios."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:locale" content="es"/>
+        <meta property="og:image" content="https://ftxlive.com/office/images/FTXlive-logo.png"/>
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="180" />
+
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -201,6 +212,7 @@
                                             <div class="text-center text-white" style="margin-top: 20px;">
                                                 <a href="#" class="text-white" target="_blank" style="padding: 2px;">Pol&iacute;ticas de Uso</a> &nbsp&nbsp
                                                 <a href="{{ route('terms-and-conditions')}}" class="text-white" style="padding: 2px;" target="_blank">T&eacute;rminos y condiciones</a>&nbsp&nbsp
+                                                <a href="{{route('legal')}}" class="text-white" style="padding: 2px;">Legal</a>&nbsp&nbsp
                                                 <a href="#" data-toggle="modal" data-target="#contactModal" class="text-white" style="padding: 2px;" target="_black"> Contacto</a>&nbsp&nbsp
                                                 <a href="{{route('index')}}" class="text-white" style="padding: 2px;">Inicio</a>&nbsp&nbsp
                                             </div>

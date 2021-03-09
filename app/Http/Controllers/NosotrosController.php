@@ -53,8 +53,14 @@ class NosotrosController extends Controller
 	
 
 	public function afiliados(){
-    
-
         return view('nosotros.afiliados');
+    }
+
+    public function coaches(){
+        return view('nosotros.coaches');
+    }
+
+    public function comisiones(){
+        return view('nosotros.commissions');
     }
 }

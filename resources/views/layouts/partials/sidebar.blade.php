@@ -83,7 +83,7 @@
                             </div>-->
             </form>
         </div>
-
+        <a href="{{route('legal')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-balance-scale"></i> Legal</a>
         @if(Auth::user())
             @if(Auth::user()->rol_id == 0)
                 <a href="{{route('setting-logo')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fa fa-gear"></i> Ajustes</a>

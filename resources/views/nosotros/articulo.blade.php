@@ -17,16 +17,19 @@
          </div>
       </div>
 
-      <div class="container">
+      <div class="container pl-5 pr-5">
          <div class="row justify-content-md-center">
-            <div class="col-md-4 mt-3">
-               <div class="new-course-title pb-1 mb-3" style="background-color: #333; color: #2A91FF; float: left; font-size:30px;">
+            <div class="col-md-4 mt-3 text-center"></div>
+            <div class="col-md-4 mt-3 text-center">
+               <div>
+                  <img src="{{ asset('uploads/entradas/'.$articulo->imagen_destacada) }}" class="card-img" alt="...">
+               </div>
+               <div class="new-course-title pb-1 mb-3" style="background-color: #333; color: #2A91FF; font-size:30px; text-align: center;">
                   {!! $articulo->autor !!}
                </div>
-               <img src="{{ asset('uploads/entradas/'.$articulo->imagen_destacada) }}" class="card-img" alt="...">
-               
             </div>
-            <div class="col-md-8 mt-2">{!! $articulo->descripcion_completa !!}</div>
+             <div class="col-md-4 mt-3 text-center"></div>
+            <div class="col-md-12 mt-2">{!! $articulo->descripcion_completa !!}</div>
          </div>
       </div>
    </div>
