@@ -78,9 +78,7 @@ class HomeController extends Controller{
    public function index(){
       $modalVisitante = 0;
       if (Auth::guest()){
-        if (redirect()->getUrlGenerator()->previous() == "https://ftxlive.com/"){
-          $modalVisitante = 1;
-        }
+        $modalVisitante = 1;
       }
       
       setlocale(LC_TIME, 'es_ES.UTF-8'); //Para el server
@@ -123,7 +121,6 @@ class HomeController extends Controller{
 
         /*Eventos por categoria con el numero de eventos asociados*/
         $events_category = Category::withCount('events')
-                        ->take(9)
                         ->get();
 
          return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category', 'cursosDestacados', 'modalVisitante'));
@@ -158,7 +155,6 @@ class HomeController extends Controller{
        }
         /*Eventos por categoria con el numero de eventos asociados*/
         $events_category = Category::withCount('events')
-        ->take(9)
         ->get();
       
        return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category', 'cursosDestacados', 'modalVisitante'));

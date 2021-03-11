@@ -20,11 +20,11 @@
 <div class="container">
   <div class="row justify-content-md-center">
       @foreach($entradas as $entra)
-        <div class="col-md-4 offset-md-1" style="box-shadow: 0 2px 4px rgba(0,0,0,.2); margin-bottom: 20px;">
+        <div class="col-md-3" style="box-shadow: 0 2px 4px rgba(0,0,0,.2); margin-bottom: 20px; margin-bottom: 20px; margin-right: 25px;">
             <img src="{{ asset('uploads/entradas/'.$entra->imagen_destacada) }}" class="card-img-top" alt="..." style="border: solid 0; height: 250px;">
             <div class="card-body" style="background-color: #FFFFFF;">
-                <h6 class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 22px !important; font-weight: 700!important;">{{$entra->titulo}}</h6>
-                <h6 style="font-size: 14px; color: #8B8E9D;">{!! $entra->descripcion !!}</h6>
+                <div class="card-title" style="color: #CF202F; padding-left: 0px; font-size: 20px !important; font-weight: 700!important; line-height: 26px; height: 90px;">{{$entra->titulo}}</div>
+                <div style="font-size: 14px; color: #8B8E9D; ine-height: 16px; height: 180px;">{!! $entra->descripcion !!}</div>
                 <a class="btn btn-danger btn-block" href="{{ route('blog.articulo', $entra->id) }}">¡VER ARTÍCULO!</a>
 
             </div>

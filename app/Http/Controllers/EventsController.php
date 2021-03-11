@@ -46,7 +46,7 @@ class EventsController extends Controller
      */
     public function index()
     {   
-        if (Auth::user()->rol_id = 2){
+        if (Auth::user()->ID > 1){
             $events = Events::where('user_id', '=', Auth::user()->ID)
                         ->orderBy('id', 'DESC')
                         ->get();

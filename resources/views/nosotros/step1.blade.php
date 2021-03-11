@@ -158,7 +158,15 @@
                 Especialista en desarrollo de negocios rentables, sostenibles y de expansión global.
                </p>
                <p class="card-text align-items-center d-flex justify-content-center" style="text-align: right; line-height: 24px; font-weight: 500; font-size: 16px;">
-                15 años de experiencia en el mundo financiero, eterno aprendiz y emprendedor, amante de las finanzas, la innovación, y los proyectos de impacto social. Con la experiencia ganada a través los años y su pasión por el desarrollo personal y profesional de sus equipos de trabajo, ha creado diferentes técnicas de entrenamientos altamente efectivo, además de ser escritor y autor de 4 libros de negocios, 2 best seller. Fundador y Co-creador de My Business Academy Pro, así como de Piense y Hágase Rico, El Legado. Su compromiso es dejar huella en todo país que pise y persona que lo acompañe</p>
+                  15 años de experiencia en el mundo financiero, eterno aprendiz y emprendedor, amante de las finanzas, la innovación, y los proyectos de impacto social. <br>
+
+                  Con la experiencia ganada a través los años y su pasión por el desarrollo personal y profesional de sus equipos de trabajo, ha creado diferentes técnicas de entrenamientos altamente efectivo, además de ser escritor y autor de 4 libros de negocios, 2 best seller.<br>
+
+                  Empresario comprometido con la expansión del conocimiento, Fundador y Co-creador de: 
+                  Fenttix, My Business Academy Pro, FTX Live y My Trading Academy Pro: La mejor comunidad de negocios y academias de aprendizaje para emprendedores digitales con red global.<br>
+
+                  Sumado a un gran ecosistema de maravillosos productos y servicios, que apoyan a la generación de prosperidad y abundancia a través de la productividad y la educación.
+                </p>
             </div>
           </div>
         </div>

@@ -438,7 +438,6 @@
 
             <div class="row">
                 @foreach ($events_category as $event)
-                    @if ($event->events_count > 0)
                         <div class="col-sm-4 d-inline-flex p-2">
                             @if (!is_null($event->cover))
                                 <img src="{{ asset('uploads/images/categories/covers/'.$event->cover) }}" class="card-img-top img-fluid event-category " alt="...">
@@ -454,7 +453,6 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
                 @endforeach
             </div>
         </div>
@@ -470,7 +468,8 @@
                     </button>
                 </div>
                 <div class="modal-body text-white pl-5 pr-5 text-center">
-                    Cierra esta ventana si deseas seguir explorando como visitante...
+                    Te encuentras en modo visitante.<br>
+                    Para disfrutar de nuestro contenido a precio preferencial ingresa en este botón.
                     <br><br>
                     <a type="button" class="btn btn-primary btn-register-header" href="{{ route('log').'?act=1' }}">REGISTRO</a>
                 </div>
