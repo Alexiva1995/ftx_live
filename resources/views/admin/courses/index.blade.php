@@ -7,6 +7,14 @@
 		$(document).ready( function () {
 			$('#mytable').DataTable( {
 				responsive: true,
+				drawCallback: function() {
+	                $('.featured').on('click',function(e){
+		 				e.preventDefault();
+
+		 				document.getElementById('course_id').value = $(this).attr('data-id');
+		 				$("#modal-featured").modal("show");
+					});
+	            }
 			});
 
 			$('.featured').on('click',function(e){
