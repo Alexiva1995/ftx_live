@@ -469,11 +469,12 @@ Route::group(['prefix' => 'installer'], function (){
      Route::group(['prefix' => 'events'], function(){
       Route::get('prueba', 'EventsController@prueba');
       Route::get('/', 'EventsController@index')->name('admin.events.index');
+      Route::get('record', 'EventsController@record')->name('admin.events.record');
       Route::get('show/{id}', 'EventsController@show')->name('admin.events.show');
       Route::post('store', 'EventsController@store')->name('admin.events.store');
       Route::get('edit/{id}', 'EventsController@edit')->name('admin.events.edit');
       Route::post('update', 'EventsController@update')->name('admin.events.update');
-      Route::delete('delete/{id}', 'EventsController@delete')->name('admin.events.delete');
+      Route::get('delete/{id}', 'EventsController@delete')->name('admin.events.delete');
       Route::get('change-status/{id}/{status}', 'EventsController@change_status')->name('admin.events.change-status');
       Route::post('calculate-time', 'EventsController@calculate_time')->name('admin.events.calculate-time');
 

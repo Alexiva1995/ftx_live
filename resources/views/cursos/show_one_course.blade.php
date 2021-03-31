@@ -128,7 +128,7 @@
                         <h6 class="text-white"> <img src="{{ asset('images/icons/icon-user.svg') }}" alt="" height="30px" width="30px">  {{ $curso->users_count }} Alumnos</h6>
                      </div>
                      <div class="col-md-3">
-                        <h6 class="text-white"> <img src="{{ asset('images/icons/icon-book-video.svg') }}" height="30px" width="30px"> {{ $curso->lessons_count }} Lecciones</h6>
+                        <h6 class="text-white"> <img src="{{ asset('images/icons/icon-book-video.svg') }}" height="30px" width="30px"> {{ $curso->lessons_count }} Grabaciones</h6>
                      </div>
                      <div class="col-md-3">
                         <h6 class="text-white">
@@ -179,7 +179,7 @@
                         @if (Auth::user()->membership_status == 1)
                        
                         @if(!is_null($first_lesson))
-                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR CURSO</a>
+                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR VIENDO GRABACIÓN</a>
                         @endif
                         @else
                            <a href="{{route('shopping-cart.store', [Auth::user()->membership_id, 'membresia', 'Mensual'])}}" class="btn btn-danger play-course-button btn-block" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> RENOVAR MEMBRESIA</a>
@@ -197,7 +197,7 @@
          <div class="col-md-12">
             <div class="row">
                <div class="col-md-10">
-                  <h2 class="text-white ml-5 up">ACERCA DEL CURSO </h2>
+                  <h2 class="text-white ml-5 up">SOBRE ESTE STREAMING </h2>
                   <hr style="border: 1px solid #707070; opacity: 1;" />
                   <div class="col-md-12">
                      <div class="col-md-12 justify-content-center p-2 ml-4" style="color: white;">
@@ -248,7 +248,7 @@
    @endphp
    <div class="container-fluid pt-4 pb-4">
       <div class="col-md-12 section-title-category">
-         <h3 class="ml-4">LECCIONES</h3>
+         <h3 class="ml-4">GRABACIONES</h3>
       </div>
       <div class="row justify-content-center">
          @foreach ($arrayNivel as $nivel => $name)
@@ -275,8 +275,8 @@
                         @else
                            @if (Auth::user()->membership_status == 1)
                               @if(!$curso->lessons->isEmpty())
-                                 <a href="{{route('client.courses.add', [$curso->id, 'es'])}}" class="btn btn-success play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR CURSO EN ESPAÑOL</a>
-                                 <a href="{{route('client.courses.add', [$curso->id, 'en'])}}" class="btn btn-primary play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR CURSO EN INGLÉS</a>
+                                 <a href="{{route('client.courses.add', [$curso->id, 'es'])}}" class="btn btn-success play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR GRABACIÓN EN ESPAÑOL</a>
+                                 <a href="{{route('client.courses.add', [$curso->id, 'en'])}}" class="btn btn-primary play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR GRABACIÓN EN INGLÉS</a>
                               @endif
                            @else
                               <a href="{{route('shopping-cart.store', [Auth::user()->membership_id, 'membresia', 'Mensual'])}}" class="btn btn-danger play-course-button btn-block" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> RENOVAR MEMBRESIA</a>
@@ -286,7 +286,7 @@
                   @else
                      @if (Auth::user()->membership_status == 1)
                         @if(!is_null($first_lesson))
-                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR CURSO</a>
+                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR VIENDO GRABACIÓN</a>
                         @endif
                      @else
                         <a href="{{route('shopping-cart.store', [Auth::user()->membership_id, 'membresia', 'Mensual'])}}" class="btn btn-danger play-course-button btn-block" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> RENOVAR MEMBRESIA</a>
@@ -367,9 +367,9 @@
             <div class="row">
                <div class="col-6 text-left">
                   @if (!Auth::guest())
-                     <a href="{{route('client.my-courses')}}" class="btn btn-success play-course-button mt-2" ><i class="fas fa-user-circle" aria-hidden="true"></i> IR A MIS CURSOS</a>
+                     <a href="{{route('client.my-courses')}}" class="btn btn-success play-course-button mt-2" ><i class="fas fa-user-circle" aria-hidden="true"></i> IR A MIS EVENTOS GRABADOS</a>
                   @endif
-                  <a href="{{route('courses.show.all')}}" class="btn btn-primary play-course-button mt-2" ><i class="fa fa-search" aria-hidden="true"></i> EXPLORAR MÁS CURSOS</a>
+                  <a href="{{route('courses.show.all')}}" class="btn btn-primary play-course-button mt-2" ><i class="fa fa-search" aria-hidden="true"></i> EXPLORAR OTRAS GRABACIONES</a>
                </div>
             
                <div class="col-6 text-right">
@@ -385,8 +385,8 @@
                            @else
                               @if (Auth::user()->membership_status == 1)
                                  @if(!$curso->lessons->isEmpty())
-                                    <a href="{{route('client.courses.add', [$curso->id, 'es'])}}" class="btn btn-success play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR CURSO EN ESPAÑOL</a>
-                                    <a href="{{route('client.courses.add', [$curso->id, 'en'])}}" class="btn btn-primary play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR CURSO EN INGLÉS</a>
+                                    <a href="{{route('client.courses.add', [$curso->id, 'es'])}}" class="btn btn-success play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR GRABACIÓN EN ESPAÑOL</a>
+                                    <a href="{{route('client.courses.add', [$curso->id, 'en'])}}" class="btn btn-primary play-course-button btn-block" ><i class="fa fa-language" aria-hidden="true"></i> INICIAR GRABACIÓN EN INGLÉS</a>
                                  @endif
                               @else
                                  <a href="{{route('shopping-cart.store', [Auth::user()->membership_id, 'membresia', 'Mensual'])}}" class="btn btn-danger play-course-button btn-block" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> RENOVAR MEMBRESIA</a>
@@ -396,7 +396,7 @@
                      @else
                         @if (Auth::user()->membership_status == 1)
                         @if(!is_null($first_lesson))
-                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR CURSO</a>
+                           <a href="{{ route('lesson.show', [$first_lesson->slug, $first_lesson->id, $curso->id]) }}" class="px-2 mr-auto btn btn-success play-course-button btn-block mb-2"> <i class="fa fa-play" aria-hidden="true"></i> CONTINUAR VIENDO GRABACIÓN</a>
                         @endif
                         @else
                            <a href="{{route('shopping-cart.store', [Auth::user()->membership_id, 'membresia', 'Mensual'])}}" class="btn btn-danger play-course-button btn-block" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> RENOVAR MEMBRESIA</a>
@@ -540,7 +540,7 @@
                      $idmembresia = empty(Auth::user()->membership_id) ? 1 : (Auth::user()->membership_id + 1);
                   @endphp
                   <a href="{{route('shopping-cart.store', $idmembresia)}}" class="btn btn-color-green text-white" style="background: #6ab742;">Subir de nivel</a>
-                  <a href="{{route('courses')}}" class="btn btn-primary text-white">Ver Más Cursos</a>
+                  <a href="{{route('courses')}}" class="btn btn-primary text-white">Ver Otras Grabaciones</a>
             </div>
             <!-- <div class="modal-footer">
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -549,3 +549,29 @@
       </div>
    </div>
 @endsection
+
+<script>
+   var elementos = document.getElementsByClassName("show-menu-button");
+   console.log(elementos);
+   for (var i = 0; i < elementos.length; i++) {
+      elementos[i].addEventListener("click", function(evt){
+         alert("Hola");
+         /*var elementoClase = document.getElementsById("main-content");
+         elementoClase.className = "desenfoque";*/
+      });
+   }
+
+   var boton = document.getElementById("boton");
+   boton.onclick = function() {
+      alert("Prueba");
+   }
+
+   $(".show-menu-button").on("click", function(){
+      console.log("FUnciona");
+      alert("Prueba con Jquery");
+   });
+
+   $(document).ready( function () {
+      console.log($('#et-mobile-navigation'));
+   });
+</script>

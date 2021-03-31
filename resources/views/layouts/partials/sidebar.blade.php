@@ -83,6 +83,41 @@
                             </div>-->
             </form>
         </div>
+        <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv1" style="color: white;"><i class="fas fa-graduation-cap"></i> Grabaciones<i class="fas fa-angle-down"></i></a>
+        <div class="collapse" id="categoriesDiv1" style="padding-left: 15px;">
+
+            <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv2" style="color: white;"><i class="fa fa-star"></i>  VER <i class="fas fa-angle-down"></i> </a>
+
+            <div class="collapse" id="categoriesDiv2" style="padding-left: 15px;">
+                @foreach($cursos as $curs)
+                 @if($curs->membership_id == 1)
+                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
+                 @endif
+                @endforeach
+            </div> 
+            
+            <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv3" style="color: white;"><i class="fa fa-star"></i>  DAR <i class="fas fa-angle-down"></i> </a>
+
+            <div class="collapse" id="categoriesDiv3" style="padding-left: 15px;">
+                @foreach($cursos as $curs)
+                 @if($curs->membership_id == 2)
+                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
+                 @endif
+                @endforeach
+            </div> 
+            
+            
+            <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv4" style="color: white;"><i class="fa fa-star"></i>  Ganar <i class="fas fa-angle-down"></i> </a>
+
+            <div class="collapse" id="categoriesDiv4" style="padding-left: 15px;">
+                @foreach($cursos as $curs)
+                 @if($curs->membership_id == 3) 
+                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
+                 @endif
+                @endforeach
+            </div>
+            
+        </div> 
         <a href="{{route('legal')}}" class="list-group-item bg-dark-gray" style="color: white;"><i class="fas fa-balance-scale"></i> Legal</a>
         @if(Auth::user())
             @if(Auth::user()->rol_id == 0)
@@ -110,8 +145,6 @@
                 <img src="{{ asset('uploads/images/banners/'.$banner->image) }}" alt="" width="200" style="margin-top:80px">
             </div>
         @endif
-
-
     </div>
 </div>
 <!-- /#sidebar-wrapper -->

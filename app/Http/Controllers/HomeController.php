@@ -101,8 +101,7 @@ class HomeController extends Controller{
      {
          $proximos = null;
           $finalizados = Events::where('date', '<=',date('Y-m-d'))
-         ->where('time', '<', date('H:i:s'))
-         ->orwhere('date', '<',date('Y-m-d'))
+         ->where('status', '<>', 2)
          ->take(12)
          ->get();
  
@@ -126,16 +125,14 @@ class HomeController extends Controller{
          return view('index',compact('evento_actual','proximos','total','finalizados', 'misEventosArray', 'events_category', 'cursosDestacados', 'modalVisitante'));
  
      }else{
-         $proximos = Events::where('date', '>', date('Y-m-d'))
+         $proximos = Events::where('date', '>=', date('Y-m-d'))
                        ->where('id', '!=', $evento_actual->id)
-                       ->orwhere('date', '=', date('Y-m-d'))
-                       ->where('time', '>=', date('H:i:s'))
+                       ->where('status', '=', 1)
                        ->get();
  
          //$finalizados = Events::where('status', '=',3)->get();
          $finalizados = Events::where('date', '<=',date('Y-m-d'))
-         ->where('time', '<', date('H:i:s'))
-         ->orwhere('date', '<',date('Y-m-d'))
+         ->where('status', '<>', 2)
          ->take(12)
          ->get();
          $total = count($proximos);

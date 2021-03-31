@@ -880,6 +880,12 @@ class Menu
                         'black'=> '0',
                         'oculto'=> 'activo',
                     ],
+                    'Eventos Eliminados' => [
+                        'ruta' => 'admin.events.record',
+                        'complementoruta' => '',
+                        'black'=> '0',
+                        'oculto'=> 'activo',
+                    ],
                    
                 ]
             ],

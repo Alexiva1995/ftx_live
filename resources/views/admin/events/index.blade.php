@@ -136,7 +136,7 @@
 									@if ($event->status == '0')
 									<a class="btn btn-danger" href="{{ route('admin.events.change-status', [$event->id, 1]) }}" title="Habilitar" style="background-color: rgb(23, 21, 21)!important; border-color:rgb(23, 21, 21)!important;"><i class="fa fa-check"></i></a>
 									@endif
-
+									<a class="btn btn-danger" href="{{ route('admin.events.delete', $event->id) }}" title="Eliminar"><i class="fa fa-trash"></i></a>
 								</td>
 							</tr>
 						@endforeach
