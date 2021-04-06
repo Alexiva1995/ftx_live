@@ -225,11 +225,8 @@ class SoporteController extends Controller
 
    public function frequent_questions(){
         view()->share('title', ' ');
-        $tickets = Ticket::with('support')->get();
        
-        //dd($busqueda, $tickets);
-        
-      return view('soporte.frequent_questions')->with(compact('tickets'));
+        return view('soporte.frequent_questions');
    }
 
    public function affiliates(){

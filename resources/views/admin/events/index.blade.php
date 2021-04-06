@@ -181,7 +181,7 @@
 							                <select class="form-control" name="user_id" @if (Auth::user()->rol_id != 2) required @endif>
 							                	<option value="" selected disabled>Seleccione un mentor..</option>
 							                	@foreach ($mentores as $mentor)
-							                		<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
+							                		<option value="{{ $mentor->ID }}">{{ (!is_null($mentor->display_name)) ? $mentor->display_name : $mentor->user_email }}</option>
 							                	@endforeach
 							                </select>
 							            </div>
@@ -307,7 +307,7 @@
 										<label class="white">Mentor</label>
 										<select class="form-control" name="user_id" id="user_id" @if (Auth::user()->rol_id != 2) required @endif>
 											@foreach ($mentores as $mentor)
-												<option value="{{ $mentor->ID }}">{{ $mentor->user_email }}</option>
+												<option value="{{ $mentor->ID }}">{{ (!is_null($mentor->display_name)) ? $mentor->display_name : $mentor->user_email }}</option>
 											@endforeach
 										</select>
 									</div>

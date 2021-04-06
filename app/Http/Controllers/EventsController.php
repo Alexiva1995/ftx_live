@@ -58,7 +58,7 @@ class EventsController extends Controller
         }
         
         $mentores = DB::table('wp98_users')
-            ->select('ID', 'user_email')
+            ->select('ID', 'user_email', 'display_name')
             ->where('rol_id', '=', 2)
             ->orderBy('user_email', 'ASC')
             ->get();
