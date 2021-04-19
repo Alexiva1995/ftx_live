@@ -928,6 +928,15 @@ class Menu
                 'permisoAdmin' => (!empty($permiso)) ? $permiso->cursos : 0,
                 'activo' => 0,
             ],
+            'Legal' => [
+                'submenu' => 0,
+                'ruta' => 'admin.legal.tabs.index',
+                'black'=> '0',
+                'icono' => 'fas fa-balance-scale',
+                'complementoruta' => '',
+                'permisoAdmin' => (!empty($permiso)) ? $permiso->cursos : 0,
+                'activo' => 0,
+            ],
             'Promociones' => [
                 'submenu' => 0,
                 'ruta' => 'admin.promotions.index',

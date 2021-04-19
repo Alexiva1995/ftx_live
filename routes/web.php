@@ -28,9 +28,11 @@ Route::get('terms-and-conditions', function(){
   return view('auth.termsAndConditions');
 })->name('terms-and-conditions');
 
-Route::get('legal', function(){
-  return view('legal');
-})->name('legal');
+Route::get('legal', 'LegalController@index')->name('legal');
+
+Route::get('legal2', function(){
+  return view('legal2');
+})->name('legal2');
 
 Route::get('certificado', 'HomeController@certificado');
 Route::get('/', 'HomeController@index')->name('index');
@@ -458,6 +460,24 @@ Route::group(['prefix' => 'installer'], function (){
       Route::post('update', 'MembershipController@update')->name('admin.memberships.update');
       Route::post('update-message', 'MembershipController@update_message')->name('admin.memberships.update-message');
     });
+
+     Route::group(['prefix' => 'legal'], function(){
+        Route::group(['prefix' => 'tabs'], function(){
+          Route::get('/', 'LegalController@tabs')->name('admin.legal.tabs.index');
+          Route::post('store', 'LegalController@store_tab')->name('admin.legal.tabs.store');
+          Route::get('show/{id}', 'LegalController@show_tab')->name('admin.legal.tabs.show');
+          Route::post('update', 'LegalController@update_tab')->name('admin.legal.tabs.update');
+          Route::get('change-status/{id}/{status}', 'LegalController@change_status_tab')->name('admin.legal.tabs.change-status');
+
+          Route::group(['prefix' => 'clauses'], function(){
+            Route::get('/{tab_id}', 'LegalController@clauses')->name('admin.legal.clauses.index');
+            Route::post('store', 'LegalController@store_clause')->name('admin.legal.clauses.store');
+            Route::get('show/{id}', 'LegalController@show_clause')->name('admin.legal.clauses.show');
+            Route::post('update', 'LegalController@update_clause')->name('admin.legal.clauses.update');
+            Route::get('change-status/{id}/{status}', 'LegalController@change_status_clause')->name('admin.legal.clauses.change-status');
+          });
+        });
+     });
 
     Route::group(['prefix' => 'promotions'], function(){
       Route::get('/', 'PromotionController@index')->name('admin.promotions.index');
