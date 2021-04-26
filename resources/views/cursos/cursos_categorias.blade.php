@@ -33,9 +33,9 @@
         <div class="col mb-4 mt-4">
             <div class="title-page-course col-md"><span class="text-white">
                 @if (!is_null ($category_name))
-                    <h2>Cursos Online de<span class="text-primary"> "{{$category_name->title}}"</span></h2>
+                    <h2>Grabaciones de<span class="text-primary"> "{{$category_name->title}}"</span></h2>
                 @else
-                    <h2>Cursos Online <span class="text-primary">relacionados</span></h2>
+                    <h2>Grabaciones <span class="text-primary">relacionados</span></h2>
                 @endif
             </div>
         </div>
@@ -80,7 +80,7 @@
             @else
             <div class="container-fluid">
                 <h4 class="text-white">
-                    No se encontraron cursos relacionados con la búsqueda...
+                    No se encontraron grabaciones relacionadas con la búsqueda...
                 </h4>
             </div>
 

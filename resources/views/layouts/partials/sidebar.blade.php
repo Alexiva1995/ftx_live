@@ -1,8 +1,5 @@
 @php
-    $categoriasSidebar = \App\Models\Category::orderBy('id', 'ASC')->with('course')->get();
-
-    $subcategoriasSidebar = \App\Models\Subcategory::orderBy('id', 'ASC')->get();
-    $cursos = \App\Models\Course::orderBy('id', 'ASC')->get();
+    $categoriasSidebar = \App\Models\Category::orderBy('id', 'ASC')->get();
 
     $banner = NULL;
     if (request()->is('/')){
@@ -77,43 +74,32 @@
             <form action="{{ route('search') }}" method="GET" class="form-inline d-flex justify-content-center md-form form-sm active-pink-2 mt-2">
                 <input class="form-control form-control-sm w-75 border-0" type="text" placeholder="Buscar" aria-label="Buscar" id="search" name="q">
                 <button class="btn btn-none border-0" type="submit"><i class="fas fa-search text-white" aria-hidden="true"></i></button>
-                <!--<div class="input-group">
-                                <input type="text" class="form-control" id="search" name="q" placeholder="Buscar...">
-                                <button class="btn btn-light ml-auto"><i class="fas fa-search text-primary"></i></button>
-                            </div>-->
             </form>
         </div>
         <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv1" style="color: white;"><i class="fas fa-graduation-cap"></i> Grabaciones<i class="fas fa-angle-down"></i></a>
+        
         <div class="collapse" id="categoriesDiv1" style="padding-left: 15px;">
-
             <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv2" style="color: white;"><i class="fa fa-star"></i>  VER <i class="fas fa-angle-down"></i> </a>
 
             <div class="collapse" id="categoriesDiv2" style="padding-left: 15px;">
-                @foreach($cursos as $curs)
-                 @if($curs->membership_id == 1)
-                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
-                 @endif
+                @foreach($categoriasSidebar as $cat1)
+                    <a class="list-group-item bg-dark-gray" href="{{ route('show.cursos.category', $cat1->id) }}" style="color: white;"><i class="{{ $cat1->icon }}"></i> {{$cat1->title}}</a>
                 @endforeach
             </div> 
             
             <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv3" style="color: white;"><i class="fa fa-star"></i>  DAR <i class="fas fa-angle-down"></i> </a>
 
             <div class="collapse" id="categoriesDiv3" style="padding-left: 15px;">
-                @foreach($cursos as $curs)
-                 @if($curs->membership_id == 2)
-                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
-                 @endif
+                @foreach($categoriasSidebar as $cat2)
+                    <a class="list-group-item bg-dark-gray" href="{{ route('show.cursos.category', $cat2->id) }}" style="color: white;"><i class="{{ $cat2->icon }}"></i> {{$cat2->title}}</a>
                 @endforeach
             </div> 
-            
             
             <a class="list-group-item bg-dark-gray" data-toggle="collapse" href="#categoriesDiv4" style="color: white;"><i class="fa fa-star"></i>  Ganar <i class="fas fa-angle-down"></i> </a>
 
             <div class="collapse" id="categoriesDiv4" style="padding-left: 15px;">
-                @foreach($cursos as $curs)
-                 @if($curs->membership_id == 3) 
-                  <a class="list-group-item bg-dark-gray" href="{{ route('courses.show', [$curs->slug, $curs->id]) }}" style="color: white;"><i class="{{ $curs->category->icon }}"></i> {{$curs->title}}</a>
-                 @endif
+                 @foreach($categoriasSidebar as $cat3)
+                    <a class="list-group-item bg-dark-gray" href="{{ route('show.cursos.category', $cat3->id) }}" style="color: white;"><i class="{{ $cat3->icon }}"></i> {{$cat3->title}}</a>
                 @endforeach
             </div>
             
@@ -134,6 +120,13 @@
             </form>
         @endif 
         <a href="#" id="menu-toggle2" class="list-group-item bg-dark-gray" style="color: white;"><i class="fa fa-arrow-left"></i> Ocultar</a>
+        <a href="#" data-toggle="collapse" data-target="#social-networks" class="list-group-item bg-dark-gray" style="color: white;"><i class="far fa-thumbs-up"></i> Compartir</a>
+        <div class="collapse show text-center" id="social-networks">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded facebook mt-2 mb-2" target="_blank"><i class="text-center fa fa-facebook"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=https%3A//www.ftxlive.com/office/" class="btn btn-social-media-icon btn-rounded twitter mt-2 mb-2" target="_blank"><i class="text-center fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.ftxlive.com/office/&title=FTX%20Live&summary=&source=" class="btn btn-social-media-icon btn-rounded linkedin mt-2 mb-2" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="btn btn-social-media-icon btn-rounded email-icon mt-2 mb-2" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
         @guest
             <center><a type="button" class="btn btn-register-header d-md-block m-2" href="{{ route('log').'?act=1' }}">REGISTRARME</a>
             <a type="button" class="btn btn-register-header d-md-block m-2" href="{{ route('log').'?act=0' }}">ENTRAR</a></center>

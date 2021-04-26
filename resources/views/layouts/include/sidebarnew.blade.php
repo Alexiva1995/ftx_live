@@ -83,16 +83,23 @@
                                 </a>
                             @else
                                 @if ($subIndex != 'Árbol de Cliente')
-                                @if($subItem['black'] == '0')
-                                <a href="{{route($subItem['ruta']).$subItem['complementoruta']}}">
-                                        <i class="far fa-circle"></i>
-                                        {{$subIndex}}
-                                    </a>
+                                    @if ($subIndex == 'Evento Express')
+                                        <a href="javascript:;" onclick="document.express_event_form.submit();">
+                                            <i class="far fa-circle"></i>
+                                            {{$subIndex}}
+                                        </a>
                                     @else
-                                    <a href="{{url($subItem['ruta']).$subItem['complementoruta']}}" target="_blank">
-                                        <i class="far fa-circle"></i>
-                                        {{$subIndex}}
-                                    </a>
+                                        @if($subItem['black'] == '0')
+                                            <a href="{{route($subItem['ruta']).$subItem['complementoruta']}}">
+                                                <i class="far fa-circle"></i>
+                                                {{$subIndex}}
+                                            </a>
+                                        @else
+                                            <a href="{{url($subItem['ruta']).$subItem['complementoruta']}}" target="_blank">
+                                                <i class="far fa-circle"></i>
+                                                {{$subIndex}}
+                                            </a>
+                                        @endif
                                     @endif
                                 @endif
                             @endif

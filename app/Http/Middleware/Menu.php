@@ -168,6 +168,12 @@ class Menu
                             'black'=> '0',
                             'oculto'=> 'activo',
                         ],
+                        'Evento Express' => [
+                            'ruta' => '',
+                            'complementoruta' => '',
+                            'black'=> '0',
+                            'oculto'=> 'activo',
+                        ],
                        
                     ]
                 ],
@@ -767,6 +773,12 @@ class Menu
                         'black'=> '0',
                         'oculto'=> 'activo',
                     ],
+                    'Lista de Usuarios' => [
+                        'ruta' => 'users.records',
+                        'complementoruta' => '',
+                        'black'=> '0',
+                        'oculto'=> 'activo',
+                    ],
                 ]
             ],
              
@@ -874,6 +886,12 @@ class Menu
                 'permisoAdmin' => (!empty($permiso)) ? $permiso->eventos : 0,
                 'activo' => request()->is('admin/events') ? 'active' : 0,
                 'menus' => [
+                    'Evento Express' => [
+                        'ruta' => '',
+                        'complementoruta' => '',
+                        'black'=> '0',
+                        'oculto'=> 'activo',
+                    ],
                     'Listado de Eventos' => [
                         'ruta' => 'admin.events.index',
                         'complementoruta' => '',
@@ -1037,7 +1055,7 @@ class Menu
                 'permisoAdmin' => (!empty($permiso)) ? $permiso->vision_usuario : 0,
                 'activo' => 0,
             ],
-            */
+            
             'Lista de Usuarios' => [
                 'submenu' => 0,
                 'ruta' => 'users.records',
@@ -1046,7 +1064,7 @@ class Menu
                 'complementoruta' => '',
                 'permisoAdmin' => (!empty($permiso)) ? $permiso->usuario : 0,
                 'activo' => 0,
-            ],
+            ],*/
             
             
             'Envio de correos' => [

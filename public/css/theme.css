@@ -2238,7 +2238,7 @@ p.card-text.font-weight-bold.mr-2 {
 .btn.btn-social-media-icon {
     width: 40px;
     height: 40px;
-    padding: 0;
+    /*padding: 0;*/
 }
 
 .btn-footer-redes {
