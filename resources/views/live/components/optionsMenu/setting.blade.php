@@ -17,7 +17,7 @@
                             <div class="mt-2">
                                 <a data-toggle="modal" data-target="#modal-settings-presentation" class="btn btn-danger btn-block">
                                     <i class="fa fa-plus-circle"></i>
-                                    Agregar Memoria
+                                    Agregar Presentación
                                 </a>
                             </div>
                             <div class="mt-2">

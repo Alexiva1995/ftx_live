@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Agregar Memoria</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Presentación</h5>
             </div>
             <form enctype="multipart/form-data" id="store_presentation_form">
                 {{ csrf_field() }}
@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Seleccione la memoria</label>
+                                    <label>Seleccione la presentación</label>
                                     <input type="file" class="form-control" name="presentation" required>
                                 </div>
                             </div>

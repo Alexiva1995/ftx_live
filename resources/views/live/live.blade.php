@@ -1,6 +1,19 @@
 
 @extends('layouts.landing')
 
+@push('style')
+    .modal-chat{
+        position: absolute;
+        top: 100px;right: 100px;
+        bottom: 0;
+        left: -10%;
+        z-index: 10040;
+        overflow: auto;
+        overflow-y: auto;
+        width: 70%;
+    }
+@endpush
+
 @push('scripts')
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script>
@@ -81,6 +94,7 @@
                 }
             });
         }
+
         function deleteNote($id){
             var route = "https://ftxlive.com/office/anotaciones/delete/"+$id;
             $.ajax({
@@ -122,8 +136,6 @@
                         $("#option-modal-settings").modal("hide");
                         $("#msj-success-text").html("La memoria ha sido agregada con éxito");
                         $("#msj-success-ajax").css('display', 'block');
-                        //$("#presentations_section").html(ans);
-                        refreshMenu();
                         refreshPresentationSection(false);
                     }
                 }
@@ -154,8 +166,6 @@
                         $("#option-modal-settings").modal("hide");
                         $("#msj-success-text").html("El video ha sido agregado con éxito");
                         $("#msj-success-ajax").css('display', 'block');
-                        //$("#videos_section").html(ans);
-                        refreshMenu();
                         refreshVideoSection(false);
                     }
                 }
@@ -189,7 +199,6 @@
                         $("#option-modal-settings").modal("hide");
                         $("#msj-success-text").html("El archivo ha sido agregado con éxito");
                         $("#msj-success-ajax").css('display', 'block');
-                        refreshMenu();
                         refreshFileSection(false);
                     }
                     
@@ -224,8 +233,6 @@
                         $("#option-modal-settings").modal("hide");
                         $("#msj-success-text").html("La oferta ha sido creada con éxito");
                         $("#msj-success-ajax").css('display', 'block');
-                        //$("#offers_section").html(ans);
-                        refreshMenu();
                         refreshOfferSection(false);
                     }
                 }
@@ -281,7 +288,6 @@
                     $("#option-modal-presentation").modal("hide");
                     $("#msj-success-text").html("La memoria ha sido eliminada con éxito");
                     $("#msj-success-ajax").css('display', 'block');
-                    refreshMenu();
                     refreshPresentationSection(false);
                 }
             });
@@ -305,19 +311,7 @@
                     $("#option-modal-document").modal("hide");
                     $("#msj-success-text").html("El archivo ha sido eliminado con éxito");
                     $("#msj-success-ajax").css('display', 'block');
-                    refreshMenu();
                     refreshFileSection(false);
-                }
-            });
-        }
-        
-        function refreshMenu(){
-            var route = "https://ftxlive.com/office/refresh-menu/{{Auth::user()->ID}}/{{$event->id}}";
-            $.ajax({
-                url:route,
-                type:'GET',
-                success:function(ans){
-                    $("#v-pills-tab").html(ans);
                 }
             });
         }
@@ -401,12 +395,28 @@
             });
         }
 
+        function survey_report($survey_id){
+            var route = "https://ftxlive.com/office/download-survey-report/"+$survey_id;
+            $.ajax({
+                url:route,
+                type:'GET',
+                success:function(ans){
+                    console.log(ans);
+                    $("#survey_report_answer").html(ans);
+                    $('#mytable').DataTable({
+                        dom: '<B<t>>',
+                    });
+                    $("#option-modal-survey").modal("hide");
+                    $("#modal-report-survey").modal("show");
+                }
+            });
+        }
+
         Pusher.logToConsole = true;
         var pusher = new Pusher('70633ff8ae20c2f8780b', {cluster: 'mt1'});
         var channel = pusher.subscribe('notificacion-channel');
         channel.bind('notificacion-event', function(data) {
             if (data.user != $("#user_auth").val()){
-                refreshMenu();
                 if (data.type == 'video'){ 
                     refreshVideoSection(true);
                 }else if (data.type == 'presentation'){
@@ -424,6 +434,11 @@
                 }
             }
         });
+
+        $(".emoji").click(function() {
+            console.log($(this).attr('data-emoji'));
+            document.getElementById("resetinput").value += $(this).attr('data-emoji');
+        });
     </script>
 @endpush
 @section('content')
@@ -434,9 +449,8 @@
     <div class="bg-dark-gray">
         {{-- Encabezado o titulo --}}
         @include('live.components.cabezera')
+
         @include('live.components.avisos')
-      
-        
     </div>
     
     <div class="container-fluid">
@@ -472,6 +486,8 @@
     @include('live.components.modal.agregarRecursosEncuestas')
     @include('live.components.modal.agregarRecursosOfertas')
     @include('live.components.modal.editNote')
+    {{-- Modal para reporte de encuesta --}}
+    @include('live.components.modal.reporteEncuesta')
 
     <!-- Scrips de la seccion de live -->
     @include('live.components.scritpsLive')

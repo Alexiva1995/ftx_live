@@ -27,7 +27,7 @@
                                     @else
                                         @foreach($files as $file)
                                             <ul class="list-group">
-                                                <a href="{{route ('download_resource_file', [$event->id, $file->id])}}" class="btn btn-danger btn-block" target="_blank">{{$file->title}}</a>
+                                                <li style="list-style:none;"><a href="{{route ('download_resource_file', [$event->id, $file->id])}}" class="btn btn-danger btn-block" target="_blank">{{$file->title}}</a></li>
                                             </ul>
                                         @endforeach
                                     @endif

@@ -14,6 +14,7 @@ class EnviarMensaje implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $user_id;
     public $avatar;
     public $usuario;
     public $mensaje;
@@ -23,8 +24,9 @@ class EnviarMensaje implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($usuario, $mensaje, $avatar)
+    public function __construct($user_id, $usuario, $mensaje, $avatar)
     {
+        $this->user_id = $user_id;
         $this->avatar = $avatar;
         $this->usuario = $usuario;
         $this->mensaje = $mensaje;

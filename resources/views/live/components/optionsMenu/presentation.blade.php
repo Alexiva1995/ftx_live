@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Memorias</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Presentaciones</h5>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -27,7 +27,7 @@
                                     @else
                                         @foreach($presentations as $presentation)
                                             <ul class="list-group">
-                                                <li><a href="{{route ('download_resource_file', [$event->id, $presentation->id])}}" class="btn btn-danger btn-block" target="_blank">{{$presentation->title}}</a></li>
+                                                <li style="list-style:none;"><a href="{{route ('download_resource_file', [$event->id, $presentation->id])}}" class="btn btn-danger btn-block" target="_blank">{{$presentation->title}}</a></li>
                                             </ul>
                                         @endforeach
                                     @endif

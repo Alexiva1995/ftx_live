@@ -73,6 +73,9 @@
                                                     <div>
                                                         <canvas id="survey-chart-{{$encuesta->id}}" width="400" height="400"></canvas>
                                                     </div>
+                                                    <div class="mt-2 text-center">
+                                                        <a class="btn btn-small btn-danger" href="javascript:;" onclick="survey_report({{$encuesta->id}});"><i class="fas fa-file-download"></i> Descargar Reporte</a>
+                                                    </div>
                                                 </div>
                                             @endforeach
                                         </div>

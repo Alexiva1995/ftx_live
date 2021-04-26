@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="{{asset('css/anotaciones-simple.css')}}">
         <!-- css para cookies -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/datatables/datatables.min.css') }}">
         <style>
             .ct-topbar {
             text-align: right;
@@ -311,6 +312,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="{{ asset('bootstrap-4.5.1/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('bootstrap-4.5.1/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/datatables/datatables.min.js') }}"></script>
 
         <!-- Menu Toggle Script -->
         <script>

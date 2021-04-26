@@ -74,7 +74,7 @@
     
     function loadCharts() {
         $.ajax({
-            url: 'https://mybusinessacademypro.com/academia/survey/statistics',
+            url: 'https://ftxlive.com/office/survey/statistics',
             method: 'POST',
             data: {
                 id: id,
@@ -82,11 +82,11 @@
             }
         }).done(function (res) {
             res.forEach(value => {
-                /*console.log("ID: "+value["id"]);
+                console.log("ID: "+value["id"]);
                 console.log("Pregunta: "+value["question"]);
                 console.log("Cantidad de Opciones: "+value["options_count"]);
                 console.log("Opciones: "+value["options"]);
-                console.log("Respuestas: "+value["responses"]);*/
+                console.log("Respuestas: "+value["responses"]);
             
                 var ctx = document.getElementById('survey-chart-'+value["id"]).getContext('2d');
                 var myChart = new Chart(ctx, {
