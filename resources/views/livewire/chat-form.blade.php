@@ -73,7 +73,7 @@
 
         @error('mensaje')<small class="text-danger">{{$message}}</small>@enderror
 
-        <div class="card-footer p-1 border-0" style="padding: 0 !important; background-color: #363840; border-top: 1px solid #363840;">
+        <div class="card-footer p-1 border-0" style="padding: 0 !important; background-color: #313335; border-top: 1px solid #313335;">
 
             <div style="position: absolute" class="alert alert-success collapse p-1" role="alert" id="avisoSuccess">
                 <i class="fa fa-check"></i> Mensaje enviado
