@@ -1,197 +1,296 @@
 @extends('layouts.landing')
 
 @push('styles')
-   <style>
-      .card-testimonios {
-         background: #FFFFFF 0% 0% no-repeat padding-box !important;
-         border-radius: 30px!important;
-         opacity: 1;
-      }
+    <style>
+        .card-testimonios {
+            background: #FFFFFF 0% 0% no-repeat padding-box !important;
+            border-radius: 30px!important;
+            opacity: 1;
+        }
    </style> 
 @endpush
 
 @section('content')
-   <div class="col-md-12 py-5" style="background-color: #FFFFFF;">
-      <div class="col-md-8 offset-md-2" style=" text-align: center;">
-         <h3>El programa de <b class="text-danger">FTX Live</b> te ayuda a que ganes dinero por aprender.</h3>
-      </div>
-   </div>
+    <div class="banner-coaches">
+        <img src="{{ asset('nosotros/afiliados/header2.jpg') }}" class="w-100" alt="...">
 
-    <div class="col-md-12" style="background-color: #fff;">
-         <div class="col-md-8 offset-md-2" style="padding: 20px 15px 40px 15px; text-align: justify;">
-            <h4>Te ofrecemos todo el conocimiento, el desarrollo de actitudes y las herramientas que necesitas para convertirte en un gran Speaker y Coach Master de FTX Live </h4><br>
-
-            <h5>Si ya tienes la formación o experiencia en el medio de comunicación y manejo de equipos, pero ¿quieres obtener proyección internacional? Aquí encontrarás toda la información para digitalizar tus cursos y maximizar su alcance en línea.</h5><br>
-            <h5><b>¡Haz negocio con nosotros! y ¡Súmate a nuestro equipo de entrenadores!</b></h5><br>
-
-            <center><a type="button" class="btn btn-primary btn-register-header" href="{{ route('log').'?act=1' }}">REGISTRATE AQUÍ</a></center><br>
-
-            <h5>Con la atención y el cuidado que te mereces, valoraremos tu trabajo y sobre eso daremos seguimiento a algunas posibilidades. Pero para ello, requerimos que con la formalidad que se requiere, tengas consciencia de lo siguiente: <br><br>
-            <ul>
-               <li>FTX Live te ofrece una posibilidad, la cual necesita tú mayor compromiso, responsabilidad y colaboración.</li>   <br>
-               <li>Para nosotros es importante que el trabajo de todos sea valorado, por ello tenemos requisitos importantes, así como confianza en que podrás cumplir a cabalidad el objetivo que nos mueve como grupo, que sobre todo yace en la satisfacción de nuestro consumidor final, el impacto positivo que queremos dar al mundo y la trascendencia del material que ofrecemos, por ello nuestro compromiso en la calidad de todo nuestro modelo académico.</li><br>
-               <li>Te ofrecemos la exposición internacional que siempre has soñado, apalancado de nuestra comunidad en más de 80 países y con la posibilidad de seguir creciendo por el mundo entero, le daremos un tratamiento impecable a cada material, contando con el mejor equipo técnico, operativo, logístico, administrativo y de creación de contenidos para que, sumado a extraordinarias locaciones, hagamos que expreses lo mejor de ti.</li>
-            </ul></h5>
-
+        <div class="banner-coaches-text">
             <div class="row">
-               <div class="col-md-2"></div>
-               <div class="col-md-8">
-                  <img src="https://ftxlive.com/office/nosotros/gratis-Blog/video1.jpg" class="card-img-top" alt="..." style="border: solid 0;">
-                  <div style="background-color: #cc3333; color: white; padding-top: 12px; padding-bottom: 12px; text-align: center; font-weight: bold;">
-                     <a href="#" data-toggle="modal" data-target="#video1" style="text-decoration: none; color: white;"><i class="fa fa-play-circle"></i> Testimonio de José Gordo</a>
-                  </div>
-               </div>
-               <div class="col-md-2"></div>
+                <div class="col-12 mt-5 text-center">
+                    <img src="{{ asset ('images/FTXlive-logo.png')}}"  class="banner-coaches-logo">
+                </div>
+                <div class="col-12 mt-5 text-center text-white pt-4"">
+                    Te damos la bienvenida a uno de los  mejores y más geniales programas de marketing de Afiliados del mundo
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <img src="{{ asset ('images/line-red.png')}}" class="banner-coaches-line">
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-      <div class="col-md-12 pt-5" style="background: #cc3333;">
-         <div class="new-courses-section-title mb-2">
-            <h1 class="text-center font-weight-bold" style="color: white;">TESTIMONIOS</h1>
-         </div>
-         
-         <!--Carousel Wrapper-->
-         <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-               <li data-target="#multi-item-example" data-slide-to="0" class=""></li>
-               <li data-target="#multi-item-example" data-slide-to="1" class="active"></li>
-            </ol>
-            <!--/.Indicators-->
+    <div class="pb-5" style="background-color: #fff;">
+        <div class="text-center coaches-second-section">
+            Te ofrecemos todo el conocimiento, el desarrollo de actitudes y las herramientas que necesitas para convertirte en un gran Speaker y Coach Master de FTX Live
+            <br><br>
+            Si ya tienes la formación o experiencia en el medio de comunicación y manejo de equipos, pero ¿quieres obtener proyección internacional? Aquí encontrarás toda la información para digitalizar tus cursos y maximizar su alcance en línea.
 
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-               <!--First slide-->
-               <div class="carousel-item">
-                  <div class="row align-items-center justify-content-center" style="margin-bottom:50px!important;">
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante1.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante2.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante3.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </div><!--END ROW-->
-               </div><!--/.First slide-->
+            <div class="mt-3 p-5 coaches-second-section-text-red">¡Haz negocio con nosotros! y ¡Súmate a nuestro equipo de entrenadores!</div>
 
-               <!--Second slide-->
-               <div class="carousel-item active">
-                  <div class="row align-items-center justify-content-center" style="margin-bottom:50px!important;">
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante1.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante2.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-3 mb-2">
-                        <div class="card card-testimonios">
-                           <div class="card-body text-center">
-                              <h5 class="card-title text-center text-secondary fontweight-bold"><i class="fa fa-quote-left" aria-hidden="true"></i></h5>
-                              <p class="card-text text-center">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                              <img class="mx-auto" src="https://mytradingacademypro.com/office/images/Academia/estudiante3.jpg" alt="Card image cap" style="max-width:70px; max-height:70px; border-radius:50%;">
-                              <h5 class="text-center">Nombre Estudiante</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </div><!--END ROW-->
-               </div><!--/.Second slide-->
+            <center><a type="button" class="btn coaches-second-section-button-red" href="{{ route('log').'?act=1' }}">Regístrate Aquí</a></center><br>
+
+            <div class="mt-3">Con la atención y el cuidado que te mereces, valoraremos tu trabajo y sobre eso daremos seguimiento a algunas posibilidades. Pero para ello, requerimos que con la formalidad que se requiere, tengas consciencia de lo siguiente:</div>
+        </div>
+
+        <div class="row pl-5 pr-5 pb-5">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12 pl-2 pr-2 pt-2">
+                <div class="p-4 coaches-second-section-card">
+                    <div class="coaches-second-section-card-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 124.085 81.785">
+                            <defs>
+                                <style>.a{fill:#B70F1E;}</style>
+                            </defs>
+                            <g transform="translate(0)">
+                                <g transform="translate(0 0)">
+                                    <path class="a" d="M124.085,108.379a8.719,8.719,0,0,0-1.782-5.369l-9.832-12.58a8.455,8.455,0,0,0-6.657-3.16,8.2,8.2,0,0,0-4.348,1.218L91.88,94.452a8.747,8.747,0,0,1-4.406,1.073,7.987,7.987,0,0,1-3.378-.663l-9.388-4.547a11.308,11.308,0,0,0-4.9-1.031,12.206,12.206,0,0,0-6.891,1.985l-1.1.769-3.729-1.857a14.064,14.064,0,0,0-6.114-1.258,14.629,14.629,0,0,0-5.612,1.029l-6.394,2.728a11.691,11.691,0,0,1-4.34.739,11.684,11.684,0,0,1-4.337-.739l-6.4-2.73a9.315,9.315,0,0,0-3.652-.712,11.122,11.122,0,0,0-4.155.815,9.448,9.448,0,0,0-3.505,2.412L1.93,105.517a7.566,7.566,0,0,0,.739,10.816l10.87,9.273-5.156,5.379a7.682,7.682,0,0,0,.264,10.879l1.046.994a7.671,7.671,0,0,0,3.409,1.847,7.6,7.6,0,0,0,1.431,9.226h0l1.049,1a7.781,7.781,0,0,0,8.353,1.512,7.6,7.6,0,0,0,2.138,3.722l1.049,1a7.765,7.765,0,0,0,9.622.826,7.629,7.629,0,0,0,2.011,3.3l1.049,1a7.775,7.775,0,0,0,10.933-.259l4.557-4.759L61.481,167a7.77,7.77,0,0,0,10.925-.393l.988-1.059a7.625,7.625,0,0,0,1.733-3.133l2.4,2.214a7.782,7.782,0,0,0,10.932-.4l.983-1.058a7.6,7.6,0,0,0,1.971-4.248A7.569,7.569,0,0,0,99,156.742l.986-1.058a7.66,7.66,0,0,0,2.06-5.237,7.856,7.856,0,0,0-.212-1.726,7.663,7.663,0,0,0,4.637-2.348l.988-1.059a7.692,7.692,0,0,0-.4-10.88l-1.848-1.707,16.683-18.446A8.783,8.783,0,0,0,124.085,108.379Zm-109.056,32.4a3.508,3.508,0,0,1-2.424-.959l-1.048-.994a3.5,3.5,0,0,1-.121-4.945L22,122.862a3.544,3.544,0,0,1,4.972-.118l1.043,1a6.618,6.618,0,0,1,1.083,2.535,3.48,3.48,0,0,1-.625,1.978c-.035.035-11.4,11.878-11.4,11.878A3.556,3.556,0,0,1,15.029,140.781Zm8.434,10.992a3.546,3.546,0,0,1-4.969.117l-1.049-1h0a3.508,3.508,0,0,1-.119-4.945s14.077-14.654,14.2-14.8a3.525,3.525,0,0,1,4.859-.024l1.049,1a3.5,3.5,0,0,1,.118,4.946ZM35,158a3.54,3.54,0,0,1-4.967.118l-1.052-1a3.476,3.476,0,0,1-.306-4.711l9.8-10.232a3.514,3.514,0,0,1,4.773.048l1.052,1a3.5,3.5,0,0,1,.118,4.945Zm18.628-1.08-5.949,6.209a3.542,3.542,0,0,1-4.969.117l-1.049-1a3.5,3.5,0,0,1-.118-4.945l5.946-6.208a3.546,3.546,0,0,1,4.972-.117l1.052,1a3.5,3.5,0,0,1,.115,4.945Zm51.679-16.841a3.464,3.464,0,0,1-.936,2.378l-.986,1.058a3.544,3.544,0,0,1-4.967.181L81.81,128.338l-2.872,3.075,17.779,16.47a3.5,3.5,0,0,1,.182,4.946l-.983,1.058a3.542,3.542,0,0,1-4.965.182l-16.614-15.36-2.869,3.075,14.744,13.635a3.494,3.494,0,0,1,.144,4.9l-.986,1.058a3.547,3.547,0,0,1-4.97.183L65.685,147.97h0l0,0-2.864,3.081,0,0,.055.052,7.37,6.8a3.463,3.463,0,0,1,.063,4.79l-.986,1.059a3.535,3.535,0,0,1-4.959.179l-6.417-5.942a7.575,7.575,0,0,0-1.52-9.048l-1.052-1a7.73,7.73,0,0,0-5.331-2.118c-.148,0-.3.034-.443.042,0-.035.008-.072.008-.107,0-2.023-2.39-5.574-2.39-5.574l-1.049-1a7.7,7.7,0,0,0-3.891-1.982,7.583,7.583,0,0,0-1.933-8.119l-1.049-1a7.745,7.745,0,0,0-5.334-2.121c-.223,0-.443.045-.664.065a7.66,7.66,0,0,0-2.366-5.331h0l-1.046-.994a7.772,7.772,0,0,0-10.933.257l-2.493,2.6L5.417,113.151a3.385,3.385,0,0,1-.329-4.839L16.74,95.263a5.317,5.317,0,0,1,1.947-1.314,6.934,6.934,0,0,1,2.56-.5,5.11,5.11,0,0,1,1.991.374l6.4,2.73a15.74,15.74,0,0,0,6,1.078,15.741,15.741,0,0,0,6-1.078l6.394-2.728a10.474,10.474,0,0,1,3.952-.691,10.037,10.037,0,0,1,4.224.814c.6.3,1.176.585,1.707.852L51.4,99.378a7.532,7.532,0,0,0-1.719,10.692l0,0,.861,1.157a8.418,8.418,0,0,0,6.736,3.3,8.179,8.179,0,0,0,4.213-1.148l3.9-2.342a6.423,6.423,0,0,1,3.239-.788,6.745,6.745,0,0,1,3.814,1.073l10.789,7.735a107.759,107.759,0,0,1,8.48,6.919l12.488,11.546A3.479,3.479,0,0,1,105.309,140.082Zm13.454-28.607-16.637,18.4-7.553-6.982a111.142,111.142,0,0,0-8.884-7.249L74.9,107.905a10.9,10.9,0,0,0-6.282-1.864,10.62,10.62,0,0,0-5.42,1.392l-3.9,2.342a3.957,3.957,0,0,1-2.035.544,4.206,4.206,0,0,1-3.349-1.6l-.859-1.156,0,0a3.341,3.341,0,0,1,.766-4.757l11.531-8.1a8.116,8.116,0,0,1,4.456-1.215,7.143,7.143,0,0,1,3.054.608l9.388,4.547a12.127,12.127,0,0,0,5.224,1.087,12.843,12.843,0,0,0,6.64-1.713l9.589-5.966a3.985,3.985,0,0,1,2.112-.579,4.254,4.254,0,0,1,3.326,1.541l9.832,12.58a4.577,4.577,0,0,1,.9,2.79A4.664,4.664,0,0,1,118.763,111.475Z" transform="translate(0 -87.27)"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="mt-4 pb-4 coaches-second-section-card-text">
+                        FTX Live te ofrece una posibilidad, la cual necesita tú mayor compromiso, responsabilidad y colaboración.
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      
-      <div class="col-md-12" style="background-color: #fff;">
-         <div class="col-md-8 offset-md-2" style="padding: 20px 15px 40px 15px; text-align: justify;">
-            <div class="row">
-               <div class="col-md-2"></div>
-               <div class="col-md-8">
-                  <img src="{{ asset('nosotros/afiliados/live-streaming.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
-               </div>
-               <div class="col-md-2"></div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12 pl-2 pr-2 pt-2">
+                <div class="p-4 coaches-second-section-card">
+                    <div class="coaches-second-section-card-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 113.22 105.938">
+                            <defs>
+                                <style>.a{fill:#B70F1E;}</style>
+                            </defs>
+                            <path class="a" d="M221.023,109.966a1.675,1.675,0,0,0,2.525-.287L234.587,93.02a1.659,1.659,0,1,0-2.765-1.833L221.874,106.2l-5.527-5.248a1.659,1.659,0,1,0-2.284,2.406Zm0,0" transform="translate(-166.324 -70.555)"/><path class="a" d="M144.148,65.207a2.457,2.457,0,0,0,1.017.222h.014a2.427,2.427,0,0,0,1.029-.235c25.22-11.994,29.494-37.872,30.2-45.517a3.965,3.965,0,0,0-2.445-4.045,14.494,14.494,0,0,1-8.907-12.164A3.275,3.275,0,0,0,161.807.5h-.02L127.81.7a3.249,3.249,0,0,0-3.236,3.028A14.5,14.5,0,0,1,115.8,15.979a3.951,3.951,0,0,0-2.384,4.067C114.212,27.683,118.789,53.51,144.148,65.207ZM117.1,19.029A17.8,17.8,0,0,0,127.878,4.016l33.879-.2A17.8,17.8,0,0,0,172.692,18.7a.667.667,0,0,1,.415.676c-.665,7.165-4.645,31.325-27.948,42.647-23.438-11.046-27.7-35.159-28.447-42.317A.653.653,0,0,1,117.1,19.029Zm0,0" transform="translate(-88.317 -0.5)"/><path class="a" d="M144.5,50.262a1.749,1.749,0,0,0,2.036,1.165,1.661,1.661,0,0,0,1.165-2.035c-.422-1.557-.777-3.135-1.056-4.7a23.325,23.325,0,0,0,9.49-12.436l23.952-.141a23.323,23.323,0,0,0,9.635,12.324c-.26,1.568-.6,3.151-1,4.714a1.659,1.659,0,1,0,3.212.832c.475-1.835.862-3.7,1.149-5.535a2.536,2.536,0,0,0-1.2-2.572,20.016,20.016,0,0,1-8.8-11.283,2.565,2.565,0,0,0-2.438-1.8h-.016l-25.076.147a2.565,2.565,0,0,0-2.432,1.829,20.017,20.017,0,0,1-8.669,11.386,2.535,2.535,0,0,0-1.165,2.586C143.593,46.578,144,48.435,144.5,50.262Zm0,0" transform="translate(-111.571 -22.539)"/><path class="a" d="M201.4,147.66a1.657,1.657,0,0,0-2.166.9,41.776,41.776,0,0,1-18.039,21,41.791,41.791,0,0,1-18.3-20.821,1.659,1.659,0,0,0-3.053,1.3,44.991,44.991,0,0,0,20.139,22.64,2.539,2.539,0,0,0,2.46-.014,44.977,44.977,0,0,0,19.857-22.84A1.657,1.657,0,0,0,201.4,147.66Zm0,0" transform="translate(-124.391 -115.02)"/><path class="a" d="M27.454,384.273a5.868,5.868,0,1,0,5.869,5.868A5.875,5.875,0,0,0,27.454,384.273Zm0,8.419a2.551,2.551,0,1,1,2.552-2.551A2.553,2.553,0,0,1,27.454,392.692Zm0,0" transform="translate(-16.813 -299.408)"/><path class="a" d="M112.031,253.245a6.909,6.909,0,0,0-9.541-1.845L80.809,265.911l-4.628-.26-.118-1.185a10.066,10.066,0,0,0-8.627-8.992l-.087-.01-23.362-2.047c-.79-.124-3.32-.85-10.272-4.837a25.8,25.8,0,0,0-11.82-3.4v-4.339a3.952,3.952,0,0,0-3.948-3.948h-14A3.953,3.953,0,0,0,0,240.839v42.733a3.953,3.953,0,0,0,3.948,3.948h14a3.953,3.953,0,0,0,3.948-3.948v-1.177l20.422,7.734a11.421,11.421,0,0,0,4.753.35L81,285.587l.025,0a16.684,16.684,0,0,0,7.907-3.542l.06-.052,21.916-19.711A6.909,6.909,0,0,0,112.031,253.245ZM108.7,259.8l-21.892,19.69a13.365,13.365,0,0,1-6.292,2.811l-33.908,4.888-.029,0-.016,0a7.448,7.448,0,0,1-3.141-.2l-21.527-8.152V259.908a1.659,1.659,0,1,0-3.317,0v23.665a.632.632,0,0,1-.631.631h-14a.632.632,0,0,1-.631-.631V240.839a.632.632,0,0,1,.631-.631h14a.632.632,0,0,1,.631.631v11.577a1.659,1.659,0,1,0,3.317,0V248.5a22.465,22.465,0,0,1,10.17,2.959c8.385,4.809,10.727,5.141,11.5,5.249l.087.01,23.365,2.047a6.758,6.758,0,0,1,5.75,6.03l.088.884-31.281,1.931-.062-.005a3.78,3.78,0,0,1-2.58-1.35,1.658,1.658,0,1,0-2.547,2.124,7.182,7.182,0,0,0,4.832,2.53c1.024.107,33.463-2.02,33.463-2.02l6.5.365a1.654,1.654,0,0,0,1.015-.278l22.146-14.821a3.576,3.576,0,0,1,4.36,5.649Zm0,0" transform="translate(0 -184.617)"/>
+                        </svg>
+                    </div>
+                    <div class="mt-4 pb-4 coaches-second-section-card-text">
+                        Para nosotros es importante que el trabajo de todos sea valorado, por ello tenemos requisitos importantes, así como confianza en que podrás cumplir a cabalidad el objetivo que nos mueve como grupo, que sobre todo yace en la satisfacción de nuestro consumidor final, el impacto positivo que queremos dar al mundo y la trascendencia del material que ofrecemos, por ello nuestro compromiso en la calidad de todo nuestro modelo académico
+                    </div>
+                </div>
             </div>
-
-            <br>
-            <h4>Haremos producciones a lo largo de todo el mundo y presentaremos a los mejores coaches para tu formación y desarrollo. <br><br>
-            Personas que tengan toda el conocimiento y experiencia para ofrecerte valor en lo que sea que quieras desarrollar.</h4><br>
-
-            <h5>Pero ¿Qué temas puedo encontrar en FTX Live?
-            <ul>
-               <li>Desarrollo Humano</li>   
-               <li>Finanzas</li>
-               <li>Ventas</li>
-               <li>Emprendurismo</li>
-               <li>Fintech</li>
-               <li>Real Estate </li>
-               <li>Enseñanza Aprendizaje</li>
-               <li>Bienestar Integral</li>
-            </ul>
-
-            Si tienes algún tema de valor que ofrecernos, envíanos tu propuesta y con gusto nuestro comité de talentos medirá y expondrá las posibilidades que podemos ofrecerte a través de un proceso formal de varios filtros, porque como ya lo mencionamos, nuestra principal preocupación es la calidad de la información que ofrecemos, una vez que pase todas las validaciones, te contactaremos por teléfono y correo a los datos que nos dejaste en tu formulario para proceder con una entrevista online y coordinar detalles de relación comercial, derechos de uso, producción y post producción.<br></h5><br>
-
-            <center>
-               <a type="button" class="btn btn-primary btn-register-header" href="{{ route('log').'?act=1' }}">REGISTRATE AQUÍ</a><br><br>
-
-               <b>Solicitamos tu empatía y paciencia durante el proceso, contamos con muchas solicitudes y el trabajo de todos es importante. 
-
-               Esperamos pronto sumarte a nuestro equipo de talentos.</b>
-            </center>
-
-         </div>
-      </div>
-
-   <div class="modal fade" id="video1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Testimonio de José Gordo</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
-                  <span aria-hidden="true">&times;</span>
-               </button>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12 pl-2 pr-2 pt-2">
+                <div class="p-4 coaches-second-section-card">
+                    <div class="coaches-second-section-card-img">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 89.473 89.473">
+                            <defs>
+                                <style>.a{fill:#B70F1E;}</style>
+                            </defs>
+                            <g transform="translate(0)">
+                                <g transform="translate(0 0)">
+                                    <path class="a" d="M89.473,23.612V20.471a10.423,10.423,0,0,0-4.334-8.482,6.7,6.7,0,0,0,.59-2.751v-2.5a6.741,6.741,0,0,0-13.481,0v2.5c0,.077,0,.154.006.231A44.738,44.738,0,0,0,5.53,66.291a6.714,6.714,0,0,0-1.786,4.564v2.5A6.7,6.7,0,0,0,4.334,76.1,10.421,10.421,0,0,0,0,84.585v3.141a1.747,1.747,0,0,0,1.748,1.748H19.223a1.747,1.747,0,0,0,1.748-1.748V84.585a10.565,10.565,0,0,0-.205-2.069,44.746,44.746,0,0,0,64.3-57.157h2.661a1.747,1.747,0,0,0,1.748-1.748ZM75.743,6.741a3.245,3.245,0,1,1,6.491,0v2.5a3.245,3.245,0,0,1-6.491,0Zm10.2,39.744A41.081,41.081,0,0,1,75.232,72.473,44.593,44.593,0,0,0,70.2,68.417a61.016,61.016,0,0,0,4.506-21.933ZM14.24,17c.992.924,2.03,1.805,3.1,2.636a6.752,6.752,0,0,0-.116,1.238v2.5a6.7,6.7,0,0,0,.589,2.751,10.421,10.421,0,0,0-4.334,8.483v3.141A1.746,1.746,0,0,0,14.95,39.47c-.092,1.168-.154,2.344-.184,3.519H3.535A41.083,41.083,0,0,1,14.24,17Zm12.433-2.3C31.144,8.227,36.935,4.313,42.989,3.678v21.8a41.019,41.019,0,0,1-12.283-2.423V20.875A6.75,6.75,0,0,0,26.673,14.7ZM23.966,17.63a3.249,3.249,0,0,1,3.245,3.245v2.5a3.245,3.245,0,0,1-6.491,0v-2.5A3.249,3.249,0,0,1,23.966,17.63ZM20.032,28.84a6.718,6.718,0,0,0,7.87,0,6.952,6.952,0,0,1,3.054,5.767V36H16.976V34.606A7.057,7.057,0,0,1,20.032,28.84ZM18.455,39.494H32.7a1.747,1.747,0,0,0,1.748-1.748V34.606a10.418,10.418,0,0,0-3.436-7.756,44.473,44.473,0,0,0,11.974,2.122V42.989H18.262C18.294,41.821,18.359,40.653,18.455,39.494ZM46.484,3.674c6.288.641,12.187,4.733,16.766,11.688a41.751,41.751,0,0,1,2.51,4.384,41.612,41.612,0,0,1-19.276,5.729ZM22.8,14.239a6.738,6.738,0,0,0-3.885,2.185q-1.137-.914-2.208-1.905A41.35,41.35,0,0,1,29.117,6.57,36.1,36.1,0,0,0,22.8,14.239ZM14.769,46.484c.028,1.075.08,2.155.159,3.23a1.748,1.748,0,0,0,1.741,1.618q.065,0,.131,0a1.747,1.747,0,0,0,1.613-1.872c-.073-.989-.121-1.982-.149-2.971H42.989V60.5a44.568,44.568,0,0,0-20.715,6.007q-.421-1.042-.805-2.129a1.748,1.748,0,0,0-3.3,1.162q.52,1.473,1.105,2.87-1.077.747-2.112,1.561a6.74,6.74,0,0,0-8.678-5.556A41.2,41.2,0,0,1,3.533,46.484ZM67.2,66.516a44.886,44.886,0,0,0-5.348-2.646q-.986-.408-1.984-.767h8.574q-.566,1.748-1.241,3.413ZM42.989,85.8c-7.631-.786-14.646-6.691-19.281-16.083A41.086,41.086,0,0,1,42.989,64Zm3.5,0V64a40.914,40.914,0,0,1,19.285,5.71,41.785,41.785,0,0,1-2.519,4.4C58.671,81.066,52.772,85.158,46.484,85.8Zm20.97-26.191H53.474V58.215a7.058,7.058,0,0,1,3.056-5.766,6.718,6.718,0,0,0,7.87,0,6.953,6.953,0,0,1,3.054,5.767ZM63.71,46.981a3.245,3.245,0,0,1-6.491,0v-2.5a3.245,3.245,0,0,1,6.491,0Zm-9.4,2.751a10.421,10.421,0,0,0-4.334,8.483v2.557q-1.737-.2-3.5-.271V46.484h7.24v.5a6.7,6.7,0,0,0,.59,2.751ZM7.24,73.351v-2.5a3.245,3.245,0,1,1,6.491,0v2.5a3.245,3.245,0,1,1-6.491,0Zm9.871,1.233a41.5,41.5,0,0,1,3.655-2.942,38.449,38.449,0,0,0,8.38,11.287A41.145,41.145,0,0,1,16.96,75.218q.09-.311.15-.634Zm49.059,1.45a44.914,44.914,0,0,0,2.542-4.4,41.632,41.632,0,0,1,4.058,3.32A41.346,41.346,0,0,1,60.388,82.89,35.979,35.979,0,0,0,66.169,76.034Zm4.25-21.121a10.427,10.427,0,0,0-3.8-5.18,6.7,6.7,0,0,0,.59-2.751v-.5H71.21A62.478,62.478,0,0,1,70.419,54.912ZM67.036,42.989a6.739,6.739,0,0,0-13.142,0H46.484V28.973A45.133,45.133,0,0,0,67.2,22.95,57.7,57.7,0,0,1,71.21,42.989ZM68.87,17.712l-.162.118a44.943,44.943,0,0,0-2.539-4.391,35.973,35.973,0,0,0-5.8-6.873,41.148,41.148,0,0,1,11.008,6.692,10.394,10.394,0,0,0-2.508,4.453ZM17.475,85.978H3.5V84.585a7.058,7.058,0,0,1,3.056-5.766,6.718,6.718,0,0,0,7.87,0,6.953,6.953,0,0,1,3.054,5.767ZM85.94,42.989H74.706a62.917,62.917,0,0,0-2.917-17.63h9.359A41.252,41.252,0,0,1,85.94,42.989Zm.038-21.125H72V20.471a7.058,7.058,0,0,1,3.056-5.766,6.718,6.718,0,0,0,7.87,0,6.952,6.952,0,0,1,3.054,5.767Z" transform="translate(0 0)"/><path class="a" d="M93.245,321.825a1.748,1.748,0,1,0,0-3.5h0a1.748,1.748,0,0,0,0,3.5Z" transform="translate(-75.508 -262.701)"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="mt-4 pb-4 coaches-second-section-card-text">
+                        Te ofrecemos la exposición internacional que siempre has soñado, apalancado de nuestra comunidad en más de 80 países y con la posibilidad de seguir creciendo por el mundo entero, le daremos un tratamiento impecable a cada material, contando con el mejor equipo técnico, operativo, logístico, administrativo y de creación de contenidos para que, sumado a extraordinarias locaciones, hagamos que expreses lo mejor de ti.
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-               <div class="embed-responsive embed-responsive-16by9">
-                  <video src="{{ asset('nosotros/videos/introduccion.mp4') }}" controls poster="{{ asset('nosotros/gratis-Blog/video1.jpg') }}"></video>
-               </div>
+        </div>
+    </div>
+
+    <div style="background-color: #1C1E21; border: solid #707070 1px;">
+        <div class="row mt-5 pt-5 pb-5 mb-5">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <img src="{{ asset('nosotros/gratis-Blog/video1.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
+                <div style="background-color: #B70F1E; color: white; padding-top: 12px; padding-bottom: 12px; text-align: center; font-weight: bold;">
+                    <a href="#" data-toggle="modal" data-target="#video1" style="text-decoration: none; color: white;"><i class="fa fa-play-circle"></i> Testimonio de José Gordo</a>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div style="background-color: #fff;">
+        <div class="row" style="display: flex; align-items: center;">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 p-5">
+                <div class="pl-5 pr-5" style="font-size: 24px; color: #696969; font-weight: bold;">Haremos producciones a lo largo de todo el mundo y presentaremos a los mejores coaches para tu formación y desarrollo.</div>
+                <div class="pl-5 pr-5 pt-4" style="font-size: 24px; color: #696969;">Personas que tengan todo el conocimiento y experiencia para ofrecerte valor en lo que sea que quieras desarrollar.</div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-12 p-5">
+                <img src="{{ asset('nosotros/afiliados/live-streaming.jpg') }}" class="card-img-top" alt="..." style="border: solid 0;">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-3"></div>
+            <div class="col-6 text-white text-center" style="background-color: #1C1D21; border-radius: 12px; font-size: 25px; font-weight: bold; padding: 10px 20px;">Pero ¿Qué temas puedo encontrar en FTX Live?</div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row" style="padding: 8% 10%;">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center pb-5" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 92.183 90.787">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(-0.001 -0.5)">
+                        <path class="a" d="M90.006,226.192a8.35,8.35,0,0,0-5.15-2.158,7.372,7.372,0,0,0-5.664,2.156l-10.25,10.142a6.8,6.8,0,0,0-.693-.99,6.645,6.645,0,0,0-5.192-2.322H48.708a29.43,29.43,0,0,1-7.845-1.042,19.3,19.3,0,0,0-18.005,3.81,26.188,26.188,0,0,0-4.689,5.033l-2.573-2.5a1.829,1.829,0,0,0-1.269-.515h-.012a1.833,1.833,0,0,0-1.3.558L.508,251.352a1.815,1.815,0,0,0,.056,2.571l21.153,20.142a1.813,1.813,0,0,0,2.549-.047l12.39-12.711a1.823,1.823,0,0,0-.036-2.58l-1.079-1.047,2.469-.278a39.24,39.24,0,0,1,4.517-.262H64.359a16.39,16.39,0,0,0,8.956-2.306l.059-.039a12.085,12.085,0,0,0,2.313-2.1L90.4,235.387C92.917,232.426,92.759,228.73,90.006,226.192ZM22.92,270.2,4.386,252.555l9.985-10.366L32.8,260.07Zm64.715-37.165L72.924,250.346a8.477,8.477,0,0,1-1.592,1.451,12.9,12.9,0,0,1-6.973,1.717H42.527a42.821,42.821,0,0,0-4.928.286l-5.428.609L20.806,243.38a22.616,22.616,0,0,1,4.346-4.781A15.61,15.61,0,0,1,39.9,235.474a33.051,33.051,0,0,0,8.812,1.174H63.056a3.276,3.276,0,0,1,3.265,3.551,3.927,3.927,0,0,1-.849,2.516A3.082,3.082,0,0,1,63,243.753H50.509a1.813,1.813,0,0,0,0,3.627H63a6.725,6.725,0,0,0,5.237-2.317,7.448,7.448,0,0,0,1.708-4.621l11.8-11.681a4.245,4.245,0,0,1,5.8.1C88.31,229.561,89.335,231.039,87.635,233.038Zm0,0" transform="translate(0 -183.279)"/><path class="a" d="M232.817,334.621a1.813,1.813,0,1,0-3.531.828l.017.074a1.814,1.814,0,0,0,1.764,1.4,1.837,1.837,0,0,0,.416-.048,1.813,1.813,0,0,0,1.352-2.18Zm0,0" transform="translate(-187.964 -272.816)"/><path class="a" d="M48.082,38.76h17.67a4.364,4.364,0,0,0,2.577-.84,4.364,4.364,0,0,0,2.577.84h17.67a4.364,4.364,0,0,0,2.577-.84,4.364,4.364,0,0,0,2.577.84H111.4a4.4,4.4,0,0,0,4.39-4.391v-8.24a9.508,9.508,0,0,0-5.171-8.5,10.46,10.46,0,1,0-16.107,0,9.5,9.5,0,0,0-3.358,2.879,9.481,9.481,0,0,0-3.359-2.879,10.46,10.46,0,1,0-16.106,0,9.481,9.481,0,0,0-3.359,2.879,9.49,9.49,0,0,0-3.359-2.88,10.46,10.46,0,1,0-16.106,0,9.51,9.51,0,0,0-5.172,8.5v8.239A4.4,4.4,0,0,0,48.082,38.76ZM102.566,4.127a6.833,6.833,0,1,1-6.833,6.833A6.841,6.841,0,0,1,102.566,4.127ZM97.854,20.3a10.423,10.423,0,0,0,9.421,0,5.892,5.892,0,0,1,4.888,5.834v8.24a.764.764,0,0,1-.764.764H93.73a.764.764,0,0,1-.763-.764v-8.24A5.892,5.892,0,0,1,97.854,20.3ZM79.741,4.127a6.833,6.833,0,1,1-6.833,6.833A6.841,6.841,0,0,1,79.741,4.127ZM75.031,20.3a10.423,10.423,0,0,0,9.421,0,5.893,5.893,0,0,1,4.888,5.834v8.24a.764.764,0,0,1-.764.764H70.906a.764.764,0,0,1-.764-.764v-8.24A5.893,5.893,0,0,1,75.031,20.3ZM56.917,4.127a6.833,6.833,0,1,1-6.833,6.833A6.841,6.841,0,0,1,56.917,4.127Zm-9.6,22A5.893,5.893,0,0,1,52.206,20.3a10.423,10.423,0,0,0,9.421,0,5.892,5.892,0,0,1,4.888,5.834v8.24a.764.764,0,0,1-.764.764H48.082a.764.764,0,0,1-.764-.764Zm0,0" transform="translate(-35.824)"/>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Desarrollo<br> Humano 
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center pb-5" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 72.673 71.822">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(0 -3)">
+                        <g transform="translate(42.575 38.939)">
+                            <path class="a" d="M305.915,266.443a2.731,2.731,0,1,1,3.123-2.7,1.419,1.419,0,0,0,2.839,0,5.648,5.648,0,0,0-4.542-5.382v-.738a1.419,1.419,0,1,0-2.839,0v.738a5.648,5.648,0,0,0-4.542,5.382,5.77,5.77,0,0,0,5.961,5.541,2.731,2.731,0,1,1-3.123,2.7,1.419,1.419,0,1,0-2.839,0,5.648,5.648,0,0,0,4.542,5.382v.613a1.419,1.419,0,1,0,2.839,0v-.613a5.648,5.648,0,0,0,4.542-5.382A5.77,5.77,0,0,0,305.915,266.443Z" transform="translate(-299.954 -256.201)"/>
+                        </g>
+                        <g transform="translate(54.494 33.912)">
+                            <path class="a" d="M393.513,227.611a18.494,18.494,0,0,0-7.554-6.686,1.419,1.419,0,1,0-1.23,2.558,15.627,15.627,0,0,1,7.038,21.4,1.419,1.419,0,1,0,2.506,1.333,18.473,18.473,0,0,0-.76-18.61Z" transform="translate(-383.924 -220.785)"/>
+                        </g>
+                        <g transform="translate(49.253 32.24)">
+                            <path class="a" d="M348.515,209h-.1a1.419,1.419,0,1,0,0,2.839h.089a1.419,1.419,0,0,0,.007-2.839Z" transform="translate(-347 -209.001)"/>
+                        </g>
+                        <g transform="translate(30.092 41.283)">
+                            <path class="a" d="M223.7,296.2a15.627,15.627,0,0,1-7.038-21.4,1.419,1.419,0,0,0-2.506-1.333,18.46,18.46,0,0,0,8.314,25.3,1.419,1.419,0,1,0,1.23-2.559Z" transform="translate(-212.002 -272.711)"/>
+                        </g>
+                        <g transform="translate(44.907 66.305)">
+                            <path class="a" d="M317.886,449H317.8a1.419,1.419,0,0,0-.013,2.839h.1a1.419,1.419,0,0,0,0-2.839Z" transform="translate(-316.378 -448.999)"/>
+                        </g>
+                        <g transform="translate(0 3)">
+                            <g transform="translate(0 0)">
+                                <path class="a" d="M54.989,27.438a6.515,6.515,0,0,0-.631-1.159h3.7a6.529,6.529,0,1,0,0-13.058H46.687A6.525,6.525,0,0,0,41.3,3H6.529a6.529,6.529,0,1,0,0,13.058H17.9a6.511,6.511,0,0,0,0,7.381h-3.7a6.525,6.525,0,0,0-4.057,11.639,6.517,6.517,0,0,0,0,10.22,6.517,6.517,0,0,0,0,10.22,6.525,6.525,0,0,0,4.057,11.639H30.922A24.124,24.124,0,1,0,54.989,27.438Zm3.065-11.379a3.69,3.69,0,1,1,0,7.381H23.278a3.69,3.69,0,1,1,0-7.381ZM6.529,13.22a3.69,3.69,0,1,1,0-7.381H41.3a3.69,3.69,0,0,1,0,7.381Zm7.665,13.058H48.969a3.688,3.688,0,0,1,1.61.371c-.671-.056-1.35-.087-2.036-.087a24.055,24.055,0,0,0-17.075,7.1H14.194a3.69,3.69,0,0,1,0-7.381Zm0,10.22H29.043a24.061,24.061,0,0,0-3.648,7.381h-11.2a3.69,3.69,0,1,1,0-7.381Zm0,10.22H24.743a24.149,24.149,0,0,0-.088,7.381H14.194a3.69,3.69,0,0,1,0-7.381Zm0,17.6a3.69,3.69,0,1,1,0-7.381H25.235a24.035,24.035,0,0,0,3.406,7.381Zm34.35,7.665A21.291,21.291,0,1,1,69.835,50.692,21.315,21.315,0,0,1,48.544,71.983Z" transform="translate(0 -3)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Finanzas
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center pb-5" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 81.784 77.749">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <path class="a" d="M81.636,140.868a6.963,6.963,0,0,0-8.371-5.37l-8.525,1.952v-3.485a33.673,33.673,0,0,0,4.756-5.635,33.035,33.035,0,0,0,4.67-11,33.7,33.7,0,0,0,.064-14.3,1.6,1.6,0,0,0-3.124.669,30.463,30.463,0,0,1-.058,12.937,29.853,29.853,0,0,1-4.22,9.937,28.435,28.435,0,0,1-2.088,2.755V111.621a1.6,1.6,0,0,0-1.6-1.6H50.507V92.966a1.6,1.6,0,0,0-1.592-1.6L34.682,91.32h0a1.6,1.6,0,0,0-1.6,1.6v8.873H20.442a1.6,1.6,0,0,0-1.6,1.6v15.818H15.286v-2.17a1.6,1.6,0,0,0-1.6-1.6H12.05a30.232,30.232,0,0,1,1.3-15.666c.3-.821.636-1.64,1-2.432a1.6,1.6,0,1,0-2.9-1.348c-.409.877-.783,1.783-1.112,2.692A33.379,33.379,0,0,0,8.809,115.44H1.6a1.6,1.6,0,0,0-1.6,1.6v28.077a1.6,1.6,0,0,0,1.6,1.6H13.688a1.6,1.6,0,0,0,1.6-1.6V143.6h6.009l24.34,9.547a19.225,19.225,0,0,0,11.822.739l19.078-4.849A6.95,6.95,0,0,0,81.636,140.868Zm-20.09-27.65V138.18l-4.27.978c-.459.1-.923.188-1.39.253a16.215,16.215,0,0,1-5.356-.155l-.022,0v-2.422a7.4,7.4,0,0,0,.983-6.223,7.173,7.173,0,0,0-.752-1.675q-.11-.178-.228-.348l0,0V113.218H61.546Zm-25.272-18.7,11.038.037V126.04l-6.169-2.553-4.869-2.016ZM22.04,104.986H33.078v15.162l-1.981-.82a1.6,1.6,0,0,0-.611-.122H22.04Zm-9.948,38.531h-8.9V118.634h8.9Zm63.656,2.42-19.078,4.849a16.054,16.054,0,0,1-9.869-.617L22.18,140.512a1.6,1.6,0,0,0-.583-.11H15.286v-18H30.168L40.5,126.679l5.656,2.341A4,4,0,0,1,48.3,134.2a4.567,4.567,0,0,1-.64,1.123,4.117,4.117,0,0,1-4.187,1.444l-.037-.009c-.092-.023-.184-.05-.275-.08L32.41,132.542l-.134-.051a1.6,1.6,0,1,0-1.146,2.982s6.06,2.33,10.681,4.112c.093.036.185.07.278.1l3.548,1.365a29.331,29.331,0,0,0,3.256,1.108,19.38,19.38,0,0,0,9.095.114l5.51-1.261.017,0,10.461-2.395a3.768,3.768,0,0,1,1.769,7.325Zm0,0" transform="translate(0 -76.733)"/><path class="a" d="M119.474,11.361a1.591,1.591,0,0,0,1.07-.412,30.016,30.016,0,0,1,22.179-7.69,29.96,29.96,0,0,1,8.709,1.9,1.6,1.6,0,0,0,1.137-2.985,33.147,33.147,0,0,0-9.636-2.1A33.213,33.213,0,0,0,118.4,8.578a1.6,1.6,0,0,0,1.071,2.783Zm0,0" transform="translate(-99.048 0)"/><path class="a" d="M352,48.171a1.6,1.6,0,0,0,2.254-.158l13.142-15.128a1.6,1.6,0,0,0-2.411-2.1L351.837,45.917A1.6,1.6,0,0,0,352,48.171Zm0,0" transform="translate(-295.308 -25.41)"/><path class="a" d="M407.522,99.738a4.01,4.01,0,1,0,4.01,4.01A4.015,4.015,0,0,0,407.522,99.738Zm0,4.826a.816.816,0,1,1,.815-.816A.816.816,0,0,1,407.522,104.564Zm0,0" transform="translate(-339.057 -83.807)"/><path class="a" d="M351.991,35.286a4.01,4.01,0,1,0-4.01-4.01A4.015,4.015,0,0,0,351.991,35.286Zm0-4.826a.816.816,0,1,1-.815.816A.817.817,0,0,1,351.991,30.46Zm0,0" transform="translate(-292.396 -22.91)"/><path class="a" d="M91.7,83.03a1.6,1.6,0,1,0,.588-1.939A1.61,1.61,0,0,0,91.7,83.03Zm0,0" transform="translate(-76.952 -67.915)"/>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Ventas
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center pb-5" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 77.236 77.236">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(0)">
+                        <path class="a" d="M77.145,5.766A6,6,0,0,0,71.47.091c-6.191-.338-18.3-.009-29.888,5.982A58.677,58.677,0,0,0,24.447,20.281c-.061.074-.121.148-.182.221l-11.311.874A5.971,5.971,0,0,0,8.4,24.053L.688,35.725A4.136,4.136,0,0,0,3.5,42.093l9.529,1.476c-.034.185-.067.37-.1.556a6,6,0,0,0,1.682,5.219L27.892,62.618a6.015,6.015,0,0,0,4.245,1.763,5.915,5.915,0,0,0,.974-.081c.185-.031.37-.065.556-.1l1.476,9.53a4.132,4.132,0,0,0,6.368,2.817l11.672-7.717a5.97,5.97,0,0,0,2.677-4.55l.874-11.311.222-.182A58.671,58.671,0,0,0,71.163,35.654c5.992-11.584,6.32-23.7,5.982-29.888ZM50.687,65.056,39.522,72.437,38.083,63.15a50.69,50.69,0,0,0,13.833-6.586l-.569,7.368a1.474,1.474,0,0,1-.661,1.123ZM31.092,59.418,17.818,46.144a1.467,1.467,0,0,1-.418-1.273,38.926,38.926,0,0,1,1.767-6.722L39.083,58.065a39.091,39.091,0,0,1-6.718,1.771,1.467,1.467,0,0,1-1.273-.418ZM13.3,25.888l7.368-.569a50.687,50.687,0,0,0-6.586,13.833L4.8,37.714,12.18,26.549A1.474,1.474,0,0,1,13.3,25.888ZM54.056,49.313a51.88,51.88,0,0,1-10.475,6.85l-22.51-22.51A52.778,52.778,0,0,1,27.922,23.18,54,54,0,0,1,43.661,10.092c10.631-5.5,21.832-5.8,27.562-5.483a1.484,1.484,0,0,1,1.4,1.4c.312,5.731.016,16.931-5.483,27.562A54,54,0,0,1,54.056,49.313Z" transform="translate(0 0)"/><path class="a" d="M287.036,108.935a11.3,11.3,0,1,0-8-3.308A11.281,11.281,0,0,0,287.036,108.935Zm-4.8-16.108a6.788,6.788,0,1,1-1.988,4.8A6.766,6.766,0,0,1,282.236,92.827Z" transform="translate(-234.13 -73.297)"/><path class="a" d="M2.564,354.878a2.255,2.255,0,0,0,1.6-.663l7.388-7.388a2.263,2.263,0,0,0-3.2-3.2L.964,351.015a2.263,2.263,0,0,0,1.6,3.863Z" transform="translate(-0.256 -291.228)"/><path class="a" d="M18.066,388.508a2.263,2.263,0,0,0-3.2,0l-14.2,14.2a2.263,2.263,0,1,0,3.2,3.2l14.2-14.2A2.263,2.263,0,0,0,18.066,388.508Z" transform="translate(-0.001 -329.339)"/><path class="a" d="M98.113,433.389l-7.388,7.388a2.263,2.263,0,1,0,3.2,3.2l7.388-7.388a2.263,2.263,0,0,0-3.2-3.2Z" transform="translate(-76.477 -367.449)"/>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Emprendurismo
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 90.801 90.801">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(-2 -2)">
+                        <path class="a" d="M33.54,30.54a1.515,1.515,0,0,1,1.513,1.513H38.08a4.534,4.534,0,0,0-3.027-4.262V26H32.027v1.792a4.529,4.529,0,0,0,1.513,8.8,1.513,1.513,0,1,1-1.513,1.513H29a4.534,4.534,0,0,0,3.027,4.262V44.16h3.027V42.368a4.529,4.529,0,0,0-1.513-8.8,1.513,1.513,0,1,1,0-3.027Z" transform="translate(13.86 12.32)"/><path class="a" d="M84.418,14.335a8.624,8.624,0,0,0-14.58-1.364A8.617,8.617,0,0,0,58.728,14.5,34.434,34.434,0,0,0,43.8,12.8,9.172,9.172,0,0,0,35.99,6.77,8.622,8.622,0,0,0,21.412,5.405,8.639,8.639,0,0,0,8.1,12.672v.861H7.583a5.583,5.583,0,0,0,0,11.167H21.018a34.42,34.42,0,0,0-8.425,22.7,34.854,34.854,0,0,0,30.93,34.586A5.571,5.571,0,0,0,45.416,92.8H73.445a8.569,8.569,0,0,0,8.762-8.762,9.236,9.236,0,0,0-8.382-9.169,8.655,8.655,0,0,0-2.055-2.63,34.75,34.75,0,0,0,6.964-39.972H84.04A8.568,8.568,0,0,0,92.8,23.5a9.237,9.237,0,0,0-8.382-9.169ZM51.076,29.24H48.914V15.653a31.239,31.239,0,0,1,8.2,1.494,8.571,8.571,0,0,0-.583,3.092V21.1H56.01a5.59,5.59,0,0,0-5.583,5.584A5.512,5.512,0,0,0,51.076,29.24ZM5.027,19.117A2.56,2.56,0,0,1,7.583,16.56H9.618a1.513,1.513,0,0,0,1.513-1.513V12.672a5.616,5.616,0,0,1,5.61-5.61A5.559,5.559,0,0,1,20.729,8.73a1.514,1.514,0,0,0,2.452-.43,5.6,5.6,0,0,1,10.377.468,1.514,1.514,0,0,0,1.426,1.008H35.4a6.14,6.14,0,0,1,5.95,6.162,5.609,5.609,0,0,1-5.734,5.736H7.583a2.56,2.56,0,0,1-2.556-2.556ZM35.613,24.7a8.568,8.568,0,0,0,8.761-8.762c0-.053-.006-.1-.008-.156.508-.05,1.015-.085,1.521-.109V29.24H33.8c.118-.316.225-.642.35-.95l-2.81-1.124c-.271.676-.524,1.371-.764,2.076H21.315a32.3,32.3,0,0,1,3.892-4.54H35.613ZM60.931,48.914h3.084A54.107,54.107,0,0,1,62,62.534H48.914v-1.6A13.639,13.639,0,0,0,60.931,48.914Zm18.209,0a31.752,31.752,0,0,1-3.814,13.62H65.143a57.7,57.7,0,0,0,1.9-13.62ZM45.887,79.029c-4.908-.891-9.269-6.058-12.036-13.469H45.887Zm-13.048-16.5A54,54,0,0,1,30.8,48.914h3.075A13.639,13.639,0,0,0,45.889,60.931v1.6ZM15.7,48.914H27.748a58.426,58.426,0,0,0,1.869,13.62H19.461A31.564,31.564,0,0,1,15.7,48.914Zm0-3.027a31.408,31.408,0,0,1,3.758-13.62h10.2a57.7,57.7,0,0,0-1.9,13.62ZM47.4,57.994A10.593,10.593,0,1,1,57.994,47.4,10.606,10.606,0,0,1,47.4,57.994ZM45.887,33.87A13.639,13.639,0,0,0,33.87,45.887H30.785A54.108,54.108,0,0,1,32.8,32.267H45.887ZM21.357,65.561H30.53a31.6,31.6,0,0,0,6.918,12A31.9,31.9,0,0,1,21.357,65.561ZM72.819,77.876h.413a6.14,6.14,0,0,1,5.949,6.162,5.609,5.609,0,0,1-5.734,5.736H45.416a2.557,2.557,0,0,1,0-5.114h2.035a1.513,1.513,0,0,0,1.513-1.513V80.773a5.616,5.616,0,0,1,5.61-5.61,5.559,5.559,0,0,1,3.988,1.668,1.514,1.514,0,0,0,2.452-.43,5.6,5.6,0,0,1,10.377.468A1.515,1.515,0,0,0,72.819,77.876ZM66.108,70.1a8.662,8.662,0,0,0-6.863,3.405,8.613,8.613,0,0,0-10.332.761V65.561H61c-.118.316-.225.642-.35.95l2.81,1.124c.271-.676.524-1.371.764-2.076h9.234a31.882,31.882,0,0,1-4.408,5.08A8.582,8.582,0,0,0,66.108,70.1ZM79.131,45.887H67.036A59.274,59.274,0,0,0,65.8,34.979l-2.962.631a56.048,56.048,0,0,1,1.168,10.279H60.931A13.639,13.639,0,0,0,48.914,33.871v-1.6H75.325A31.759,31.759,0,0,1,79.131,45.887ZM84.04,29.24H56.01a2.557,2.557,0,0,1,0-5.114h2.035a1.513,1.513,0,0,0,1.513-1.513V20.239a5.616,5.616,0,0,1,5.61-5.61A5.559,5.559,0,0,1,69.156,16.3a1.514,1.514,0,0,0,2.452-.43,5.6,5.6,0,0,1,10.377.468,1.514,1.514,0,0,0,1.426,1.008h.413a6.14,6.14,0,0,1,5.95,6.162A5.609,5.609,0,0,1,84.04,29.24Z" transform="translate(0 0)"/><path class="a" d="M55,13v3.027a1.6,1.6,0,0,1,1.594,1.594H59.62A4.625,4.625,0,0,0,55,13Z" transform="translate(27.207 5.647)"/><path class="a" d="M48,56.185a1.6,1.6,0,0,1,1.594,1.594H52.62A4.625,4.625,0,0,0,48,53.158Z" transform="translate(23.614 26.262)"/><path class="a" d="M6.172,40.088l-2.9.872c.3,1,.64,2,1.006,2.963L7.107,42.85C6.766,41.951,6.452,41.022,6.172,40.088Z" transform="translate(0.653 19.552)"/><path class="a" d="M2.039,31.506l3.024.154c.048-.976.133-1.955.248-2.912l-3.006-.362C2.183,29.41,2.092,30.46,2.039,31.506Z" transform="translate(0.02 13.546)"/><path class="a" d="M7.485,43.694,4.734,44.956c.43.937.9,1.878,1.407,2.8L8.8,46.3C8.325,45.443,7.883,44.567,7.485,43.694Z" transform="translate(1.403 21.403)"/><path class="a" d="M15.344,57.809c.867.58,1.763,1.135,2.66,1.65l1.5-2.626c-.837-.48-1.671-1-2.483-1.541Z" transform="translate(6.85 27.357)"/><path class="a" d="M7.489,21.578,4.7,20.408c-.4.961-.775,1.946-1.108,2.928l2.868.973c.31-.917.657-1.836,1.034-2.732Z" transform="translate(0.815 9.45)"/><path class="a" d="M9.268,47.076l-2.552,1.63c.557.87,1.155,1.736,1.777,2.577l2.432-1.8C10.343,48.7,9.787,47.887,9.268,47.076Z" transform="translate(2.421 23.14)"/><path class="a" d="M22.771,61.53c.988.319,2,.607,3.009.858l.729-2.937c-.941-.233-1.886-.5-2.807-.8Z" transform="translate(10.663 29.081)"/><path class="a" d="M18.931,59.935c.929.451,1.893.878,2.865,1.267l1.129-2.807c-.906-.365-1.8-.761-2.673-1.183Z" transform="translate(8.691 28.342)"/><path class="a" d="M5.031,32.482,2,32.53c.017,1.04.071,2.091.159,3.125L5.177,35.4C5.1,34.433,5.046,33.452,5.031,32.482Z" transform="translate(0.002 15.648)"/><path class="a" d="M2.533,27.377l2.974.569c.183-.959.4-1.919.646-2.85l-2.927-.77C2.963,25.323,2.73,26.351,2.533,27.377Z" transform="translate(0.274 11.461)"/><path class="a" d="M5.347,36.325l-2.992.468c.162,1.034.359,2.066.587,3.072L5.895,39.2C5.683,38.256,5.5,37.291,5.347,36.325Z" transform="translate(0.182 17.621)"/><path class="a" d="M12.073,55.193c.773.687,1.583,1.359,2.408,2L16.335,54.8c-.772-.6-1.528-1.226-2.25-1.866Z" transform="translate(5.171 26.145)"/><path class="a" d="M9.179,52.141c.672.788,1.383,1.565,2.113,2.308l2.161-2.119c-.681-.695-1.345-1.42-1.972-2.155Z" transform="translate(3.685 24.73)"/><path class="a" d="M54.837,49.031,57.3,50.788c.6-.837,1.176-1.716,1.727-2.614l-2.58-1.581C55.936,47.431,55.392,48.252,54.837,49.031Z" transform="translate(27.124 22.892)"/><path class="a" d="M60.03,32.053c0,.931-.03,1.857-.089,2.772l3.021.194q.1-1.471.1-2.966V31.9H60.03Z" transform="translate(29.744 15.347)"/><path class="a" d="M56.853,45.807l2.683,1.4c.477-.916.931-1.867,1.35-2.827l-2.775-1.208C57.722,44.066,57.3,44.953,56.853,45.807Z" transform="translate(28.159 21.135)"/><path class="a" d="M58.393,42.32l2.853,1.014c.347-.975.664-1.979.944-2.986l-2.915-.813C59.013,40.473,58.715,41.41,58.393,42.32Z" transform="translate(28.949 19.268)"/><path class="a" d="M58.922,24.557c.265.928.5,1.881.707,2.836l2.959-.631c-.218-1.022-.472-2.045-.757-3.036Z" transform="translate(29.221 11.153)"/><path class="a" d="M63.05,30.882c-.074-1.044-.185-2.091-.33-3.113l-3,.424c.135.952.238,1.93.309,2.9Z" transform="translate(29.632 13.228)"/><path class="a" d="M59.429,38.634l2.965.61c.209-1.011.384-2.051.524-3.09l-3-.4C59.786,36.723,59.623,37.692,59.429,38.634Z" transform="translate(29.481 17.327)"/><path class="a" d="M22.947,8.947v3.027a1.6,1.6,0,0,1,1.594,1.594h3.027a4.625,4.625,0,0,0-4.62-4.62Z" transform="translate(10.753 3.566)"/>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Fintech
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 90.432 74.002">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(0 -43.604)">
+                        <g transform="translate(0 49.649)">
+                            <path class="a" d="M87.417,140.634V96.925a1.507,1.507,0,0,0-1.507-1.507H84.4V80.86L72.345,75.692,60.288,80.86V95.418H58.781a1.507,1.507,0,0,0-1.507,1.507V110.49H55.766V95.932L43.709,90.764,31.651,95.932V110.49A1.507,1.507,0,0,0,30.144,112v13.565H28.637V110.49H4.522v15.072a1.507,1.507,0,0,0-1.507,1.507v13.565H0v3.014H90.432v-3.014ZM7.536,113.5H25.622v12.058H21.1v-7.536H12.058v7.536H7.536Zm10.55,7.536v4.522H15.072V121.04Zm12.058,19.594H6.029v-4.522H30.144Zm0-7.536H6.029v-4.522H30.144Zm4.522-35.179,9.043-3.875,9.043,3.875V110.49H48.23v-7.536H39.187v7.536H34.665Zm10.55,8.05v4.522H42.2v-4.522Zm12.058,34.665H33.158v-4.522H57.273Zm0-7.536H33.158v-4.522H57.273Zm0-7.536H33.158V121.04H57.273Zm0-7.536H33.158V113.5H57.273ZM63.3,82.847l9.043-3.875,9.043,3.875V95.418H76.867V87.882H67.824v7.536H63.3Zm10.55,8.05v4.522H70.838V90.9ZM84.4,140.634H60.288v-4.522H84.4Zm0-7.536H60.288v-4.522H84.4Zm0-7.536H60.288V121.04H84.4Zm0-7.536H60.288V113.5H84.4Zm0-7.536H60.288v-4.522H84.4Zm0-7.536H60.288V98.433H84.4Z" transform="translate(0 -75.692)"/>
+                        </g>
+                        <g transform="translate(55.142 43.604)">
+                            <g transform="translate(0 0)">
+                                <path class="a" d="M309.891,43.6l-17.2,7.821,1.248,2.743,15.955-7.251,15.955,7.251,1.248-2.743Z" transform="translate(-292.688 -43.604)"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Real State
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 98.899 84.604">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(0 -37)">
+                        <g transform="translate(0 37)">
+                            <path class="a" d="M94.746,109.049h-2.9a5.278,5.278,0,0,0,.584-2.416l0-50.221A5.318,5.318,0,0,0,87.114,51.1H79.293V49.33a2.533,2.533,0,0,0-2.53-2.53h-2.4V39.53a2.531,2.531,0,0,0-3.358-2.392l-4.563,1.578a1.449,1.449,0,0,0,.947,2.738l4.077-1.41V74.887L50.9,82V47.158l10.65-3.683a1.449,1.449,0,1,0-.947-2.738L49.449,44.593,27.892,37.139a2.531,2.531,0,0,0-3.358,2.392V46.8h-2.4a2.533,2.533,0,0,0-2.53,2.53V51.1H11.783a5.318,5.318,0,0,0-5.312,5.312v5.152a1.449,1.449,0,0,0,2.9,0V56.414A2.417,2.417,0,0,1,11.783,54h7.823v2.9H13.714a1.449,1.449,0,0,0-1.449,1.449l0,46.358a1.449,1.449,0,0,0,1.449,1.449l71.468,0a1.449,1.449,0,0,0,1.449-1.449l0-46.358a1.449,1.449,0,0,0-1.449-1.449H79.293V54h7.821a2.417,2.417,0,0,1,2.415,2.415l0,50.221a2.417,2.417,0,0,1-2.415,2.415l-75.331,0a2.417,2.417,0,0,1-2.415-2.415V67.764a1.449,1.449,0,0,0-2.9,0v38.87a5.275,5.275,0,0,0,.583,2.415h-2.9A4.158,4.158,0,0,0,0,113.2v4.25A4.158,4.158,0,0,0,4.153,121.6h57.6a1.449,1.449,0,0,0,0-2.9H4.153A1.257,1.257,0,0,1,2.9,117.452V113.2a1.257,1.257,0,0,1,1.256-1.256H39.695v1.018a3.622,3.622,0,0,0,3.618,3.618H55.586a3.622,3.622,0,0,0,3.618-3.618v-1.018H94.746A1.257,1.257,0,0,1,96,113.2v4.25a1.257,1.257,0,0,1-1.256,1.256H68.075a1.449,1.449,0,1,0,0,2.9H94.746a4.158,4.158,0,0,0,4.153-4.153V113.2a4.158,4.158,0,0,0-4.153-4.153ZM72.661,77.54a2.532,2.532,0,0,0,1.7-2.392V49.7H76.4V82.585H58.071ZM27.431,40.045,48,47.158V82L27.431,74.887ZM22.5,49.7h2.031V75.148a2.533,2.533,0,0,0,1.7,2.392l14.59,5.045H22.5Zm61.23,10.095,0,43.46-68.571,0,0-43.46h4.443V82.952a2.533,2.533,0,0,0,2.53,2.53H76.762a2.533,2.533,0,0,0,2.53-2.53V59.792ZM56.307,112.964a.722.722,0,0,1-.72.721H43.313a.722.722,0,0,1-.721-.721v-1.018H56.307Z" transform="translate(0 -37)"/><path class="a" d="M189.495,309.387H151.438a1.449,1.449,0,1,0,0,2.9h38.057a1.449,1.449,0,0,0,0-2.9Z" transform="translate(-121.017 -256.772)"/><path class="a" d="M176.119,341.2H151.438a1.449,1.449,0,1,0,0,2.9h24.681a1.449,1.449,0,1,0,0-2.9Z" transform="translate(-121.017 -282.442)"/>
+                        </g>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Enseñanza <br>Aprendizaje
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-6 text-center" style="color: #B70F1E;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 96.069 67.314">
+                    <defs>
+                        <style>.a{fill:#B70F1E;}</style>
+                    </defs>
+                    <g transform="translate(-2 -11.012)">
+                        <path class="a" d="M96.833,54.734A67.307,67.307,0,0,0,81.895,53.41c2.882-7.293,3.476-16.087,1.739-26.212a1.6,1.6,0,0,0-1.961-1.281A56.554,56.554,0,0,0,66.383,32.8,50.016,50.016,0,0,0,51.14,11.346a1.6,1.6,0,0,0-2.12.144c-7.1,7.223-11.848,14.644-14.173,22.1A56.738,56.738,0,0,0,18.4,25.913a1.6,1.6,0,0,0-1.961,1.281C14.7,37.32,15.3,46.112,18.173,53.406A67.306,67.306,0,0,0,3.234,54.731a1.6,1.6,0,0,0-1.121,2.152C9.072,74.306,22.635,78.32,33.656,78.32A52.765,52.765,0,0,0,50.034,75.6a52.754,52.754,0,0,0,16.38,2.722c11.019,0,24.584-4.016,31.542-21.437a1.606,1.606,0,0,0-1.122-2.155ZM78.345,53.583a42.169,42.169,0,0,0-16.8,4.643,1.572,1.572,0,0,0-.74.416h0a27.607,27.607,0,0,0-8.308,7.38,38.222,38.222,0,0,0-.815-8.806c1.921-8.129,6.861-15.051,14.73-20.587a55.67,55.67,0,0,1,14.357-7.1C82.135,38.942,81.309,47.018,78.345,53.583Zm-28.073-38.8c2.82,2.5,10.313,9.874,13.361,19.929a38.723,38.723,0,0,0-13.6,17.108A38.16,38.16,0,0,0,37.587,35.586C39.522,28.639,43.767,21.651,50.272,14.784ZM19.307,29.514A55.141,55.141,0,0,1,34.793,37.44h0a34.306,34.306,0,0,1,13.6,19.766,38.141,38.141,0,0,0-.817,8.806C41.087,57.3,30.777,54.3,21.721,53.575c-2.962-6.557-3.788-14.634-2.414-24.055ZM31.451,75.127c-11.988-.65-20.59-6.584-25.6-17.638,7.258-1.236,33.433-4.176,42.065,15.448a48.435,48.435,0,0,1-16.464,2.2Zm37.165,0a48.53,48.53,0,0,1-16.464-2.2c8.63-19.617,34.8-16.677,42.073-15.443C89.207,68.543,80.6,74.477,68.617,75.132Z" transform="translate(0)"/><rect class="a" width="3.202" height="3.202" transform="translate(48.433 22.668)"/><rect class="a" width="3.202" height="3.202" transform="translate(48.433 29.072)"/><rect class="a" width="3.202" height="3.202" transform="translate(48.433 35.477)"/><path class="a" d="M14,26.293a24.4,24.4,0,0,0,3.471,12.1l2.664-1.777A21.455,21.455,0,0,1,17.2,26.291Z" transform="translate(7.214 9.184)"/><path class="a" d="M52.3,26.292H49.1a21.311,21.311,0,0,1-2.933,10.319l2.664,1.777a24.4,24.4,0,0,0,3.471-12.1Z" transform="translate(26.551 9.185)"/>
+                    </g>
+                </svg>
+                <div class="mt-3" style="font-size: 26px; line-height: 30px; font-weight: bold;">
+                    Bienestar <br>Integral
+                </div>
+            </div>
+        </div>
+
+        <div class="text-white text-center" style="background-color: #B70F1E; padding: 8% 10%; font-size: 26px; line-height: 36px;">
+            Si tienes algún tema de valor que ofrecernos, envíanos tu propuesta y con gusto nuestro comité de talentos medirá y expondrá las posibilidades que podemos ofrecerte a través de un proceso formal de varios filtros, porque como ya lo mencionamos, nuestra principal preocupación es la calidad de la información que ofrecemos, una vez que pase todas las validaciones, te contactaremos por teléfono y correo a los datos que nos dejaste en tu formulario para proceder con una entrevista online y coordinar detalles de relación comercial, derechos de uso, producción y post producción.
+            
+            <div class="mt-5">
+                <a type="button" class="btn" style="background-color: #1C1E21; color: white; font-size: 25px; font-weight: bold; border-radius: 15px !important; padding: 10px 20px;" href="{{ route('log').'?act=1' }}">Regístrate Aquí</a>
+            </div>
+        </div>
+
+        <div class="text-center" style="background-color: #FFFFFF; padding: 8% 15%; font-size: 26px; line-height: 36px; color: #696969;">
+            Solicitamos tu empatía y paciencia durante el proceso, contamos con muchas solicitudes y el trabajo de todos es importante. Esperamos pronto sumarte a nuestro equipo de talentos.
+        </div>
+    </div>
+
+    <div class="modal fade" id="video1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Testimonio de José Gordo</h5>
+                <button type="button" class="close close-trailer" data-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video src="{{ asset('nosotros/gratis-Blog/video1.jpg') }}" controls poster="{{ asset('nosotros/gratis-Blog/cambio.jpg') }}" id="video-trailer1"></video>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection

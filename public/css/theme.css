@@ -374,527 +374,6 @@ h5.title-level {
 .li-register-button {
     padding-left: 10px;
 }
-
-@media (max-width: 1350px) {
-    .items-header {
-        font-size: 14px;
-    }
-    .header-list {
-        padding: 5px;
-    }
-    .btn-register-header {
-        border-radius: 25px !important;
-        font-weight: bold;
-        width: 140px;
-    }
-    .li-language {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    .btn-language {
-        width: 100px;
-        font-size: 12px;
-    }
-    .referrers-banner-text {
-        font-size: 40px;
-        padding: 80px 40px 20px 60px;
-        line-height: 40px;
-    }
-}
-
-@media (min-width: 981px) and (max-width: 1250px) {
-    .items-header {
-        font-size: 12px;
-    }
-    .li-language {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .btn-language {
-        width: 70px;
-        font-size: 10px;
-    }
-    .btn-register-header {
-        font-size: 12px;
-        width: 120px;
-    }
-    .course-label {
-        padding-bottom: 15px;
-    }
-    .course-autor {
-        font-size: 30px;
-    }
-    .course-title {
-        font-size: 45px;
-        line-height: 45px;
-        padding: 15px 0;
-    }
-    .course-category {
-        font-size: 20px;
-    }
-    .next-streaming-title {
-        width: 50%;
-        font-size: 60px;
-        line-height: 60px;
-    }
-    .next-streaming-reserve {
-        padding-top: 50px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .referrers-box {
-        font-size: 34px;
-        padding: 100px 15px;
-    }
-}
-
-@media (min-width: 451px) and (max-width: 980px) {
-    .referrers-box {
-        font-size: 34px;
-        padding: 100px 15px;
-    }
-    #navbarItems {
-        background-color: #1C1D21 !important;
-        padding: 15px 30px 15px 30px;
-    }
-    .li-register-button {
-        padding-left: 0 !important;
-    }
-    #li-notifications-larger {
-        display: none;
-    }
-    #li-notifications-small {
-        display: block !important;
-    }
-    #li-language-larger {
-        display: none;
-    }
-    #li-language-small {
-        display: block !important;
-    }
-    #li-search-larger {
-        display: none;
-    }
-    #li-search-small {
-        display: block !important;
-    }
-    #li-home-larger {
-        display: none;
-    }
-    #li-messages-larger {
-        display: none;
-    }
-    #li-messages-small {
-        display: block !important;
-    }
-    #li-user-larger {
-        display: none;
-    }
-    #li-user-small {
-        display: block !important;
-    }
-    .li-language {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .carousel-caption {
-        width: 50%;
-    }
-    .course-label {
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-    .course-autor {
-        font-size: 25px;
-    }
-    .course-title {
-        font-size: 30px;
-        line-height: 30px;
-        padding: 10px 0;
-    }
-    .course-category {
-        font-size: 17px;
-    }
-    .next-streaming-title {
-        font-size: 50px;
-        line-height: 50px;
-    }
-    .next-streaming-reserve {
-        padding-top: 20px;
-    }
-    .vertical-menu p {
-        font-size: 2vh;
-    }
-}
-
-@media (max-width: 450px) {
-
-    .course-category-caption a {
-        font-size: 23px;
-    }
-    .carousel-caption {
-        width: auto;
-    }
-    .course-label {
-        padding-bottom: 5px;
-        font-size: 16px;
-    }
-    .course-autor {
-        font-size: 15px;
-    }
-    .course-title {
-        font-size: 12px;
-        line-height: 25px;
-        padding: 10px 0;
-    }
-    .course-category {
-        font-size: 14px;
-    }
-    .next-streaming-title {
-        width: 50%;
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .carousel-indicators {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .vertical-menu h6 {
-        font-size: 2vh;
-    }
-    .course-banner-caption {
-        top: 70%;
-        width: 96%;
-    }
-    .comisiones-card-title {
-        font-size: 10px!important;
-    }
-    .com-line-white {
-        width: 50!important;
-    }
-    .com-line-blue {
-        width: 50!important;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 576px) {
-    
-    .estilostreaming{
-        font-size: 80px!important;
-        margin-top: 20%!important;
-    }
-    .estilostreamingtwo{
-        font-size: 20px!important;
-        margin-top: 0px!important;
-    }
-    .text-title-miscursos{
-        font-size: 12px!important;
-    }
-    .estilobusiness{
-        margin-top: 10%!important;
-    }
-    .ecosistema-img
-    {
-        padding-top: 0px!important;
-    }
-    
-
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-    .course-category-caption a {
-        font-size: 12px;
-        bottom: 0px;
-    }
-    .course-banner-caption {
-        top: 55%;
-        width: 95%;
-    }
-    .clock-text {
-        font-size: 40px!important;
-        font-weight: 400!important;
-    }
-    .title-status-live {
-        font-size: 30px!important;
-        font-weight: 400!important;
-    }
-    .title-remain {
-        font-size: 20px !important;
-        font-weight: 600 !important;
-    }
-    .seccion-razones {
-        padding-top: 0px!important;
-    }
-    .subtitle-laptop-one {
-        display: none!important;
-    }
-    .subtitle-laptop-two {
-        margin-top: 180px!important;
-    }
-    .caption-hidden {
-        display: none;
-    }
-    .mybussiness-title-afiliados {
-        font-size: 20px!important;
-        padding-left: 45px;
-        margin-top: 4em!important;
-    }
-    .academia-title-afiliados {
-        padding-left: 45px;
-        font-size: 16px!important;
-    }
-    .afiliados-title-two {
-        display: none;
-    }
-    .logo-academia-afiliados {
-        margin-top: 3em!important;
-    }
-    .icon-bar {
-        display: none;
-    }
-    .clock-live-text {
-        font-size: 20px!important;
-        font-weight: 800!important;
-    }
-}
-
-
-@media (min-width: 1024px) {
-    .course-category-caption a {
-        font-size: 23px;
-    }
-    .mentor-index-seccion {
-        display: grid !important;
-    }
-    .boton-toggle {
-        display: none;
-    }
-    .subtitle-laptop-two {
-        display: none;
-    }
-    .caption-hidden {
-        display: none;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1024px) {
-    .afiliados-title-two {
-        font-size: 20px!important;
-    }
-    .nivel-body {
-        height: 230px!important;
-    }
-    .estilostreaming{
-        font-size: 60px!important;
-        margin-top: 20%!important;
-    }
-    .estilostreamingtwo{
-        font-size: 20px!important;
-        line-height: 30px!important;
-    }
-    .text-title-miscursos{
-        font-size: 12px!important;
-    }
-    .reciente-mentor-name{
-        top:60%!important;
-    }
-    .card-comisiones-two {
-        height: 200px!important;
-    }
-    .clock-live-text {
-        font-size: 30px!important;
-        font-weight: 800!important;
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .list-sidebar{
-        text-align: center;
-    }
-    .mentor-index-seccion {
-        display: block !important;
-    }
-    .navbar-redes {
-        display: none;
-    }
-}
-
-@media (min-width: 1366px) {
-    .course-banner-caption {
-        position: absolute;
-        bottom: 0 !important;
-        top: 65%;
-        width: 97%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .course-banner-caption {
-        position: absolute;
-        bottom: 0 !important;
-        top: 65%;
-    }
-    .icon-bar {
-        margin: 10px!important;
-    }
-    .nivel-body {
-        height: 182px!important;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 320px) {
-    .course-banner-caption {
-        display: none;
-    }
-    .body-miscursos {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .clock-text {
-        font-size: 25px!important;
-        font-weight: 400!important;
-    }
-
-    .clock-live-text {
-        font-size: 11px!important;
-        font-weight: 800!important;
-    }
-    .title-status-live {
-        font-size: 20px!important;
-        font-weight: 400!important;
-    }
-    .title-remain {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-    }
-    .ir-arriba {
-        font-size: 15px!important;
-    }
-    .text-link-mba {
-        font-size: 15px!important;
-    }
-    .seccion-razones {
-        padding-top: 0px!important;
-    }
-    .mybussiness-title-afiliados {
-        font-size: 20px!important;
-        margin-top: 0px!important;
-        text-align: center;
-    }
-    .logo-academia-afiliados {
-        height: 50px!important;
-        width: 50px!important;
-    }
-    .subtitle-laptop-two {
-        display: none;
-    }
-    .img-laptop {
-        padding-top: 50px!important;
-    }
-    .caption-show {
-        display: none;
-    }
-    .icon-bar {
-        display: none;
-    }
-    .next-streaming-date {
-        font-size: 20px!important;
-    }
-    .estilostreaming{
-        font-size: 30px!important;
-
-        margin-top: 0px!important;
-    }
-    .estilostreamingtwo{
-        font-size: 20px!important;
-        line-height:0px!important;
-        margin-top: 0px!important;
-    }
-    .ftxlivestreming-text{
-        font-size: 1.5rem!important;
-    }
-    .reciente-mentor-name{
-        top:60%!important;
-    }
-    .card-comisiones-two {
-        height: 200px!important;
-    }
-    .ecosistema-img
-    {
-        padding-top: 0px!important;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 575px) {
-    .title-remain {
-        font-size: 16px !important;
-        font-weight: 600 !important;
-    }
-    .clock-text {
-        font-size: 25px!important;
-        font-weight: 400!important;
-    }
-
-    .title-status-live {
-        font-size: 20px!important;
-        font-weight: 400!important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 768px) {
-    .icon-miscursos img {
-        display: none;
-    }
-    .card-comisiones {
-        height: 450px!important;
-    }
-    .card-comisiones-two {
-        height: 400px!important;
-    }
-    .recomendados-title p {
-        font-size: 10px!important;
-    }
-    .recomendados-title {
-        margin-top: 5px!important;
-    }
-
-    .estilostreaming{
-        font-size: 50px!important;
-        margin-top: 20%!important;
-    }
-    .estilostreamingtwo{
-        font-size: 18px!important;
-        line-height: 20px!important;
-    }
-    .text-title-miscursos{
-        font-size: 12px!important;
-    }
-    .ecosistema-img{
-        padding-top: 90px!important;
-    }
-}
-
-@media (min-width: 1366px) and (max-width: 1366px) {
-    .nivel-body {
-        height: 182px!important;
-    }
-
-    .estilostreaming {
-        font-size: 80px!important;
-    }
-    .text-title-miscursos{
-        padding-top: 0px!important;
-        padding-bottom: 0px!important;
-        padding-right: 0px!important;
-        margin: 0px!important;
-    }
-    
-}
-
 .title-page-course {
     color: #FFFF;
     font-weight: bold;
@@ -1869,66 +1348,17 @@ p.card-text.font-weight-bold.mr-2 {
     border: 1px solid #707070;
 }
 
-@media only screen and (max-width: 450px) {
-    .section-title-landing {
-        font-weight: bold;
-        color: #B70F1E;
-        font-size: 25px;
-    }
-    .new-course-title {
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 1;
-    }
-    .new-course-category {
-        font-size: 13px;
-        font-weight: bold;
-    }
-    .next-streaming-info {
-        position: absolute;
-        top: 2%;
-        left: 5%;
-        color: white;
-        font-size: 35px;
-        font-weight: bold;
-    }
-    .next-streaming-reserve {
-        font-size: 25px;
-        padding-top: 0px;
-    }
-    .referrers-box {
-        font-size: 34px;
-        padding: 10px 15px;
-        text-align: center;
-        font-size: 38px;
-        color: white;
-        font-weight: bold;
-        border: solid #919191 1px;
-        background-color: #222326;
-        margin-bottom: 10px;
-        height: 150px;
-    }
-    .wrapper {
-        display: block;
-    }
-}
-
-
 /*Estilos menu vertical de anotaciones */
-
 .menu-vertical-anotaciones {
     background: #363840;
 }
-
 .menu-vertical-anotaciones .nav-link.active,
 .nav-pills .show>.nav-link {
     background: #212529;
 }
-
 .img-thumbnail {
     background-color: none;
 }
-
 .paginador .page-link {
     background-color: #1C1D21;
     border: 1px solid #8E8E8E;
@@ -1994,26 +1424,7 @@ p.card-text.font-weight-bold.mr-2 {
     letter-spacing: 1px;
 }
 
-@media (max-width: 450px) {
-    .blog-title {
-        font-size: 25px;
-        line-height: 25px;
-        padding: 10px 0;
-    }
-    .estilobusiness {
-        text-align: right;
-        font-size: 30px;
-        line-height: 40px;
-        color: #B70F1E;
-        font-weight: 700!important;
-        margin-top: 0px;
-        text-align: center!important;
-    }
-}
-
-
 /*MEMBRESIA*/
-
 .pricing .card {
     border: 50px;
     border-radius: 1rem;
@@ -2057,20 +1468,6 @@ p.card-text.font-weight-bold.mr-2 {
     opacity: 0.7;
     transition: all 0.2s;
 }
-
-
-/* Hover Effects on Card */
-
-@media (min-width: 992px) {
-    .pricing .card:hover {
-        margin-top: -.25rem;
-        margin-bottom: .25rem;
-    }
-    .pricing .card:hover .btn {
-        opacity: 1;
-    }
-}
-
 .card-header-orange-price {
     background-color: #fbb62c;
     border-radius: 1rem;
@@ -2531,7 +1928,651 @@ max-height: 405px;
     transform: rotate(10deg);
 
 }
-
 .streaming{
     color: #dc3545!important;
+}
+/*Página COACHES */
+.banner-coaches{
+    position: relative; 
+    display: inline-block; 
+    text-align: center;
+}
+.banner-coaches-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -40%); 
+    font-size: 2.5vw !important; 
+    line-height: 2.7vw !important; 
+    font-weight: bold;
+}
+.banner-coaches-logo{
+    width: 400px;
+}
+.banner-coaches-line{
+    width: 180px;
+    height: 10px;
+}
+.coaches-second-section{
+    padding: 8% 15% 5% 15%; 
+    font-size: 26px; 
+    line-height: 36px; 
+    color: #696969;
+}
+.coaches-second-section-text-red{
+    font-size: 36px; 
+    color: #B70F1E; 
+    font-weight: bold;
+}
+.coaches-second-section-button-red{
+    background-color: #B70F1E; 
+    color: white; 
+    font-size: 25px; 
+    font-weight: bold; 
+    border-radius: 15px !important; 
+    padding: 10px 20px;
+}
+.coaches-second-section-card{
+    background-color: #F7F7F7; 
+    border-radius: 25px;
+}
+.coaches-second-section-card-img{
+    text-align: justify;
+}
+.coaches-second-section-card-text{
+    text-align: left;
+    font-size: 22px; 
+    color: #696969;
+}
+
+@media (min-width: 981px) and (max-width: 1250px) {
+    .items-header {
+        font-size: 12px;
+    }
+    .li-language {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .btn-language {
+        width: 70px;
+        font-size: 10px;
+    }
+    .btn-register-header {
+        font-size: 12px;
+        width: 120px;
+    }
+    .course-label {
+        padding-bottom: 15px;
+    }
+    .course-autor {
+        font-size: 30px;
+    }
+    .course-title {
+        font-size: 45px;
+        line-height: 45px;
+        padding: 15px 0;
+    }
+    .course-category {
+        font-size: 20px;
+    }
+    .next-streaming-title {
+        width: 50%;
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .next-streaming-reserve {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 1100px) {
+    .referrers-box {
+        font-size: 34px;
+        padding: 100px 15px;
+    }
+}
+@media (min-width: 451px) and (max-width: 980px) {
+    .referrers-box {
+        font-size: 34px;
+        padding: 100px 15px;
+    }
+    #navbarItems {
+        background-color: #1C1D21 !important;
+        padding: 15px 30px 15px 30px;
+    }
+    .li-register-button {
+        padding-left: 0 !important;
+    }
+    #li-notifications-larger {
+        display: none;
+    }
+    #li-notifications-small {
+        display: block !important;
+    }
+    #li-language-larger {
+        display: none;
+    }
+    #li-language-small {
+        display: block !important;
+    }
+    #li-search-larger {
+        display: none;
+    }
+    #li-search-small {
+        display: block !important;
+    }
+    #li-home-larger {
+        display: none;
+    }
+    #li-messages-larger {
+        display: none;
+    }
+    #li-messages-small {
+        display: block !important;
+    }
+    #li-user-larger {
+        display: none;
+    }
+    #li-user-small {
+        display: block !important;
+    }
+    .li-language {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .carousel-caption {
+        width: 50%;
+    }
+    .course-label {
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .course-autor {
+        font-size: 25px;
+    }
+    .course-title {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 10px 0;
+    }
+    .course-category {
+        font-size: 17px;
+    }
+    .next-streaming-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .next-streaming-reserve {
+        padding-top: 20px;
+    }
+    .vertical-menu p {
+        font-size: 2vh;
+    }
+}
+@media (max-width: 450px) {
+
+    .course-category-caption a {
+        font-size: 23px;
+    }
+    .carousel-caption {
+        width: auto;
+    }
+    .course-label {
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+    .course-autor {
+        font-size: 15px;
+    }
+    .course-title {
+        font-size: 12px;
+        line-height: 25px;
+        padding: 10px 0;
+    }
+    .course-category {
+        font-size: 14px;
+    }
+    .next-streaming-title {
+        width: 50%;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .carousel-indicators {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .vertical-menu h6 {
+        font-size: 2vh;
+    }
+    .course-banner-caption {
+        top: 70%;
+        width: 96%;
+    }
+    .comisiones-card-title {
+        font-size: 10px!important;
+    }
+    .com-line-white {
+        width: 50!important;
+    }
+    .com-line-blue {
+        width: 50!important;
+    }
+}
+@media (min-width: 576px) and (max-width: 576px) {
+    
+    .estilostreaming{
+        font-size: 80px!important;
+        margin-top: 20%!important;
+    }
+    .estilostreamingtwo{
+        font-size: 20px!important;
+        margin-top: 0px!important;
+    }
+    .text-title-miscursos{
+        font-size: 12px!important;
+    }
+    .estilobusiness{
+        margin-top: 10%!important;
+    }
+    .ecosistema-img
+    {
+        padding-top: 0px!important;
+    }
+    
+
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .course-category-caption a {
+        font-size: 12px;
+        bottom: 0px;
+    }
+    .course-banner-caption {
+        top: 55%;
+        width: 95%;
+    }
+    .clock-text {
+        font-size: 40px!important;
+        font-weight: 400!important;
+    }
+    .title-status-live {
+        font-size: 30px!important;
+        font-weight: 400!important;
+    }
+    .title-remain {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+    .seccion-razones {
+        padding-top: 0px!important;
+    }
+    .subtitle-laptop-one {
+        display: none!important;
+    }
+    .subtitle-laptop-two {
+        margin-top: 180px!important;
+    }
+    .caption-hidden {
+        display: none;
+    }
+    .mybussiness-title-afiliados {
+        font-size: 20px!important;
+        padding-left: 45px;
+        margin-top: 4em!important;
+    }
+    .academia-title-afiliados {
+        padding-left: 45px;
+        font-size: 16px!important;
+    }
+    .afiliados-title-two {
+        display: none;
+    }
+    .logo-academia-afiliados {
+        margin-top: 3em!important;
+    }
+    .icon-bar {
+        display: none;
+    }
+    .clock-live-text {
+        font-size: 20px!important;
+        font-weight: 800!important;
+    }
+}
+@media (min-width: 1024px) {
+    .course-category-caption a {
+        font-size: 23px;
+    }
+    .mentor-index-seccion {
+        display: grid !important;
+    }
+    .boton-toggle {
+        display: none;
+    }
+    .subtitle-laptop-two {
+        display: none;
+    }
+    .caption-hidden {
+        display: none;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+    .afiliados-title-two {
+        font-size: 20px!important;
+    }
+    .nivel-body {
+        height: 230px!important;
+    }
+    .estilostreaming{
+        font-size: 60px!important;
+        margin-top: 20%!important;
+    }
+    .estilostreamingtwo{
+        font-size: 20px!important;
+        line-height: 30px!important;
+    }
+    .text-title-miscursos{
+        font-size: 12px!important;
+    }
+    .reciente-mentor-name{
+        top:60%!important;
+    }
+    .card-comisiones-two {
+        height: 200px!important;
+    }
+    .clock-live-text {
+        font-size: 30px!important;
+        font-weight: 800!important;
+    }
+    
+}
+@media (max-width: 768px) {
+    .list-sidebar{
+        text-align: center;
+    }
+    .mentor-index-seccion {
+        display: block !important;
+    }
+    .navbar-redes {
+        display: none;
+    }
+    .banner-coaches-logo{
+        width: 300px;
+    }
+    .banner-coaches-line{
+        width: 100px;
+        height: 6px;
+    }
+    .coaches-second-section{
+        font-size: 20px; 
+        line-height: 30px;
+    }
+    .coaches-second-section-text-red{
+        font-size: 30px; 
+    }
+    .coaches-second-section-card-text{
+        text-align: center;
+        font-size: 18px; 
+    }
+    .coaches-second-section-card-img{
+        text-align: center;
+    }
+}
+@media (min-width: 1366px) {
+    .course-banner-caption {
+        position: absolute;
+        bottom: 0 !important;
+        top: 65%;
+        width: 97%;
+    }
+}
+@media (min-width: 1400px) {
+    .course-banner-caption {
+        position: absolute;
+        bottom: 0 !important;
+        top: 65%;
+    }
+    .icon-bar {
+        margin: 10px!important;
+    }
+    .nivel-body {
+        height: 182px!important;
+    }
+}
+@media (min-width: 320px) and (max-width: 320px) {
+    .course-banner-caption {
+        display: none;
+    }
+    .body-miscursos {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .clock-text {
+        font-size: 25px!important;
+        font-weight: 400!important;
+    }
+
+    .clock-live-text {
+        font-size: 11px!important;
+        font-weight: 800!important;
+    }
+    .title-status-live {
+        font-size: 20px!important;
+        font-weight: 400!important;
+    }
+    .title-remain {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+    .ir-arriba {
+        font-size: 15px!important;
+    }
+    .text-link-mba {
+        font-size: 15px!important;
+    }
+    .seccion-razones {
+        padding-top: 0px!important;
+    }
+    .mybussiness-title-afiliados {
+        font-size: 20px!important;
+        margin-top: 0px!important;
+        text-align: center;
+    }
+    .logo-academia-afiliados {
+        height: 50px!important;
+        width: 50px!important;
+    }
+    .subtitle-laptop-two {
+        display: none;
+    }
+    .img-laptop {
+        padding-top: 50px!important;
+    }
+    .caption-show {
+        display: none;
+    }
+    .icon-bar {
+        display: none;
+    }
+    .next-streaming-date {
+        font-size: 20px!important;
+    }
+    .estilostreaming{
+        font-size: 30px!important;
+
+        margin-top: 0px!important;
+    }
+    .estilostreamingtwo{
+        font-size: 20px!important;
+        line-height:0px!important;
+        margin-top: 0px!important;
+    }
+    .ftxlivestreming-text{
+        font-size: 1.5rem!important;
+    }
+    .reciente-mentor-name{
+        top:60%!important;
+    }
+    .card-comisiones-two {
+        height: 200px!important;
+    }
+    .ecosistema-img
+    {
+        padding-top: 0px!important;
+    }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+    .title-remain {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+    .clock-text {
+        font-size: 25px!important;
+        font-weight: 400!important;
+    }
+
+    .title-status-live {
+        font-size: 20px!important;
+        font-weight: 400!important;
+    }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+    .icon-miscursos img {
+        display: none;
+    }
+    .card-comisiones {
+        height: 450px!important;
+    }
+    .card-comisiones-two {
+        height: 400px!important;
+    }
+    .recomendados-title p {
+        font-size: 10px!important;
+    }
+    .recomendados-title {
+        margin-top: 5px!important;
+    }
+
+    .estilostreaming{
+        font-size: 50px!important;
+        margin-top: 20%!important;
+    }
+    .estilostreamingtwo{
+        font-size: 18px!important;
+        line-height: 20px!important;
+    }
+    .text-title-miscursos{
+        font-size: 12px!important;
+    }
+    .ecosistema-img{
+        padding-top: 90px!important;
+    }
+}
+@media (min-width: 1366px) and (max-width: 1366px) {
+    .nivel-body {
+        height: 182px!important;
+    }
+
+    .estilostreaming {
+        font-size: 80px!important;
+    }
+    .text-title-miscursos{
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+        padding-right: 0px!important;
+        margin: 0px!important;
+    }
+    
+}
+@media (max-width: 1350px) {
+    .items-header {
+        font-size: 14px;
+    }
+    .header-list {
+        padding: 5px;
+    }
+    .btn-register-header {
+        border-radius: 25px !important;
+        font-weight: bold;
+        width: 140px;
+    }
+    .li-language {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .btn-language {
+        width: 100px;
+        font-size: 12px;
+    }
+    .referrers-banner-text {
+        font-size: 40px;
+        padding: 80px 40px 20px 60px;
+        line-height: 40px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .section-title-landing {
+        font-weight: bold;
+        color: #B70F1E;
+        font-size: 25px;
+    }
+    .new-course-title {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .new-course-category {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .next-streaming-info {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        color: white;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .next-streaming-reserve {
+        font-size: 25px;
+        padding-top: 0px;
+    }
+    .referrers-box {
+        font-size: 34px;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 38px;
+        color: white;
+        font-weight: bold;
+        border: solid #919191 1px;
+        background-color: #222326;
+        margin-bottom: 10px;
+        height: 150px;
+    }
+    .wrapper {
+        display: block;
+    }
+}
+@media (max-width: 450px) {
+    .blog-title {
+        font-size: 25px;
+        line-height: 25px;
+        padding: 10px 0;
+    }
+    .estilobusiness {
+        text-align: right;
+        font-size: 30px;
+        line-height: 40px;
+        color: #B70F1E;
+        font-weight: 700!important;
+        margin-top: 0px;
+        text-align: center!important;
+    }
+}
+@media (min-width: 992px) {
+    .pricing .card:hover {
+        margin-top: -.25rem;
+        margin-bottom: .25rem;
+    }
+    .pricing .card:hover .btn {
+        opacity: 1;
+    }
 }
