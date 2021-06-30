@@ -30,31 +30,30 @@
       <div class="row mt-4 mb-2">
          <div class="col-md-4">
             <img src="{{ asset('images/fxtfotohome.png') }}" class="img-fluid" alt="...">
-            <div class="text-center">
-               <!--<h3 class="text-primary font-weight-bold ftxlivestreming-text">FTX LIVE</h3>-->
-               <img src="{{ asset('images/FTXlive-logo.png') }}" class="img-fluid" alt="...">
-               <h6 class="text-white mt-2">
-                  El usuario podrá disfrutar, sin importar el lugar en donde se encuentre, con su ordenador o su cel, desde presentaciones de negocios, hasta capacitaciones de todo tipo en vivo, lanzamientos y más.
-               </h6>
-            </div>
          </div>
          <div class="col-md-4">
             <img src="{{ asset('images/fxtmodif.png') }}" class="img-fluid" alt="...">
-            <div class="text-center">
-               <h3 class="text-danger font-weight-bold ftxlivestreming-text">FTX LIVESTREAMING</h3>
-               <h6 class="text-white mt-2">
-                  Un espacio de entrenamientos en vivo para emprendedores, su propuesta de valor se distingue por ofrecer: Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en practica el conocimiento adquirido en los streaming de forma inmediata.
-               </h6>
-            </div>
          </div>
          <div class="col-md-4">
             <img src="{{ asset('images/ftxliveacceso.png') }}" class="img-fluid" alt="...">
-            <div class="text-center">
-               <h3 class="text-danger font-weight-bold ftxlivestreming-text">ACCESO</h3>
-               <h6 class="text-white mt-2">
-                  El acceso será exclusivo para las personas que sean socios de FTXLive y tengan un login de acceso. Dentro de las principales ventajas de este canal, es su fácil acceso, su increíble diseño, así como su chat interactivo, el cual permitirá tener vinculación inmediata y más cercana a la red, ya que la inmediatez y naturalidad en que son transmitidos los enlaces, permitirá a los espectadores participar, haciendo preguntas acerca del contenido que se este explorando, pudiendo aclarar sus dudas de manera inmediata.
-               </h6>
-            </div>
+         </div>
+         <div class="col-md-12 mt-4">
+            <img src="{{ asset('images/FTXlive-logo.png') }}" class="img-fluid" alt="...">
+            <h6 class="text-white mt-2">
+               El usuario podrá disfrutar, sin importar el lugar en donde se encuentre, con su ordenador o su cel, desde presentaciones de negocios, hasta capacitaciones de todo tipo en vivo, lanzamientos y más.
+            </h6>
+         </div>
+         <div class="col-md-12 mt-4">
+            <h3 class="text-danger font-weight-bold ftxlivestreming-text">FTX LIVESTREAMING</h3>
+            <h6 class="text-white mt-2">
+               Un espacio de entrenamientos en vivo para emprendedores, su propuesta de valor se distingue por ofrecer: Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en practica el conocimiento adquirido en los streaming de forma inmediata.
+            </h6>
+         </div>
+         <div class="col-md-12 mt-4">
+            <h3 class="text-danger font-weight-bold ftxlivestreming-text">ACCESO</h3>
+            <h6 class="text-white mt-2">
+               El acceso será exclusivo para las personas que sean socios de FTXLive y tengan un login de acceso. Dentro de las principales ventajas de este canal, es su fácil acceso, su increíble diseño, así como su chat interactivo, el cual permitirá tener vinculación inmediata y más cercana a la red, ya que la inmediatez y naturalidad en que son transmitidos los enlaces, permitirá a los espectadores participar, haciendo preguntas acerca del contenido que se este explorando, pudiendo aclarar sus dudas de manera inmediata.
+            </h6>
          </div>
       </div>
    </div>

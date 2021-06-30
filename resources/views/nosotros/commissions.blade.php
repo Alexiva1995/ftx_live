@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="banner-coaches">
-        <img src="{{ asset('nosotros/afiliados/header2.jpg') }}" class="w-100" alt="...">
+        <img src="{{ asset('nosotros/afiliados/header.jpg') }}" class="w-100" alt="...">
 
         <div class="banner-coaches-text">
             <div class="row">
