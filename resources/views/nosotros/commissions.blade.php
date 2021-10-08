@@ -19,10 +19,10 @@
                 <div class="col-12 mt-5 text-center">
                     <img src="{{ asset ('images/FTXlive-logo.png')}}"  class="banner-coaches-logo">
                 </div>
-                <div class="col-12 mt-5 text-center text-white pt-4"">
+                <div class="col-12 text-center text-white pt-4">
                     Te damos la bienvenida a uno de los  mejores y más geniales programas de marketing de Afiliados del mundo
                 </div>
-                <div class="col-12 mt-3 text-center">
+                <div class="col-12 mt-3 text-center d-none d-sm-block">
                     <img src="{{ asset ('images/line-red.png')}}" class="banner-coaches-line">
                 </div>
             </div>
@@ -79,16 +79,16 @@
         </div>
     </div>
 
-    <div style="padding: 5% 25%; text-align: center;">
+    <div class="commissions-text-black-div">
         <h4 style="color: white; letter-spacing: -0.57px;">Sin importar la categoría de la membresía se afilie tu referido o si lo paga mensual, anual o vitalicio.</h4>
     </div>
 
     <div class="pb-5" style="background-color: white; text-align:center;">
-        <div style="padding: 5% 25%; font-size: 22px; line-height: 30px; font-weight: 400; color:#696969;">
+        <div class="commissions-text-div">
             Por supuesto y además del valor simbólico que le damos a tu trabajo, también lo retribuimos económicamente, ofreciéndote hasta un 10% del valor de cada membresía.
         </div>
 
-        <div class="row pl-5 pr-5 ml-5 mr-5">
+        <div class="row commissions-table-div">
             <div class="col-xl-2 col-lg-2 col-12">
                 <div class="card card-comisiones" style="background-color: #F2F2F2!important; height: 100px;">
                     <div class="card-body text-center">
@@ -123,7 +123,7 @@
                 </div>
             </div>
         </div>
-        <div class="row pl-5 pr-5 ml-5 mr-5 pt-3">
+        <div class="row  commissions-table-div pt-3">
             <div class="col-xl-2 col-lg-2 col-12"></div>
             <div class="col-xl-10 col-lg-10 col-12 p-3" style="background-color: #F2F2F2; border-radius: 0px 0px 15px 15px !important;">
                 <div style="font-size: 26px; font-weight: 500; color: #1C1E21;">10% DE COMISIÓN POR CADA MEMBRESÍA</div>

@@ -34,7 +34,7 @@
    </div>
 
 <div class="col-md-12" style="background-color: #EDEDED;">
-   <div class="col-md-8 offset-md-2" style="padding: 50px 50px; text-align: center;">
+   <div class="col-md-8 offset-md-2 first-section-nosotros">
   <h3>Somos el mejor espacio de entrenamientos en vivo para emprendedores y empresarios.</h3>
    </div>
   </div>
@@ -42,11 +42,10 @@
 
   <div class="card mb-3" style="max-width: 100%; margin-bottom: 0rem!important;">
         <div class="row no-gutters">
-            <div class="col-md-6" style="background-color: #CF202F; color: #fff; padding: 40px !important;">
+            <div class="col-md-6 second-section-nosotros-text">
                 <div class="card-body">
                      <h4 class="card-title text-center">Nuestra propuesta de valor se distingue por ofrecer:</h4>
-                     <!--<p class="card-text" style="text-align: center;">Te hacemos crecer personalmente con mucho contenido de desarrollo personal.</p>-->
-                     <p class="m-4 card-title align-items-center d-flex justify-content-center text-center"> Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en práctica el conocimiento adquirido en cada uno de los eventos y transmisiones que tengamos. </p>
+                     <p class="mt-4 card-title align-items-center d-flex justify-content-center text-center"> Información de primer nivel y en tiempo real, así como motivación para aprender de forma sencilla y herramientas precisas para que se ponga en práctica el conocimiento adquirido en cada uno de los eventos y transmisiones que tengamos. </p>
                 </div>
             </div>
                 <div class="col-md-6" style="min-height: 300px; background-image: url('{{ asset('nosotros/nosotros/02.jpg') }}'); background-size: cover; background-position: top;">

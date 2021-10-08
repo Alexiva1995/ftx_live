@@ -145,8 +145,8 @@ i.fa.fa-user.referrers-icon {
 
 .carousel-caption {
     width: auto;
-    left: 10% !important;
-    right: 0 !important;
+   /* left: 10% !important;
+    right: 0 !important;*/
     top: 5% !important;
     bottom: 0 !important;
     text-align: left;
@@ -1404,7 +1404,7 @@ p.card-text.font-weight-bold.mr-2 {
 
 .estilostreamingtwo{
     font-size: 30px;
-    line-height: 60px;
+    line-height: 34px;
     color: #fff;
     font-weight: 400!important;
     margin-top: 10px;
@@ -1963,6 +1963,7 @@ max-height: 405px;
     font-size: 36px; 
     color: #B70F1E; 
     font-weight: bold;
+    padding: 10%;
 }
 .coaches-second-section-button-red{
     background-color: #B70F1E; 
@@ -1984,6 +1985,36 @@ max-height: 405px;
     font-size: 22px; 
     color: #696969;
 }
+.first-section-nosotros{
+    padding: 50px 50px; 
+    text-align: center;
+}
+.second-section-nosotros-text{
+    background-color: #CF202F; 
+    color: #fff; 
+    padding: 40px !important;
+}
+.section-banner-text{
+    margin-top: 10px;
+    font-size: 22px; 
+    line-height: 24px;
+}
+.commissions-text-div{
+    padding: 5% 25%; 
+    font-size: 22px; 
+    line-height: 30px; 
+    font-weight: 400; 
+    color:#696969;
+}
+.commissions-text-black-div{
+    padding: 5% 25%; 
+    text-align: center;
+}
+.commissions-table-div{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 
 @media (min-width: 981px) and (max-width: 1250px) {
     .items-header {
@@ -2109,6 +2140,48 @@ max-height: 405px;
     }
 }
 @media (max-width: 450px) {
+    .first-section-nosotros{
+        padding: 20px 20px; 
+    }
+    .second-section-nosotros-text{
+        padding: 10px !important;
+    }
+    .section-banner-text{
+        margin-top: 10px;
+        font-size: 18px; 
+        line-height: 20px;
+    }
+    .blog-title-two {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .seccion-razones {
+        padding-top: 10px;
+    }
+    .banner-coaches-text{ 
+        font-size: 3.5vw !important; 
+        line-height: 3.7vw !important; 
+    }
+    .commissions-text-div{
+        padding: 5% 15%; 
+        font-size: 20px; 
+        line-height: 25px; 
+    }
+    .commissions-text-black-div{
+        padding: 5% 15%; 
+    }
+    .estilostreaming {
+        text-align: center;
+        font-size: 40px;
+        line-height: 20px;
+        margin-top: 5%;
+    }
+    .estilostreamingtwo{
+        text-align: center;
+        font-size: 25px;
+        line-height: 25px;
+        margin-top: 25px;
+    }
 
     .course-category-caption a {
         font-size: 23px;
@@ -2295,7 +2368,7 @@ max-height: 405px;
         display: none;
     }
     .banner-coaches-logo{
-        width: 300px;
+        width: 200px;
     }
     .banner-coaches-line{
         width: 100px;
@@ -2307,6 +2380,7 @@ max-height: 405px;
     }
     .coaches-second-section-text-red{
         font-size: 30px; 
+        padding: 5%;
     }
     .coaches-second-section-card-text{
         text-align: center;

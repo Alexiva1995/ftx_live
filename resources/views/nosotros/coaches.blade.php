@@ -19,10 +19,10 @@
                 <div class="col-12 mt-5 text-center">
                     <img src="{{ asset ('images/FTXlive-logo.png')}}"  class="banner-coaches-logo">
                 </div>
-                <div class="col-12 mt-5 text-center text-white pt-4"">
+                <div class="col-12 text-center text-white pt-4">
                     Te damos la bienvenida a uno de los  mejores y más geniales programas de marketing de Afiliados del mundo
                 </div>
-                <div class="col-12 mt-3 text-center">
+                <div class="col-12 mt-3 text-center d-none d-sm-block">
                     <img src="{{ asset ('images/line-red.png')}}" class="banner-coaches-line">
                 </div>
             </div>

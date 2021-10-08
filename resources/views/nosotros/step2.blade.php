@@ -32,7 +32,7 @@
                   <img src="{{ asset('nosotros/gratis-Blog/homegratis.jpg') }}" class="d-block w-100" alt="...">
                    <div class="carousel-caption row align-items-center">
                   <div class="blog-title font-weight-bold">¡COMIENZA AHORA!
-                          <p style="font-size: 22px;">En este mundo tan acelerado, es la preparación lo que conduce el futuro de la vida.</p>
+                          <p class="section-banner-text">En este mundo tan acelerado, es la preparación lo que conduce el futuro de la vida.</p>
                         </div>
               </div>
           </div>   

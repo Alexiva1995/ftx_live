@@ -55,7 +55,7 @@
     </div>
     @endif
 
-<div class="col-md-12 mostrar" style="margin-top: 30px;">
+<div class="col-md-12 text-center mostrar" style="margin-top: 30px;">
     <h3 class="text-white">Inicia Sesión para disfrutar de tu compra</h3>
     <h4 class="text-white pr-2 pt-2">Si no estás registrado puedes hacerlo <a href="#" onclick="toggle()">aquí</a></h4>
     @if($items[0]->period == 'Anual')
@@ -87,7 +87,7 @@
 </div>
 
 
-<div class="col-xs-12 mostrar" style="display:none; margin-top: 30px;">
+<div class="col-xs-12 text-center mostrar" style="display:none; margin-top: 30px;">
     <h3 class="text-white">Regístrate para disfrutar de tu compra</h3>
     <h6 class="text-white">Si ya estás registrado puedes <a href="#" onclick="toggle()">entrar</a></h6>
    <form class="login-form" method="POST" action="{{ route('autenticacion.save-register') }}" name="formulario">
